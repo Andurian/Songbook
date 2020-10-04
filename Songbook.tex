@@ -1,5 +1,8 @@
 \documentclass[12pt,oneside]{book}
 
+% Make sure the following line is commented when building automatically and uncommented when building manually!
+%\newcommand{\instrument}{Guitar}
+
 \usepackage[bookmarks]{hyperref}
 \usepackage{graphicx}
 \usepackage{xcolor}
@@ -10,7 +13,7 @@
 
 \usepackage[utf8]{inputenc}
 
-\input{chords}
+\input{extra/extra_\instrument}
 
 \pretitle{
 	\begin{center}
@@ -28,6 +31,12 @@
   {\SB@addtoindexes{\songtitle\ifx\songauthors\empty\else\ \textcolor{gray}{(\songauthors)}\fi}}
   {}{}
 \makeatother
+
+\newcommand{\scaletab}[1]{
+	\let\gtabBAK\gtab
+	\newcommand{\sgtab}[3]{\scalebox{##1}{\gtabBAK{##2}{##3}}}
+	\renewcommand*\gtab{\sgtab{#1}}
+}
 
 \newcommand*\skiptoleftpage{%
 	\leavevmode
@@ -73,7 +82,7 @@
 \newindex{titleidx}{cbtitle}
 \indexsongsas{titleidx}{\thepage}
 
-\title{{\bfseries \Huge Songbook \\[0.5cm] \Large Guitar}}
+\title{{\bfseries \Huge Songbook \\[0.5cm] \Large \instrument}}
 \author{{\bfseries \Large Andurian}}
 \date{}     
 
@@ -96,12 +105,9 @@
 \begin{songs}{titleidx}
 \pagestyle{plain}
 \setcounter{page}{1}
-\input{songs_Guitar}
+\input{songs_\instrument}
 \end{songs}
 
-\chapter*{Chords}
-\scaletab{1.5}
-\printchordlist
-
+\printextra
 
 \end{document}

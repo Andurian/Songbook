@@ -17,12 +17,12 @@ def run_pdflatex(texfile, auxdir, outname):
     ]
     subprocess.run(pdflatexjob)
     
-def run_index(instrument, auxdir):
+def run_index(auxdir):
     indexjob = [
         'texlua', 
         'songidx.lua',
-        '{}/{}_cbtitle.sxd'.format(auxdir, instrument), 
-        '{}/{}_cbtitle.sbx'.format(auxdir, instrument)
+        '{}/cbtitle.sxd'.format(auxdir), 
+        '{}/cbtitle.sbx'.format(auxdir)
     ]
     subprocess.run(indexjob)
 
@@ -38,10 +38,10 @@ with tempfile.TemporaryDirectory(dir='.') as auxdir:
     for instrument in filecontents:
         filename = '{}/{}.tex'.format(auxdir, instrument)
         with open(filename, 'w+') as outfile:
-            document = filecontents[instrument] + '\n\n\\input{{makesongbook}} \\makesongbook{{{}}}'.format(instrument)
+            document = filecontents[instrument] + '\n\n\\newcommand{{\\instrument}}{{{}}}\n\\input{{Songbook}}'.format(instrument)
             outfile.write(document)
         run_pdflatex(filename, auxdir, 'Songbook_' + instrument)
         run_pdflatex(filename, auxdir, 'Songbook_' + instrument)
-        run_index(instrument, auxdir)
+        run_index(auxdir)
         run_pdflatex(filename, auxdir, 'Songbook_' + instrument)
         

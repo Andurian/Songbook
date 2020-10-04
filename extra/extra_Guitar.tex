@@ -1,9 +1,3 @@
-\newcommand{\scaletab}[1]{
-	\let\gtabBAK\gtab
-	\newcommand{\sgtab}[3]{\scalebox{##1}{\gtabBAK{##2}{##3}}}
-	\renewcommand*\gtab{\sgtab{#1}}
-}
-
 \newcommand{\chordA}{
 	\gtab{A}{X02220}
 }
@@ -91,4 +85,10 @@
 	\chordFshm
 	\chordG
 	\chordGm
+}
+
+\newcommand{\printextra}{
+	\chapter*{Chords}
+	\scaletab{1.5}
+	\printchordlist
 }
