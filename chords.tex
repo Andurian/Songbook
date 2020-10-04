@@ -1,0 +1,94 @@
+\newcommand{\scaletab}[1]{
+	\let\gtabBAK\gtab
+	\newcommand{\sgtab}[3]{\scalebox{##1}{\gtabBAK{##2}{##3}}}
+	\renewcommand*\gtab{\sgtab{#1}}
+}
+
+\newcommand{\chordA}{
+	\gtab{A}{X02220}
+}
+
+\newcommand{\chordAm}{
+	\gtab{Am}{X02210}
+}
+
+\newcommand{\chordAsh}{
+	\gtab{A\shrp}{X(13331)}
+}
+
+\newcommand{\chordBb}{
+	\gtab{B\flt}{X(13331)}
+}
+
+\newcommand{\chordB}{
+	\gtab{B}{X(24442)}
+}
+
+\newcommand{\chordBm}{
+	\gtab{Bm}{X(24432)}
+}
+
+\newcommand{\chordC}{
+	\gtab{C}{X32010}
+}
+
+\newcommand{\chordD}{
+	\gtab{D}{XX0232}
+}
+
+\newcommand{\chordDm}{
+	\gtab{Dm}{XX0231}
+}
+
+\newcommand{\chordE}{
+	\gtab{E}{022100}
+}
+	
+\newcommand{\chordEm}{
+	\gtab{Em}{022000}
+}
+
+\newcommand{\chordF}{
+	\gtab{F}{(133211)}
+}
+
+\newcommand{\chordFm}{
+	\gtab{Fm}{(133111)}
+}
+
+\newcommand{\chordFsh}{
+	\gtab{F\shrp}{(244322)}
+}
+
+\newcommand{\chordFshm}{
+	\gtab{F\shrp{}m}{(244222)}
+}
+
+\newcommand{\chordG}{
+	\gtab{G}{320033}
+}
+
+\newcommand{\chordGm}{
+	\gtab{G}{310033}
+}
+
+
+\newcommand{\printchordlist}{
+	\chordA
+	\chordAm
+	\chordAsh
+	\chordBb
+	\chordB
+	\chordBm
+	\chordC
+	\chordD
+	\chordDm
+	\chordE
+	\chordEm
+	\chordF
+	\chordFm
+	\chordFsh
+	\chordFshm
+	\chordG
+	\chordGm
+}

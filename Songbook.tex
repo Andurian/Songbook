@@ -1,0 +1,107 @@
+\documentclass[12pt,oneside]{book}
+
+\usepackage[bookmarks]{hyperref}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{titling}
+\usepackage{xpatch}
+\usepackage{ifoddpage}
+\usepackage[chorded]{songs}
+
+\usepackage[utf8]{inputenc}
+
+\input{chords}
+
+\pretitle{
+	\begin{center}
+}
+
+\posttitle{
+	~\\
+	\vspace*{1cm}
+	\includegraphics[width=6cm]{img.png}
+\end{center}}
+
+\makeatletter
+\xpatchcmd{\SB@@@beginsong}
+  {\SB@addtoindexes\songtitle}
+  {\SB@addtoindexes{\songtitle\ifx\songauthors\empty\else\ \textcolor{gray}{(\songauthors)}\fi}}
+  {}{}
+\makeatother
+
+\newcommand*\skiptoleftpage{%
+	\leavevmode
+	\checkoddpage
+	\ifoddpage
+		\null
+	\else
+		\null
+		\newpage
+	 \fi
+}
+
+\newcommand*\cleartoleftpage{%
+  \clearpage
+  \skiptoleftpage
+}
+
+\newcommand{\inputafterskip}[1]{
+	\begin{intersong*}
+	\newpage
+	\end{intersong*}
+	\begin{intersong*}
+	\skiptoleftpage
+	\end{intersong*}
+	\input{#1}
+}
+
+\setlength{\oddsidemargin}{0in}
+\setlength{\evensidemargin}{0in}
+\setlength{\textwidth}{6.5in}
+\setlength{\topmargin}{0in}
+\setlength{\topskip}{0in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\textheight}{9.1in}
+\settowidth{\versenumwidth}{1.\ }
+
+\renewcommand{\lyricfont}{\normalfont\large}
+\songcolumns{1}
+
+\indexeson
+
+\newindex{titleidx}{cbtitle}
+\indexsongsas{titleidx}{\thepage}
+
+\title{{\bfseries \Huge Songbook \\[0.5cm] \Large Guitar}}
+\author{{\bfseries \Large Andurian}}
+\date{}     
+
+\begin{document}
+
+\maketitle
+
+\pagestyle{empty}
+
+\null
+\newpage
+
+\showindex[1]{Index}{titleidx}
+
+\null
+\newpage
+\null
+\newpage
+
+\begin{songs}{titleidx}
+\pagestyle{plain}
+\setcounter{page}{1}
+\input{songs_Guitar}
+\end{songs}
+
+\chapter*{Chords}
+\scaletab{1.5}
+\printchordlist
+
+
+\end{document}
