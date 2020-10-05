@@ -6,15 +6,15 @@ def find_songs():
     ret = {}
     
     for path, dirs, files in os.walk("songs"):
-        files = list(filter(lambda x: x.endswith('.tex'), files))
+        files = sorted(list(filter(lambda x: x.endswith('.tex'), files)))
         
         if not files:
             continue
             
-        filename = path.replace('\\', '_')
+        filename = path.replace(os.sep, '_')
         data = ""
         
-        prefix = path.replace('\\', '/')
+        prefix = path.replace(os.sep, '/')
         newline = ''
         for f in files:
             line = '{}\\inputafterskip{{{}/{}}}'.format(newline, prefix, f)

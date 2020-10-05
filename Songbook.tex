@@ -3,6 +3,8 @@
 % Make sure the following line is commented when building automatically and uncommented when building manually!
 %\newcommand{\instrument}{Guitar}
 
+\providecommand{\builddir}{.}
+
 \usepackage[bookmarks]{hyperref}
 \usepackage{graphicx}
 \usepackage{xcolor}
@@ -105,9 +107,9 @@
 \begin{songs}{titleidx}
 \pagestyle{plain}
 \setcounter{page}{1}
-\input{songs_\instrument}
+\input{\builddir/songs_\instrument}
 \end{songs}
 
-\printextra
+%\printextra
 
 \end{document}
