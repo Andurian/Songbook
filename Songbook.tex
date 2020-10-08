@@ -1,8 +1,6 @@
 \documentclass[12pt,oneside]{book}
 
-% Make sure the following line is commented when building automatically and uncommented when building manually!
-%\newcommand{\instrument}{Guitar}
-
+\providecommand{\instrument}{Guitar}
 \providecommand{\builddir}{.}
 
 \usepackage[bookmarks]{hyperref}
@@ -11,6 +9,7 @@
 \usepackage{titling}
 \usepackage{xpatch}
 \usepackage{ifoddpage}
+\usepackage{units}
 \usepackage[chorded]{songs}
 
 \usepackage[utf8]{inputenc}
@@ -29,9 +28,9 @@
 
 \makeatletter
 \xpatchcmd{\SB@@@beginsong}
-  {\SB@addtoindexes\songtitle}
-  {\SB@addtoindexes{\songtitle\ifx\songauthors\empty\else\ \textcolor{gray}{(\songauthors)}\fi}}
-  {}{}
+	{\SB@addtoindexes\songtitle}
+	{\SB@addtoindexes{\songtitle\ifx\songauthors\empty\else\ \textcolor{gray}{(\songauthors)}\fi}}
+	{}{}
 \makeatother
 
 \newcommand{\scaletab}[1]{
@@ -52,8 +51,8 @@
 }
 
 \newcommand*\cleartoleftpage{%
-  \clearpage
-  \skiptoleftpage
+	\clearpage
+	\skiptoleftpage
 }
 
 \newcommand{\inputafterskip}[1]{
@@ -66,6 +65,18 @@
 	\input{#1}
 }
 
+\newenvironment{infotext}{
+	\begin{minipage}{\linewidth}
+	\color{darkgray}
+	\itshape
+	\normalsize
+}{
+	\end{minipage}
+	\vspace*{1em}
+}
+
+
+\setlength{\parindent}{0cm}
 \setlength{\oddsidemargin}{0in}
 \setlength{\evensidemargin}{0in}
 \setlength{\textwidth}{6.5in}
@@ -110,6 +121,6 @@
 \input{\builddir/songs_\instrument}
 \end{songs}
 
-%\printextra
+\printextra
 
 \end{document}

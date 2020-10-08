@@ -43,11 +43,9 @@ First you need to run:
     python find_songs.py
     
 This will traverse the `songs` directory and write a `songs_<Instrument>.tex` file in the root directory.
-Open `Songbook.tex` and uncomment the line
+Open `Songbook.tex` and insert the name of the instrument you want to build the songbook for in the line:
 
-    \newcommand{\instrument}{<Instrument>}
-    
-Insert the name of instrument you want to build the songbook for.
+    \providecommand{\instrument}{<Instrument>}
 
 Run `PDFLaTeX` twice and all songs should be where they are. 
 The only thing missing now is the index. 

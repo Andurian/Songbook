@@ -1,16 +1,19 @@
-\beginsong{The Cauldron Born}[]
+\beginsong{The Cauldron Born}[
+	by={Damh the Bard}
+]
 
-\beginverse\memorize
-\[Dm]Sunset, \[Am]Moonrise
-\[Dm]--- And see \[G]how the land is \[Dm]bathed
+\newchords{cauldron_verse}
+\newchords{cauldron_bridge}
+
+\beginverse\memorize[cauldron_verse]
+\[Dm]Sunset, \[Am]Moonrise \[Dm]--- And see \[G]how the land is \[Dm]bathed
 \[Am]--- In silver \[Dm]hue
 
-You \[Dm]feel so \[Dm]lonely
-\[Dm]--- Come with \[G]me and let me \[Dm]show
+You \[Dm]feel so \[Am]lonely \[Dm]--- Come with \[G]me and let me \[Dm]show
 There are \[Am]others just like \[Dm]you
 \endverse
 
-\beginverse*
+\beginverse*\memorize[cauldron_bridge]
 Who \[F]feel the \[C]powers of \[Am]Earth, Sea and \[Dm]Sky
 Of \[F]Dragons and \[C]Faerie and \[Am]Shades of the \[Dm]night
 Hear the \[F]call of our \[C]ancestors of blood and \[G]bone
@@ -24,21 +27,19 @@ Of womb and tomb, and standing \[A]stone...
 \[G]Hear the Goddess \[C]Ceridwen \[Dm]call...
 \endchorus
 
-\beginverse
-^See a ^man
-A^lone on a ^hill
+\beginverse\replay[cauldron_verse]
+^See a ^man A^lone on a ^hill
 His ^arms raised ^high to the ^Moon
 
-^Chanting ^words,
-a ^charm, a ^spell of ^power
+^Chanting ^words, a ^charm, a ^spell of ^power
 ^--- A Witches ^Rune...
 \endverse
 
-\beginverse*
-He \[F]calls to the \[C]powers of \[Am]Earth, Sea and \[Dm]Sky
-Of \[F]Dragons and \[C]Faerie and \[Am]Shades of the \[Dm]night
-He \[F]calls to his \[C]ancestors of blood and \[G]bone
-Of womb and tomb, and standing \[A]stone...
+\beginverse*\replay[cauldron_bridge]
+He ^calls to the ^powers of ^Earth, Sea and ^Sky
+Of ^Dragons and ^Faerie and ^Shades of the ^night
+He ^calls to his ^ancestors of blood and ^bone
+Of womb and tomb, and standing ^stone...
 \endverse
 
 \beginchorus
@@ -46,7 +47,7 @@ Of womb and tomb, and standing \[A]stone...
 \[G]Chant your words and \[C]sing your \[Dm]spell
 \[Dm]--- Deep within the \[F]darkened \[G]hall
 \[G]Hear the Goddess \[C]Ceridwen \[Dm]call...
-
+\vspace*{1em}
 \[Dm]--- Come and taste of the \[F]Cauldron's \[G]Brew
 And \[G]magic she will \[C]give to \[Dm]you
 \[Dm]--- You will dance in the \[F]eye of the \[G]storm
@@ -54,38 +55,47 @@ You're \[G]Ceridwen's Children
 The \[Am]Cauldron \[Dm]Born!
 \endchorus
 
-\beginverse
-A ^charm of ^silver
-^--- The gypsy ^said
+\beginverse\replay[cauldron_verse]
+A ^charm of ^silver ^--- The gypsy ^said
 When ^he was ^just seven^teen
 
-Your ^future I'll ^tell you
-^--- Every ^thread and ^turn
+Your ^future I'll ^tell you ^--- Every ^thread and ^turn
 If ^there to be ^seen...
 \endverse
 
-\beginverse*
-She \[F]took his \[C]hands \[Am]tracing the \[Dm]lines
-\[F]Searching for \[C]patterns and \[Am]looking for \[Dm]signs
-Your \[F]life a \[C]construction one day you will \[G]see
-Through the illusion and into the \[A]dream!
+\beginverse*\replay[cauldron_bridge]
+She ^took his ^hands ^tracing the ^lines
+^Searching for ^patterns and ^looking for ^signs
+Your ^life a ^construction one day you will ^see
+Through the illusion and into the ^dream!
 \endverse
+
+\beginchorus
+\[Dm]Lady stir your \[F]Cauldron \[G]well
+\[G]Chant your words and \[C]sing your \[Dm]spell
+\[Dm]--- Deep within the \[F]darkened \[G]hall
+\[G]Hear the Goddess \[C]Ceridwen \[Dm]call...
+\vspace*{1em}
+\[Dm]--- Come and taste of the \[F]Cauldron's \[G]Brew
+And \[G]magic she will \[C]give to \[Dm]you
+\[Dm]--- You will dance in the \[F]eye of the \[G]storm
+You're \[G]Ceridwen's Children
+The \[Am]Cauldron \[Dm]Born!
+\endchorus
         
-\beginverse
-^So we vstand
-^--- On this ^hill
+\beginverse\replay[cauldron_verse]
+^So we ^stand ^--- On this ^hill
 Our ^shadows are ^cast by the ^Moon
 
-^Chanting ^words,
-a ^charm, a ^spell of ^power
+^Chanting ^words, a ^charm, a ^spell of ^power
 ^--- Our Witches ^Rune...
 \endverse
 
-\beginverse*
-We \[F]call to the \[C]powers of \[Am]Earth, Sea and \[Dm]Sky
-Of \[F]Dragons and \[C]Faerie and \[Am]Shades of the \[Dm]night
-We \[F]call to our \[C]ancestors of blood and \[G]bone
-Of womb and tomb, and standing \[A]stone...
+\beginverse*\replay[cauldron_bridge]
+We ^call to the ^powers of ^Earth, Sea and ^Sky
+Of ^Dragons and ^Faerie and ^Shades of the ^night
+We ^call to our ^ancestors of blood and ^bone
+Of womb and tomb, and standing ^stone...
 \endverse
 
 \beginchorus
@@ -102,14 +112,13 @@ The \[D]Cauldron \[Em]Born!
 \endchorus
 
 \beginverse*
-\[D]--- You're the Cauldron \[Em]Born
-The \[D]Cauldron \[Em]Born!
+\[D]--- You're the Cauldron \[Em]Bo---\[D]orn
+The Cauldron \[Em]Bo---\[D]orn!
 
-\[D]--- We're the Cauldron \[Em]Born
-The \[D]Cauldron \[Em]Born!
+We're the Cauldron \[Em]Bo---\[D]orn
+The Cauldron \[Em]Bo---\[D]orn!
 
-\[D]--- We're the Cauldron \[Em]Born
-The \[D]Cauldron \[Em]Born!
+We're the Cauldron \[Em]Born
 \endverse
 
 \endsong
