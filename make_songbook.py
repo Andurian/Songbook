@@ -16,6 +16,16 @@ def run_pdflatex(texfile, auxdir, outname):
         texfile
     ]
     subprocess.run(pdflatexjob)
+
+def run_lualatex(texfile, auxdir, outname):
+    lulatexjob = [
+        'lualatex', 
+        '-interaction=nonstopmode', 
+        '-output-directory={}'.format(auxdir), 
+        '-jobname={}'.format(outname), 
+        texfile
+    ]
+    subprocess.run(lulatexjob)
     
 def run_index(auxdir):
     indexjob = [
@@ -43,10 +53,10 @@ with tempfile.TemporaryDirectory(dir='.') as auxdir_raw:
             outfile.write(document)
         outname = 'Songbook_{}'.format(instrument)
 
-        run_pdflatex(filename, auxdir, outname)
-        run_pdflatex(filename, auxdir, outname)
+        run_lualatex(filename, auxdir, outname)
+        run_lualatex(filename, auxdir, outname)
         run_index(auxdir)
-        run_pdflatex(filename, auxdir, outname)
+        run_lualatex(filename, auxdir, outname)
 
         os.rename(os.path.join(auxdir, outname + '.pdf'), outname + '.pdf')
         
