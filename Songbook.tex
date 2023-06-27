@@ -3,6 +3,8 @@
 \providecommand{\instrument}{Guitar}
 \providecommand{\builddir}{.}
 
+\usepackage[utf8]{inputenc}
+\usepackage[main=english,ngerman]{babel}
 \usepackage[bookmarks]{hyperref}
 \usepackage{graphicx}
 \usepackage{xcolor}
@@ -10,9 +12,9 @@
 \usepackage{xpatch}
 \usepackage{ifoddpage}
 \usepackage{units}
+\usepackage{listings}
+\usepackage[autostyle]{csquotes}
 \usepackage[chorded]{songs}
-
-\usepackage[utf8]{inputenc}
 
 \input{extra/extra_\instrument}
 
@@ -75,6 +77,22 @@
 	\vspace*{1em}
 }
 
+%\MakeOuterQuote{"}
+
+\lstdefinestyle{tabs}{
+	basicstyle=\ttfamily\footnotesize,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=none,                                 
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2
+}
+
+\lstset{style=tabs}
 
 \setlength{\parindent}{0cm}
 \setlength{\oddsidemargin}{0in}
