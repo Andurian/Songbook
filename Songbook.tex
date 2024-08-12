@@ -12,9 +12,10 @@
 \usepackage{xpatch}
 \usepackage{ifoddpage}
 \usepackage{units}
-\usepackage{listings}
+\usepackage{xfrac}
 \usepackage[autostyle]{csquotes}
 \usepackage[chorded]{songs}
+\usepackage[staffsize=20]{lyluatex}
 
 \input{extra/extra_\instrument}
 
@@ -79,21 +80,6 @@
 
 %\MakeOuterQuote{"}
 
-\lstdefinestyle{tabs}{
-	basicstyle=\ttfamily\footnotesize,
-	breakatwhitespace=false,         
-	breaklines=true,                 
-	captionpos=b,                    
-	keepspaces=true,                 
-	numbers=none,                                 
-	showspaces=false,                
-	showstringspaces=false,
-	showtabs=false,                  
-	tabsize=2
-}
-
-\lstset{style=tabs}
-
 \setlength{\parindent}{0cm}
 \setlength{\oddsidemargin}{0in}
 \setlength{\evensidemargin}{0in}
@@ -113,7 +99,7 @@
 \newindex{titleidx}{cbtitle}
 \indexsongsas{titleidx}{\thepage}
 
-\title{{\bfseries \Huge Songbook \\[0.5cm] \Large \instrument}}
+\title{{\bfseries \Huge Songbook}}
 \author{{\bfseries \Large Andurian}}
 \date{}     
 
@@ -139,6 +125,6 @@
 \input{\builddir/songs_\instrument}
 \end{songs}
 
-\printextra
+%\printextra
 
 \end{document}

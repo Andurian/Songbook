@@ -1,12 +1,33 @@
 \beginsong{Amsterdam}[
-	by={Sondaschule}
+	by={Sondaschule},
+	sr={\url{https://www.youtube.com/watch?v=brJpZH18yh0}}
 ]
 
 \begin{otherlanguage}{ngerman}
 
-\beginverse*
-\lrep {\nolyrics \[F] \[Am] \[Em] \[Am]} \rrep \rep{2}
-\endverse
+\begin{lilypond}
+
+    \score {
+        <<
+          \chords {
+            \override ChordName.font-shape = #'italic
+            f1 a:m e:m a:m
+          }
+         
+           
+                  \new RhythmicStaff \relative {
+                    \time 4/4
+                    \tempo 4 = 80
+                    \improvisationOn
+                    \repeat volta 2 {
+                    a4 8. 16 4 8. 16  a4 8. 16 4 8. 16  a4 8. 16 4 8. 16  a4 8. 16 4 8. 16  } 
+                    
+                   
+                  }
+                  
+        >>
+      }
+\end{lilypond}
 
 \beginverse\memorize
 Ich verpiss' mich heute \[F]Nacht aus dem spießigen \[Am]Leben

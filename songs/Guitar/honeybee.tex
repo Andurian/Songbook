@@ -1,5 +1,6 @@
 \beginsong{Honeybee}[
-	by={Steam Powered Giraffe}
+	by={Steam Powered Giraffe},
+	sr={\url{https://www.youtube.com/watch?v=ojYK6CW8gdw}}
 ]
 %
 \begin{infotext}
@@ -8,19 +9,19 @@ Unterstrichene Textzeilen können mit Backing Vocals unterlegt werden.
 \end{infotext}
 \vspace*{-2em}
 %
-\beginverse*
-Intro:
-\begin{normalsize}
-\begin{lstlisting}
-e |---------3---3-----------------------------------------------------|
-B |-------1---1---1-------0-----0---------1-----1----------1------1---|
-G |-----0---------------0-----0---------2-----2----------0------0---0-|
-D |---2---------------2-----------0---2-----------0----2--------------|
-A |-3-------------------------------0----------------3----------------|
-E |-----------------0-------------------------------------------------| x3  
-\end{lstlisting}
-\end{normalsize}
-\endverse
+\begin{lilypond}
+\score {
+	<<
+		\new TabStaff \relative {
+		\tempo \markup {Swing}
+		\time 4/4
+		\repeat volta 3 {
+			c8 e g c g' c, g' c, e,, e' g b ~ b g b d, a e' a c ~ c a c d, c e g c ~ c g c g     
+		}
+		}
+	>>
+	}
+\end{lilypond}
 
 \beginverse\memorize
 \[C]--- You didn't have to look my way

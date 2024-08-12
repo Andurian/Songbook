@@ -1,19 +1,26 @@
 \beginsong{Blau wie das Meer}[
-	by={Mr.~Hurley \& die Pulveraffen}
+	by={Mr.~Hurley \& die Pulveraffen},
+	sr={\url{https://www.youtube.com/watch?v=TgDXGQYib8k}}
 ]
 
-\begin{infotext}
-Mit Instrumentalbegleitung:
-	\begin{itemize}
-		\item Intro zweimal spielen
-		\item Refrain ohne Gesang wiederholen
-	\end{itemize}
-\end{infotext}
-
-\beginverse*
-\[C] \[F] \[Am] \[G]
-\[C] \[F] \[Am] \[G] \[C] \[G] \[C]
-\endverse
+\textnote{Melodie nach jedem Refrain wiederholen}
+\begin{lilypond}
+\score {
+  <<
+    \chords {
+      \override ChordName.font-shape = #'italic
+      s4 c1 f a:m g c f a2:m g c4 g c2
+    }
+   
+      \new Staff \relative {
+        \partial 4 e''8 d | 
+        c4. d8 e g4. a8. g16 a8 g e c4. a'8. g16 a8 g e c4 g'8 f e d e d4 e8 d 
+        c4. d8 e g4. a8. g16 a8 g e c4. a'8. g16 a8 g e d e d c4 ~ 4 r2
+      }
+    
+  >>
+}
+\end{lilypond}
 
 \beginverse\memorize
 Schon als \[Am]Schiffsjunge hab ich meine \[F]Seele ver\[G]kauft
@@ -38,16 +45,13 @@ Doch ^wär für uns das Wasser zum ^trinken ge^dacht
 
 \newpage
 
-\textnote{Gesprochen und verkatert}
-
 \beginverse
+\textnote{Gesprochen und verkatert}
 ^Gestern Abend habe ich wohl ^ein' zu viel ge^habt
 ich ^wache auf und hab in meiner ^Koje wenig Platz
 ich ^drehe mich nach Steuerbord und ^was muss ich da ^seh'n?
 In ^meinem Bett liegt nackt die Frau ^vom \[G]Ka\[G]pi\[G]tän
 \endverse
-
-\textnote{Refrain normal ohne Wiederholung}
 
 \beginchorus
 Sie war \[C]blau wie das Meer \[F]voll wie unser Laderaum
@@ -56,7 +60,26 @@ Sie war \[C]blau wie das Meer ge\[F]laden wie ein Bordgeschütz
 und \[Am]dichter als der \[G]Nebel vor Kap \[C]Ho-\[G]o-\[C]orn
 \endchorus
 
-\textnote{Halftime}
+\textnote{Ohne Melodiewiederholung Transition in Halftime \sfrac{6}{8}}
+\begin{lilypond}
+\score {
+  <<
+    \chords {
+      \override ChordName.font-shape = #'italic
+      f2. c g c f c g s 
+      f   c g c f c g 
+    }
+   
+      \new Staff \relative {
+        \time 6/8
+        f'2 g8 a g2 e8 c d2 c8 d e4 f8 g4. f2 g8 a g2 e8 c d2 b'8 c b d c b a g \break
+        f2  g8 a g2 e8 c d2 c8 d e4 f8 g4. f2 g8 a g2 b8 c b d c b4.
+      }
+    
+  >>
+}
+\end{lilypond}
+
 \beginverse
 Und \[F]kann ich mich morgens noch \[C]daran erinnern \[G]wo ich einge\[C]schlafen bin
 \[F]muss das Gelage wohl \[C]trostlos gewesen \[G]sein 
@@ -64,12 +87,7 @@ Wir \[F]liegen viel länger im \[C]Seemannsgrab als \[G]dass wir lebendig \[C]si
 also \[F]gießt den drei Ma\[C]trosen noch einen \[G]ein
 \endverse
 
-\textnote{Refrain ohne Begleitung}
-\textnote{Refrain}
+\textnote{Refrain ohne Gitarre $\rightarrow$ Refrain $\rightarrow$ Melodieoutro}
 
-\beginverse*
-\[C] \[F] \[Am] \[G]
-\[C] \[F] \[Am] \[G] \[C] \[G] \[C]
-\endverse
 
 \endsong

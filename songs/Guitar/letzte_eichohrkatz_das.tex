@@ -1,17 +1,35 @@
 \beginsong{Das letze Eichohrkatz}[
-    by={Die Irrlichter}
+    by={Die Irrlichter},
+    sr={\url{https://www.youtube.com/watch?v=KX2wGENVzIs}}
 ]
 
 \begin{otherlanguage}{ngerman}
 
-\beginverse*
-{\nolyrics 
-\[Am] \[Dm] \[Am]
-\[G] \[Em] \[Am]
-\[Dm] \[Am]
-\[G] \[Em] \[Am]
-}
-\endverse
+\begin{lilypond}
+    \score {
+        <<
+          \chords {
+            \override ChordName.font-shape = #'italic
+             a2.:m d4.:m a:m g2. e4.:m a:m d2.:m a:m g e4.:m a:m a:sus2 a:m a:sus2
+          }
+      
+          \new StaffGroup
+          <<
+            \new Staff \relative {
+              \time 6/8 
+                e''2. d4. c b2. ~ b8 c d e4. 
+                d2. c b2. ~ b8 c d e4. ~
+                \time 9/8
+                  e4. ~ e4. ~e4. 
+              }
+            \new RhythmicStaff {
+              \improvisationOn
+              \repeat percent 8 { a8 16 16 16 16 a8 16 16 16 16 } 8 16 16 16 16  8 16 16 16 16  8 16 16 16 16
+            }
+          >>  
+        >>
+      }
+\end{lilypond}
 
 \beginverse\memorize
 Das \[Am]Eichohrkätzchen gar \[Dm]lieblich zu \[Am]schauen
@@ -85,14 +103,32 @@ Sie ^spürten die Aura des ^heil'gen Gebein
 Und ^jagten den Unhold sie ^holten ihn ^ein
 \endverse
 
-\textnote{Solo (optional)}
-\beginverse*
-{\nolyrics \lrep \[(Am)] \[Dm] \[Am]
-\[G] \[Em] \[Am]
-\[Dm] \[Am]
-\[G] \[Em] \[Am] \rrep
-}
-\endverse
+\begin{lilypond}
+    \score {
+        <<
+          \chords {
+            \override ChordName.font-shape = #'italic
+             a2.:m d4.:m a:m g2. e4.:m a:m d2.:m a:m g e4.:m a:m a:sus2 a:m a:sus2
+             a2.:m d4.:m a:m g2. e4.:m a:m d2.:m a:m g e4.:m a:m a:sus2 a:m a:sus2
+          }
+      
+
+            \new Staff \relative {
+              \time 6/8 
+                e''2. d4. c b2. ~ b8 c d e4. 
+                d2. c b2. ~ b8 c d e4. ~
+                \time 9/8
+                  e4. ~ e4. ~e4. 
+                \time 6/8
+                 d2. c b2. ~ b8 c d e4.
+                 d2. c b2. ~ b4. a4. ~
+                 \time 9/8
+                  a4. ~ a4. ~a4. 
+              }
+            
+        >>
+      }
+\end{lilypond}
 
 \beginverse\replay
 Peri^anna singt Lieder von ^Frieden und ^Glück

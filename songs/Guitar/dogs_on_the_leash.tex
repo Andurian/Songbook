@@ -1,0 +1,168 @@
+\beginsong{Dogs on the Leash}[
+    by={The O'Reillys and the Paddyhats},
+    sr={\url{https://www.youtube.com/watch?v=yqMRAHs0oyQ}}
+]
+\vspace{-2em}
+\begin{lilypond}
+    \score {
+        <<
+          \chords {
+            \override ChordName.font-shape = #'italic
+            s8 e2:m c g e:m a:m g d1 a2:m g e2.:m
+          }
+            
+          \new StaffGroup
+          <<
+            \new Staff \relative {
+              \key g \minor
+              \time 4/4
+              \partial 8 g'16 bes
+              \repeat volta 2 { 
+                d8 d4 g,16 bes es8 es4 d16 es 
+                f8. f es8 d2
+              }
+              \alternative{
+                { 
+                  c8. c d8 c8. bes bes8
+                  c8 bes a bes a g f g16 bes
+                }
+                {
+                  c8. c d8 c8 bes a f
+                  g8. g f8 g4
+                }
+              } 
+            }
+            
+            \new RhythmicStaff {
+              \improvisationOn
+              s8 a8 8. 16 16 16 8 8. 16 16 16
+              16 16 16 8. 8 8 8. 16 16 16
+              8. 8. 8 8. 8. 8
+              8 8 8 8 8 8 16 16 16 16
+              8. 8. 8 8 8. 16 16 16
+              16 16 16 8. 8 4
+            }
+          >>  
+        >>
+      }
+\end{lilypond}
+
+\beginverse\memorize
+I \[Em]heard them \[C]say they \[D]wanted \[Em]change
+\[C]Think they're not the \[G]only ones \[D]bein' \[Em]strange
+But I \[Em]know a \[C]way, oh \[D]I can make them \[Em]stop
+A \[C]trunk full of \[G]drugs and a \[D]box of beer on \[Em]top
+\endverse
+\vspace{-1em}
+\beginchorus
+Keep the \[G]dogs on the \[C]leash, keep them \[G]calm \echo{keep them calm!}
+A \[Em]dog on a \[G]leash means \[D]no harm
+Keep the \[G]dogs on the \[C]leash, hold them \[G]tight \echo{hold them tight!}
+A \[Em]dog on a \[G]leash he \[D]won't bite
+Shut their \[G]eyes and \[C]ears, give them \[Em]drugs and \[D]beers
+Keep the \[Em]bastards \[C]silent, don't \[D]trigger their a\[G]larm
+\endchorus
+
+\textnote{Begleitung Chorus}
+\begin{lilypond}
+
+    \score {
+        <<
+          \chords {
+            \override ChordName.font-shape = #'italic
+            e1:m g2 c g1 e2:m g d1 d1 g2 c e:m d e:m c d g
+          }
+            
+          \new StaffGroup
+          <<
+            \new Staff \relative {
+              \key g \minor
+              \time 4/4
+              f'4 g8. g f4.
+              \repeat volta 2 { 
+                d'4 d8 c bes4 bes8 g f4. g8 f4 bes8 c d4 d8 f d c bes c ~ 
+              }
+              \alternative{
+                { 
+                  c c ~ c2 bes8 c
+                }
+                {
+                  c c ~ c2 bes4 
+                }
+              } 
+              f'4. f8 f4 es8 d
+              es4 d c bes8 c
+              d4 d c8 bes4 bes8 
+              c16 bes8 bes8. a8 bes2
+            }
+            
+            \new RhythmicStaff {
+              \improvisationOn
+              a4 8. 8. 4. \repeat percent 3 { 8 8. 16 16 16 8 8. 16 16 16}
+            }
+          >>  
+        >>
+      }
+\end{lilypond}
+\vspace{-1em}
+\textnote{Repeat Intro}
+\vspace{-1em}
+\beginverse\replay
+I've ^got the ^task to ^keep them ^cryin'
+So ^I devised a ^plan to ^avoid their ^riot
+Most ^people ^are so ^easy to se^duce
+I ^keep on ^waving my ^fake flag of ^truth
+\endverse
+\vspace{-1em}
+\textnote{Chours $\rightarrow$ Chorus Halftime}
+\vspace{-1em}
+\textnote{Melody $\rightarrow$ Bridge $\rightarrow$ Melody $\rightarrow$ (Bridge + Melody)}
+\begin{lilypond}
+
+    \score {
+        <<
+          \chords {
+            \override ChordName.font-shape = #'italic
+            e1:m e2.:m c4 e1:m c2 d e1:m
+          }
+            
+          \new StaffGroup
+          <<
+            \new Staff \relative {
+              \key g \minor
+              \time 4/4
+                g'8. bes16 c8. d16 c8. bes16 g8. f16 
+                g8. bes16 c8. d16 c4 bes
+                g8. bes16 c8. d16 c8. bes16 g8. f16 
+                bes8. a16 g8. f16 a4 d,
+                g1
+      
+            }
+            
+            \new RhythmicStaff {
+              \improvisationOn
+              a8. 16 \xNotesOn a8. 16 a8. 16 a8. 16 \xNotesOff
+              a8. 16 \xNotesOn a8. 16 a8. 16 \xNotesOff a4
+              a8. 16 \xNotesOn a8. 16 a8. 16 a8. 16 \xNotesOff
+              a8. 16 4 8. 16 4 
+              1
+            }
+          >>  
+        >>
+      }
+\end{lilypond}
+%
+\beginverse*
+\[Em] We won't, \[Em] we won't \[Em] We won't, we \[C]won't \[Dadd9add11]back \[Em]off
+We will, \[Em] we will \[Em] We will \[C]free ourselves \[Dadd9add11]from the \[Em]leash
+\endverse
+\textnote{Softly, only strum each chord once}
+\beginchorus
+Keep the \[G]dogs on the leash, keep them calm
+A \[Em]dog on a leash means no harm
+Shut their \[G]eyes and ears, give them \[Em]drugs and \[D]beers
+Keep the \[Em]bastards \[C]silent, don't \[D]trigger their \[Em]alarm
+\endchorus
+\textnote{Repeat regular chorus}
+
+\endsong

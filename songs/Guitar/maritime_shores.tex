@@ -1,0 +1,145 @@
+\beginsong{Maritime Shores}[
+    by={Thrawsunblat},
+    sr={\url{https://www.youtube.com/watch?v=OTy43a8M9xU}}
+]
+
+\newchords{maritime_shores_verse}
+\newchords{maritime_shores_chorus}
+
+\begin{lilypond}
+
+    \score {
+        <<
+          \chords {
+            \override ChordName.font-shape = #'italic
+            s2. s4 g2 a2.:m e:m a:m g a:m f e:m s2. s2. g s a:m s s g a:m s s g
+          }
+         
+            \new StaffGroup
+                <<
+                  \new Staff \relative {
+                    \time 3/4
+                    \key d \minor
+                    r2. r2.
+                    \repeat volta 2 {
+                      r4 g''8 f g4 d4. f4 g8 r4 g8 f g4 c,4. bes4 a8 g r g' f g4 bes4. c4  d8 a2 ~ a8 g 
+                    }
+                    \alternative {
+                      { f4. g8 a bes }
+                      { f4. g8 a bes ~ }
+                    }
+                    bes4. g8 a bes ~ bes4 g8 a bes a g2.^"Skip to 2nd Refrain" d bes a4 bes c d2. bes g r2.
+                  }
+                  \new RhythmicStaff {
+                    \xNotesOn
+                     a4 r8 8 8 8 4
+                     \improvisationOn
+                     8 8 8 8
+                     4 r8 8 8 8
+                     \repeat percent 2 {4 r8 8 8 8}
+                  }
+                >>
+        >>
+      }
+\end{lilypond}
+
+\beginverse\memorize[maritime_shores_verse]
+I've \[Am]seen this continent's \[Em]oceans, and \[Am]all its creatures in \[G]motion.
+But a\[F]bove it all for \[Em]splendour stands the \[C]bri\[G]ny Mari\[Am]times.
+
+Where the \[Am]mist and the \[Em]rain Blast \[Am]life into \[G]me,
+And the \[F]old white \[Em]pines stand \[C]guard \[G]over the \[Am]sea
+Stand \[C]guard \[G]over the \[Am]sea.
+\endverse
+
+\beginchorus\memorize[maritime_shores_chorus]
+\[Am]Though I have \[Em]left her as \[Am]ofttime \[G]before
+\[C]Oh how I \[G]long for her \[Am]Maritime shores
+\[Am]I am but \[Em]one of a \[Am]thousand of \[G]lore
+\[C]Oh how I \[G]long for her \[Am]Maritime shores
+\[C]Oh how I \[G]long for her \[Am]Maritime shores.
+\endchorus
+
+\textnote{Repeat Intro}
+
+\newpage
+\textnote{Chorus Melodie -- High voice in 2nd repeat}
+
+\begin{lilypond}
+    \score {
+        <<
+          \chords {
+            \override ChordName.font-shape = #'italic
+            a2.:m e:m a:m g c g a:m s s e:m a:m g c g a:m s c g a:m
+          }
+         
+      
+                  \new Staff \relative {
+                    \time 3/4
+                    \key d \minor
+                    <g' g'>2. <a a'> <bes bes'> <a a'> <bes bes'> <a a'> <a a'>4 <g g'>2 <g g'>2. <g g'> <a a'> <bes bes'> <c c'> <d d'> <c c'> <bes bes'>4 <a a'>8 <f f'> ~ <f f'>4 <g g'>2. <bes bes'> <c c'> <c c'>4 <d d'>8 <d d'>4 <d d'>8 ~ <d d'>2.
+                  }
+      
+        >>
+      }
+\end{lilypond}
+
+\beginverse\replay[maritime_shores_verse]
+Though I've ^lost myself in the ^greenery, and ^all other distant ^scenery,
+^None match the ^climes of the ^mis^ty Mari^times.
+
+^Elsewhere pipes are ^singing, and ^strings and drums are ^ringing.
+But ^none with the ^life of the ^bri^ny Mari^times
+of the ^bri^ny Mari^times.
+\endverse
+
+\begin{lilypond}
+
+    \score {
+        <<
+          \chords {
+            \override ChordName.font-shape = #'italic
+            a2.:m s e:m s a:m s g s f s e:m s c g a:m s s s e:m a:m s g s f s e:m s c g a:m s c g a:m s
+          }
+         
+           
+                  \new Staff \relative {
+                    \time 3/4
+                    \key d \minor
+                    g''2. ~ g ~ g4 ~ g8 f g f g f d4 c d2. ~ d c \tuplet 3/2 {bes8 c bes} a4 f g2. ~ g r4. a bes c d2. c bes r4 f' g g2. ~ g r4. bes a f d2. ~ d r4. f d c bes2. ~ bes
+                    c d d c bes ~ bes4 c d d2. f g ~ g
+                   
+                  }
+                  
+        >>
+      }
+\end{lilypond}
+
+\textnote{Outro}
+\begin{lilypond}
+
+    \score {
+        <<
+          \chords {
+            \override ChordName.font-shape = #'italic
+            a2.:m f c g a:m f c g a:m f c g a:m f c g a:m
+          }
+         
+           
+                  \new Staff \relative {
+                    \time 3/4
+                    \key d \minor
+                    \repeat volta 2 {
+                    g'2 d'8 c d4 g,2 f2. c'8 bes c bes c bes 
+                    g2  d'8 c d4 g,2 f4 c'8 bes c bes \tuplet 3/2 {bes16 c bes} a8 g f d a' 
+                    g2  d'8 c d4 g,2 f2. c'8 bes c bes c bes  
+                    g2  d'8 c d4 g,2 f4. bes4 c8 d4 bes f } 
+                    g2.
+                   
+                  }
+                  
+        >>
+      }
+\end{lilypond}
+
+\endsong

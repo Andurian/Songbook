@@ -1,0 +1,111 @@
+\beginsong{Delmenhorst}[
+    by={Element of Crime},
+    sr={\url{https://www.youtube.com/watch?v=ymRnuhrAp8k}}
+]
+
+\newchords{delmenhorst_verse}
+\newchords{delmenhorst_chorus}
+
+\begin{lilypond}
+melody = \relative {
+    \repeat volta 2 {
+        b'8 d g8. fis d b 
+    }
+    \alternative{
+        { c8 e g8. fis ~ fis4 c8 }
+        { c8 e g8. fis ~ fis4.}
+    }
+    g1
+    }
+    
+    \score {
+    <<
+        \chords {
+        \override ChordName.font-shape = #'italic
+        \set majorSevenSymbol = \markup { maj7 }
+        g1 c:maj7 c:maj7 g
+        }
+            
+    
+        \new StaffGroup 
+        <<   
+        \new Staff {
+            \time 4/4
+            \tempo 4 = 100
+            \key g \major
+            \melody
+        }    
+        \new TabStaff{
+            \key g \major
+            \set TabStaff.minimumFret = #7
+            \set TabStaff.restrainOpenStrings = ##t
+            \transpose a a, \melody
+        }
+        \new RhythmicStaff \relative {
+            \improvisationOn
+            c8 8 8 16 8 16 8 16 16 16 16
+            \repeat percent 3 {c8 8 8 16 8 16 8 16 16 16 16}  
+        }
+        >>              
+    >>
+    }
+\end{lilypond}
+
+\beginverse\memorize[delmenhorst_verse]
+\[G] Ich bin jetzt immer da, wo \[Cmaj7]du nicht bist
+\[G] Und das ist immer Delmen\[Cmaj7]horst
+\[Am] Es ist schön, wenn's nicht mehr \[G]weh tut
+\[Am] Und wo zu sein, wo du nie \[D7]warst
+\endverse
+ 
+\beginchorus\memorize[delmenhorst_chorus]
+\[Bm] Hinter Huchting ist ein \[Am]Graben
+\[D7] Der ist weder breit noch \[Cmaj7]tief
+\[G] Und dann kommt gleich Getränke \[Am]Hoffmann
+\[Cm] Sag Bescheid, wenn du mich \[G]liebst
+\endchorus
+
+\textnote{Repeat Intro}
+
+\beginverse\replay[delmenhorst_verse]
+^ Ich hab jetzt Sachen an, die ^du nicht magst
+^ Und die sind immer grün und ^blau
+^ Ob ich wirklich Sport be^treibe
+^ Interessiert hier keine ^Sau
+\endverse
+
+\beginchorus\replay[delmenhorst_chorus]
+^ Hinter Huchting ist ein ^Graben
+^ Der in die Ochtum sich er^gießt
+^ Und dann kommt gleich Getränke ^Hoffmann
+^ Sag Bescheid, wenn du mich ^liebst
+\endchorus
+
+\beginverse\replay[delmenhorst_verse]
+^ Ich mach jetzt endlich alles ^öffentlich ^ Und erzähle, was ich ^weiß
+^ Auf der Strasse der Ve^dammten ^ Die hier Bremer Straße ^heißt
+\endverse
+
+\beginchorus\replay[delmenhorst_chorus]
+^ Hinter Huchting ist ein ^Graben
+^ In den sich einer über^gibt
+^ Und dann kommt gleich Getränke ^Hoffmann
+^ Sag Bescheid, wenn du mich ^liebst
+\endchorus
+
+\textnote{Solo over Verse + Chrous}
+
+\beginverse\replay[delmenhorst_verse]
+^ Ich bin jetzt da, wo ich mich ^haben will
+^ Und das ist immer Delmen^horst
+^ Erst wenn alles scheiße^gal ist ^ Macht das Leben wieder ^Spaß
+\endverse
+ 
+\textnote{Repeat First Chorus}
+
+\beginchorus\replay[delmenhorst_chorus]
+\[Cm] Sag Bescheid, wenn du mich \[G]liebst
+\[Cm] Sag Bescheid, wenn du mich \[G]liebst
+\endchorus
+
+\endsong

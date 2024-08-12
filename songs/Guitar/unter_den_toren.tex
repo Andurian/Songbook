@@ -1,26 +1,80 @@
 \beginsong{Unter den Toren}[
-	by={Traditional}
+  by={Die Streuner},
+  sr={\url{https://www.youtube.com/watch?v=nD3Iy-47nDU}}
 ]
 
 \begin{infotext}
-Angenehmer zu singen, wenn die Gitarre einen Ganzton tiefer gestimmt ist.
+Angenehmer zu singen (und zu spielen), wenn die Gitarre einen Ganzton tiefer gestimmt ist.\\
+Melodie nach jedem Chorus (außer dem letzen) wiederholen.
 \end{infotext}
 
-\beginverse*
-\[Dm] \[C] \[F] \[A]
-\endverse
+\textnote{Melodie Original}
+\vspace{-1em}
+\begin{lilypond}
+  \score {
+    <<
+      \chords {
+        \override ChordName.font-shape = #'italic
+        d2.:m f g:m a:7
+      }
+      
+      \new StaffGroup
+      <<
+        \new Staff \relative {
+          \time 6/8 
+          \key d \minor
+          \repeat volta 2 { a''2 g8 e a2 g8 a bes2 c8 bes a2. }
+        }
+        
+        \new RhythmicStaff {
+          \improvisationOn
+          \repeat percent 4 {a8. 16 8 8 16 16 16 16}
+        }
+    >>
+  >>
+}
+\end{lilypond}
+
+\textnote{Melodie Ganzton tiefer}
+\vspace{-1em}
+\begin{lilypond}
+  \score {
+    <<
+      \chords {
+        \override ChordName.font-shape = #'italic
+        d2.:m f g:m a:7
+      }
+      
+      \new StaffGroup
+      <<
+        \new Staff \relative {
+          \time 6/8
+          \transpose a g {
+            \key d \minor \relative{
+              \repeat volta 2 { a''2 g8 e a2 g8 a bes2 c8 bes a2. }
+            }
+          }
+        }
+        
+        \new RhythmicStaff {
+          \improvisationOn
+          \repeat percent 4 {a8. 16 8 8 16 16 16 16}
+        }
+    >>
+  >>
+}
+\end{lilypond}
 
 \beginverse\memorize
 \[Dm]Unter den Toren, im \[C]Schatten der Stadt, 
-schläft man \[B]gut, wenn man sonst keine \[A]Schlafstelle hat. 
-\[Dm]Keiner, der \[C]fragt nach Wo\[F]her und Wo\[G]hin, 
-und zu \[Dm]kalt ist die \[Am]Nacht für Gen\[Dm]darmen. 
+schläft man \[B&]gut, wenn man sonst keine \[A7]Schlafstelle hat. 
+\[Dm]Keiner, der \[C]fragt nach Wo\[F]her und Wo\[Gm]hin, 
+und zu \[Dm]kalt ist die \[A7]Nacht für Gen\[Dm]darmen. 
 \endverse
 
 \beginchorus
-\lrep \[Dm]He \[C]ho ein \[F]Feuerlein \[C]brennt, 
-\[Dm]kalt ist die \[Am]Nacht für Gen\[Dm]darmen. \rrep \rep{2}
-\[Dm] \[C] \[F] \[A]
+\lrep \[F]He \[C]ho ein \[F]Feuerlein \[C]brennt, 
+\[Dm]kalt ist die \[A7]Nacht für Gen\[Dm]darmen. \rrep \rep{2}
 \endchorus
 
 \beginverse
@@ -52,7 +106,7 @@ denn die ^Sonne bringt ^bald die Gen^darmen.
 \endverse
 
 \beginchorus
-\lrep \[Dm]He \[C]ho das \[F]Feuer ist \[C]aus, 
-\[Dm]bald kommen \[Am]die Gen\[Dm]darmen. \rrep \rep{2}
+\lrep \[F]He \[C]ho das \[F]Feuer ist \[C]aus, 
+\[Dm]bald kommen \[A7]die Gen\[Dm]darmen. \rrep \rep{2}
 \endchorus
 \endsong
