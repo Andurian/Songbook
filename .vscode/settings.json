@@ -1,0 +1,34 @@
+{
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "Songbook Full",
+            "tools": [
+                "lualatex",
+                "index",
+                "lualatex"
+            ]
+        }
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "lualatex",
+            "command": "lualatex",
+            "args": [
+                "-shell-escape",
+                "-interaction=nonstopmode", 
+                "-output-directory=build", 
+                "-jobname=Songbook", 
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "index",
+            "command": "texlua",
+            "args": [
+                "songidx.lua",
+                "build/cbtitle.sxd", 
+                "build/cbtitle.sbx"
+            ]   
+        }
+    ]
+}

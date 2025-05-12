@@ -60,7 +60,7 @@ class SongbookBuilder():
 
         if auxdir is None: 
             self.tempdir = tempfile.TemporaryDirectory(dir='.')
-            self.auxdir = self.tempdir.split(os.sep)[-1]
+            self.auxdir = self.tempdir.name.split(os.sep)[-1]
         else:
             self.tempdir = None
             self.auxdir = auxdir
