@@ -2,11 +2,10 @@
     by={Falkenbach},
     sr={\url{https://www.youtube.com/watch?v=mA5nN65B\_eg}}
 ]
-
+\meter{}{} % We do not want the small meter marks
 \newchords{eweroun_a}
 \newchords{eweroun_b}
 
-\textnote{Intro}
 \begin{lilypond}
     \score {
         <<
@@ -18,19 +17,22 @@
             \new RhythmicStaff \relative {
                 \time 4/4
                 \improvisationOn
+                \sectionLabel \markup { \box { Intro } }
                 b'4 4 4 8 8 4 4 4 8 8 4 4 4 8 8 4 4 4 8 8
             }
         >>
     }
 \end{lilypond}
 
-\textnote{2.~Wdh.~mit Bass}
 \beginverse\memorize[eweroun_a]
+\begin{performanceinstruction}
+First verse after intro with reduced instrumentation and one octave deeper
+\end{performanceinstruction}
 \lrep \[Am]I wintars stilta hvis. \[F]I vor\[Am]jaarns \[E]guldyn \[Am]luiht.
-I \[C]naarjaars bluodin \[G]roud, \[F]naarjaars \[E]bluodin \[Am]roud \rrep
+\[Am]I \[C]naarjaars bluodin \[G]roud, \[F]naarjaars \[E]bluodin \[Am]roud |\[Am] |\[Am] \rrep
+
 \endverse
 
-\textnote{Bridge}
 \begin{lilypond}
     \score {
         <<
@@ -42,6 +44,7 @@ I \[C]naarjaars bluodin \[G]roud, \[F]naarjaars \[E]bluodin \[Am]roud \rrep
             \new RhythmicStaff \relative {
                 \time 4/4
                 \improvisationOn
+                \sectionLabel \markup { \box { Bridge } }
                 b'4 4 4 8 8 4 4 4 8 8 4 4 4 8 8 4 4 4 8 8 4 4 4 8 8 4 4 4 8 8
             }
         >>
@@ -56,7 +59,7 @@ mynotesa =  \relative {
 }
       
 mynotesb =  \relative {
-    a'2-"arco" g8 a g4 e a, a2 a' g8 a g4 c2 \grace{ b16 c } b2 a g8 a g4 e a, a2 \break a' g8 a g4 a2 g a1 r4 e c' \grace{ b16 c } b4 a1
+    a'2-"arco" g8 a g4 e a, a2 a' g8 a g4 c2 \grace{ b16 c } b2 a g8 a g4 e a, a2 \break a' g8 a g4 a2 g a1 r4 e c' \grace{ b16 c } b4 \sectionLabel \markup { \box { Verse } } a1
 }
 
 \score {
@@ -90,7 +93,7 @@ Den \[Am]oude \[C]vandrar waagt fuër \[G]ewer oun en \[Dm]eweroun.
         <<
             \chords {
                 \override ChordName.font-shape = #'italic
-                a1:m s s f2 g d1:m s2 e a:m
+                a1:m s s f2 g a1:m s s f2 g d1:m s2 e a:m \sectionLabel \markup { \box { Verse } }
             }
             
             \new StaffGroup
@@ -102,13 +105,13 @@ Den \[Am]oude \[C]vandrar waagt fuër \[G]ewer oun en \[Dm]eweroun.
     }
     \end{lilypond}
 \vspace{-1em}
-\textnote{Gesamtes Lied ab der ersten Wiederholung wiederholen}
+\textnote{Restart from Verse 1 without repeat.}
 \begin{lilypond}
     \score {
         <<
           \chords {
             \override ChordName.font-shape = #'italic
-            a1:m a:m a:m a:m f f a:m e a:m a:m c c g g f e a:m a:m a:m a:m f f a:m e a:m
+            a1:m a:m a:m a:m f f a:m e a:m a:m c c g g f e a:m a:m a:m a:m f f a:m e a:m 
           }
           
           \new StaffGroup

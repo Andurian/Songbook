@@ -4,12 +4,18 @@
 ]
 
 \begin{infotext}
-Angenehmer zu singen (und zu spielen), wenn die Gitarre einen Ganzton tiefer gestimmt ist.\\
-Melodie nach jedem Chorus (außer dem letzen) wiederholen.
+\textbf{Capo: 0} (Original)\\
+\textbf{Capo: -2} (Personal Comfort)\\
+Song starts with Chorus played without accompaniment.
 \end{infotext}
 
-\textnote{Melodie Original}
-\vspace{-1em}
+\beginchorus
+\lrep \[F]He \[C]ho ein \[F]Feuerlein \[C]brennt, 
+\[Dm]kalt ist die \[A7]Nacht für Gen\[Dm]darmen. \rrep \rep{2}
+\endchorus
+
+\vspace{0.5em}
+
 \begin{lilypond}
   \score {
     <<
@@ -23,6 +29,7 @@ Melodie nach jedem Chorus (außer dem letzen) wiederholen.
         \new Staff \relative {
           \time 6/8 
           \key d \minor
+          \sectionLabel \markup { \box { "Post Chorus" } (Original) }
           \repeat volta 2 { a''2 g8 e a2 g8 a bes2 c8 bes a2. }
         }
         
@@ -35,8 +42,8 @@ Melodie nach jedem Chorus (außer dem letzen) wiederholen.
 }
 \end{lilypond}
 
-\textnote{Melodie Ganzton tiefer}
-\vspace{-1em}
+\vspace{0.5em}
+
 \begin{lilypond}
   \score {
     <<
@@ -49,6 +56,7 @@ Melodie nach jedem Chorus (außer dem letzen) wiederholen.
       <<
         \new Staff \relative {
           \time 6/8
+          \sectionLabel \markup { \box { "Post Chorus" } (For Capo -2) }
           \transpose a g {
             \key d \minor \relative{
               \repeat volta 2 { a''2 g8 e a2 g8 a bes2 c8 bes a2. }
@@ -71,11 +79,6 @@ schläft man \[B&]gut, wenn man sonst keine \[A7]Schlafstelle hat.
 \[Dm]Keiner, der \[C]fragt nach Wo\[F]her und Wo\[Gm]hin, 
 und zu \[Dm]kalt ist die \[A7]Nacht für Gen\[Dm]darmen. 
 \endverse
-
-\beginchorus
-\lrep \[F]He \[C]ho ein \[F]Feuerlein \[C]brennt, 
-\[Dm]kalt ist die \[A7]Nacht für Gen\[Dm]darmen. \rrep \rep{2}
-\endchorus
 
 \beginverse
 ^Silberne Löffel und ^Ketten im Sack, 

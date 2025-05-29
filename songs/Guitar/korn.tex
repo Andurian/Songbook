@@ -2,8 +2,11 @@
     by={Forseti},
     sr={\url{https://www.youtube.com/watch?v=zRRIkpnrO30}}
 ]
-
-\textnote{Intro -- 2.~Gitarre erst in Wdh.~spielen}
+\vspace{-1em}
+\meter{}{}
+\begin{performanceinstruction}
+Second guitar starts at repeat
+\end{performanceinstruction}
 \vspace{-1em}
 \begin{lilypond}
     \score {
@@ -11,17 +14,18 @@
           \chords {
           \override ChordName.font-shape = #'italic
             \repeat volta 2 {
-              e1:m a:m c g e:m a:m c g a2:m c e1:m a2:m b:m
+              s2 e:m a1:m c g e:m a:m c g a2:m c e1:m a2:m b:m
             }
             \alternative {
               { e1:m s }
-              { e1:m s }
+              { e1:m }
             }
           }
           \new StaffGroup
           <<
             \new TabStaff \relative {
               \time 4/4
+              \sectionLabel \markup { \box { Intro } }
               \repeat volta 2 {
                 e,4 g' e' b <a, c'> a' e' c <c, c'> g' e' b <g, b'> g' g' b, 
                 <e,, b''> g' e' b <a, c'> a' e' c <c, c'> g' e' b  <g, b'> g' g' b, 
@@ -29,21 +33,19 @@
               }
               \alternative {
                 { <e,, b''> g' e' b g e' b g }
-                { <e, b' e g b e>1 s }
+                { <e, b' e g b e>1 }
               }
             }
             \new TabStaff \relative {
                 b4 g e b' c a e c' c g e c' b g d b'
                 b g e b' c a e c' c g e c' b g d b'
-                c a c g b g e b' c a d g, s1 s <e, b' e g b e>1 s
+                c a c g b g e b' c a d g, s1 s <e, b' e g b e>1
             }
           >>
         >>
       }
 \end{lilypond}
-
-\textnote{Viola Solo}
-\vspace{-1em}
+%
 \begin{lilypond}
   \score {
     <<
@@ -57,7 +59,8 @@
         \new Staff \relative {
           \time 4/4
             \key g \major
-            g'2 a b1 e, c'2. d4 b2 g4 a b1 e, a4 b c2 b1 c2 d4 c b1 a2 b4 g e1 ~ e
+            \sectionLabel \markup { \box { "Viola Solo" } }
+            g'2 a b1 e, c'2. d4 b2 g4 a b1 e, a4 b c2 b1 c2 d4 c b1 a2 b4 g e1 r
                   
           }
         \new RhythmicStaff {
@@ -68,9 +71,7 @@
     >>
   }
 \end{lilypond}
-
-\textnote{Begleitung Strophe}
-\vspace{-1em}
+\pagebreak
 \begin{lilypond}
     \score {
         <<
@@ -79,13 +80,14 @@
               e1:m a:m c g e:m a:m c g a2:m c e1:m a2:m b:m e1:m s
           }
          
-            \new Staff \relative {
-              \time 4/4
-              \key g \major
-              e'1 c' c b e, c' c b c b a2 b b1 s
+          \new Staff \relative {
+            \time 4/4
+            \key g \major
+            \sectionLabel \markup { \box { "Verse" } (accompaniment) }
+            e'1 c' c b e, c' c b c2 c b1 a2 b b1 r
               
-            }
-         >>
+          }
+        >>
        
     }
 \end{lilypond}
@@ -93,13 +95,13 @@
 \beginverse\memorize
 Glut um \[Em]Glut drängt sich von \[Am]innen einen \[C]Weg durch festen \[G]Stein.
 Glühend \[Em]Adern haltlos \[Am]rinnen, schaffen \[C]strömend neues \[G]Sein.
-Wecken \[Am]bebend \[C]altes \[Em]Sinnen, wecken \[Am]bebend \[Bm]altes \[Em]Sinnen,
+Wecken \[Am]bebend \[C]altes \[Em]Sinnen, wecken \[Am]bebend \[Bm]altes \[Em]Sinnen, |\[Em]
 \endverse
 
 \beginverse\replay
 Blankge^spült vom Fluss der ^Zeiten, wächst he^ran im Welten^schoß
 Schlafend ^noch seit Ewig^keiten, jenes ^Urkorn und ward ^groß.
-Spannte ^steinern ^Flügel^weiten, spannte ^steinern ^Flügel^weiten.
+Spannte ^steinern ^Flügel^weiten, spannte ^steinern ^Flügel^weiten. |^
 \endverse
 
 \beginverse\replay
@@ -107,11 +109,11 @@ Die es ^um die Welt ge^legt, und ge^schliffen einst aus ^Erzen
 Stumm im ^Ozean ge^hegt, wacht es ^über unsere ^Herzen.
 Zeigt uns ^einen ^stillen ^Weg, zeigt uns ^einen ^stillen ^Weg.
 \endverse
-
-\textnote{Viola Solo Wiederholen}
-
-\textnote{Viola + Geige}
-
+%
+\vspace{-0.5em}
+\textnote{Viola Solo}
+\vspace{0.5em}
+%
 \begin{lilypond}
     \score {
         <<
@@ -124,7 +126,8 @@ Zeigt uns ^einen ^stillen ^Weg, zeigt uns ^einen ^stillen ^Weg.
             \new Staff \relative {
               \time 4/4
               \key g \major
-                r2 e''4 fis g1 fis2 g g4 fis e2 e e4 fis g2 g4 a a2 a4 b b1 a2 b4 a g1 fis2 e4 d e1~e
+              \sectionLabel \markup { \box { "Melody A" } (Viola & Violin) }
+              r2 e''4 fis g1 fis2 g g4 fis e2 e e4 fis g2 g4 a a2 a4 b b1 a2 b4 a g1 fis2 e4 d e1~e
               }
             \new Staff \relative {
                \key g \major
@@ -137,7 +140,6 @@ Zeigt uns ^einen ^stillen ^Weg, zeigt uns ^einen ^stillen ^Weg.
 
 \pagebreak
 
-\textnote{Geige (+ Generelle Begleitung)}
 \begin{lilypond}
     \score {
         <<
@@ -150,7 +152,8 @@ Zeigt uns ^einen ^stillen ^Weg, zeigt uns ^einen ^stillen ^Weg.
             \new Staff \relative {
               \time 4/4
               \key g \major
-                r2 e'4 fis g a b a d'2 c b4 a g2 g g4 a b2 d c b4 a b1 a2 b4 a g1 fis2 e4 d e1 ~ e
+              \sectionLabel \markup { \box { "Melody B" } (2nd voice is Verse accompaniment) }
+                r2 e'4 fis g a b a d2 c b4 a g2 g g4 a b2 d c b4 a b1 a2 b4 a g1 fis2 e4 d e1 ~ e
               }
           
                   \new Staff \relative {
@@ -169,24 +172,21 @@ Zeigt uns ^einen ^stillen ^Weg, zeigt uns ^einen ^stillen ^Weg.
 \beginverse\replay
 Der da ^führt durch dunkle ^Stunden, durch Ge^äst der Zeiten^wende.
 Bleibt dem ^Berge tief ver^bunden, der schon ^wartet auf sein ^Ende.
-Das ihm ^quillt aus ^alten ^Wunden, das ihm ^quillt aus ^alten ^Wunden.
+Das ihm ^quillt aus ^alten ^Wunden, das ihm ^quillt aus ^alten ^Wunden. |^
 \endverse
 
 \beginverse\replay
 Korn, das ^wuchs in schwarzer ^Tiefe, birgt ein ^Sehnen gleich dem ^Stern,
 Den man ver^loren nächtens ^riefe. Doch ver^schlossen bleibt sein ^Kern
-In dem ^jenes ^Hoffen ^schliefe, in dem ^jenes ^Hoffen ^schliefe.
+In dem ^jenes ^Hoffen ^schliefe, in dem ^jenes ^Hoffen ^schliefe. |^
 \endverse
 
 \beginverse\replay
 Doch kein ^Mensch begreift sein ^Sinnen. Losge^löst bleibt der Ver^stand.
 Erst im ^Traum streift man die ^Schwingen, die dem ^Wachen unbe^kannt.
-Und dem ^Korn sein ^Sehnen ^bringen, und dem ^Korn sein ^Sehnen ^bringen.
+Und dem ^Korn sein ^Sehnen ^bringen, und dem ^Korn sein ^Sehnen ^bringen. |^
 \endverse
 
-\vspace{-1em}
-
-\textnote{Flöte $2\times$}
 \begin{lilypond}
     \score {
         <<
@@ -198,6 +198,7 @@ Und dem ^Korn sein ^Sehnen ^bringen, und dem ^Korn sein ^Sehnen ^bringen.
             \new Staff \relative {
               \time 4/4
               \key g \major
+              \sectionLabel \markup { \box { "Melody C" } (Flute 2x) }
                 \repeat volta 2 {
                 b''4 b b a8 g ~ g4 g g fis e e e g8 b ~ b1 b4 b b a8 g ~ g4 g g fis e e e g8 b ~ b1 c4 c d c8 b ~ b4 b a g a a g fis8 e ~ e1 ~ e
                 }
@@ -225,7 +226,7 @@ Und dem ^Korn sein ^Sehnen ^bringen, und dem ^Korn sein ^Sehnen ^bringen.
             r4 b4 c b e2 e4 fis g b, e2 g4 fis e fis g d d c b2 a4 g a2 d2 d4 e g a b2. a8 b c2 d4 c b1 a2 g4 fis e1 r \break
             g1 a4 b a c ~ c2 b4 a b2 d4 e8 fis g2 g4 a b a2. e4 g2 fis4 d1 c2 d4 c b1 a2 g4 fis e1 r \break
             r2 e'4 fis g1 fis2 e4 d \grace{d8} c2 b b b4 c d2 c c4 a d a b1 c2 d4 c b a g2 fis g4 fis e1 r \break
-            g'8 fis g a b a g4 g8 fis g a b a g fis g a g fis g fis e d e fis g fis g d g d e d c d c b c a b g a g fis g fis e e fis e fis g fis e d e4 e8 fis g2 g8 a b a g fis e d e2 e e8 b e fis g fis e d e2 e r1 
+            g'8 fis g a b a g4 g8 fis g a b a g fis g a g fis g fis e d e fis g fis g d g d e d c d c b c a b g a g fis g fis e e fis e fis g fis e d e4 e8 fis g2 g8 a b a g fis e d e2 e e8 b e fis g fis e d e2 e 
               
           }
         >>
@@ -236,7 +237,7 @@ Und dem ^Korn sein ^Sehnen ^bringen, und dem ^Korn sein ^Sehnen ^bringen.
         <<
           \chords {
             \override ChordName.font-shape = #'italic
-            s1 e1:m a:m c g e:m a:m c g a2:m c e1:m a2:m b:m e1:m s
+            s1 e1:m a:m c g e:m a:m c g a2:m c e1:m a2:m b:m e1:m
           }
           \new StaffGroup
           <<

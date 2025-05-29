@@ -4,8 +4,8 @@
 ]
 
 \begin{infotext}
-Wenn eine Melodiebegleitung existiert, kann das Intro mit gespielt werden.\\
-Angenehmer zu singen, wenn einen Ganzton tiefer gestimmt.
+\textbf{Capo: -2} (Personal comfort if no additional instrument is present)\\
+Play instrumental post chous after regular chorus every other time (marked places).
 \end{infotext}
 
 \newchords{maenner_mit_baerten_verse}
@@ -26,6 +26,7 @@ Angenehmer zu singen, wenn einen Ganzton tiefer gestimmt.
     \relative c' {
       \key g \major
       \time 6/8
+      \sectionLabel \markup { \box { "Intro / Post Chorus" } }
       \partial 8 b8 |
       e4 fis8 g4 a8 g4 fis8 e4 b8 e4 fis8 g4 a8 g4 fis8 e4. |
       e'4 fis8 g4 a8 g4 fis8 e4 b8 e4 fis8 g4 a8 g4 fis8 e4. |
@@ -62,7 +63,7 @@ Angenehmer zu singen, wenn einen Ganzton tiefer gestimmt.
 ^Müssen ^Männer mit ^Bärten ^sein
 \endverse
 
-\textnote{Nach Chorus Intro mit Melodie wiederholen}
+\textnote{Post Chorus}
 
 \beginverse\replay[maenner_mit_baerten_verse]
 ^Alle die ^mit uns das ^Walross ^töten
@@ -78,7 +79,7 @@ Angenehmer zu singen, wenn einen Ganzton tiefer gestimmt.
 ^Müssen ^Männer mit ^Bärten ^sein
 \endverse
 
-\textnote{Nach Chorus Intro mit Melodie wiederholen}
+\textnote{Post Chorus}
 
 \beginverse\replay[maenner_mit_baerten_verse]
 ^Alle die ^endlich zur ^Hölle mit ^fahren

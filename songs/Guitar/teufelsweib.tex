@@ -6,9 +6,6 @@
 \newchords{teufelsweib_verse}
 \newchords{teufelsweib_bridge}
 \newchords{teufelsweib_chorus}
-\vspace{-1em}
-\textnote{Zweite Hälfte des Intros vor jedem Vers wiederholen}
-\vspace{-1em}
 \begin{lilypond}
     \score {
         <<
@@ -21,6 +18,7 @@
           <<
             \new Staff \relative{
               \time 4/4
+              \sectionLabel \markup { \box { "Intro" } }
               \repeat volta 2{
               a'8 a16 a16 ~ a8 b c b a g 
               a8 a16 a16 ~ a8 g a g e4
@@ -61,6 +59,8 @@ Wenn \[Am]man sie auf der \[C]Straße \[G]traf, \[Am]schimpfte man, ver\[C]fluch
 \[Am]Manchmal man auch \[C]Steine \[G]warf. \[Am]In der Kirche  \[F]war \[E]sie \[Am]nie. \[Em] \[G]
 \endverse
 
+\textnote{Intro (without repeat)}
+
 \beginverse\replay[teufelsweib_verse]
 Fühl^te mich zu ihr ^hinge^zogen, es ^kribbelte, wenn ^ich sie ^sah.
 Es ^wallten in mir ^Hitze^wogen, ^wenn sie nur in ^meiner ^Nähe ^war. ^ ^
@@ -68,9 +68,8 @@ Mein ^Vater sagte: ^Lass das ^sein! Das ^Weib ist keine ^Frau für ^dich.
 ^Sie ist anders, ^nicht mehr ^rein. Hör ^auf das, was dein ^Va^ter ^spricht!. ^ ^
 \endverse
 
-\newpage
+\pagebreak
 
-\textnote{Melodie Bridge}
 \begin{lilypond}
     \score {
         <<
@@ -82,6 +81,7 @@ Mein ^Vater sagte: ^Lass das ^sein! Das ^Weib ist keine ^Frau für ^dich.
           
             \new Staff \relative{
               \time 4/4
+              \sectionLabel \markup { \box { "Bridge" } }
               g'2 a8 g f e d4 g8 f e d c4 g'4 c8 b a g f e d4 g e2
              c16 g' es' g, c, g' es' g, 
              e16 c' as' c,    e, c' as' c,
@@ -96,8 +96,15 @@ Mein ^Vater sagte: ^Lass das ^sein! Das ^Weib ist keine ^Frau für ^dich.
       >>
     }
 \end{lilypond}
+\vspace*{-1em}
+\beginverse*\memorize[teufelsweib_bridge]
+\fbox{\normalsize{\textbf{Bridge}}}
+Mit \[C]Pergament und \[F]Federkiel schrieb \[G]ich ihr \[C]Liebesbriefe.
+Schlich bei \[C]Dunkelheit hi\[F]naus und hab sie \[G]ihr ge\[C]bracht.
+Seit\[Cm]dem sitz' ich am \[Fm]Fenster will mich \[G]stürzen in die \[Cm]Tiefe.
+Denn es \[Cm]hatte keinen \[Fm]Sinn, sie hätte es \[G]nur für Geld \[Cm]gemacht.
+\endverse
 
-\textnote{Melodie Chorus}
 \begin{lilypond}
     \score {
         <<
@@ -111,6 +118,7 @@ Mein ^Vater sagte: ^Lass das ^sein! Das ^Weib ist keine ^Frau für ^dich.
           <<
             \new Staff \relative{
               \time 4/4
+              \sectionLabel \markup { \box { "Chorus" } }
               \repeat volta 2{
                 a'4 c b g a8 16 16 ~ 8 g g2
                 a4 <c e> <b d> <g d'> <a e'>8 <g d'> <f c'> <e b'> <e c'>2
@@ -126,13 +134,6 @@ Mein ^Vater sagte: ^Lass das ^sein! Das ^Weib ist keine ^Frau für ^dich.
       >>
     }
 \end{lilypond}
-
-\beginverse*\memorize[teufelsweib_bridge]
-Mit \[C]Pergament und \[F]Federkiel schrieb \[G]ich ihr \[C]Liebesbriefe.
-Schlich bei \[C]Dunkelheit hi\[F]naus und hab sie \[G]ihr ge\[C]bracht.
-Seit\[Cm]dem sitz' ich am \[Fm]Fenster will mich \[G]stürzen in die \[Cm]Tiefe.
-Denn es \[Cm]hatte keinen \[Fm]Sinn, sie hätte es \[G]nur für Geld \[Cm]gemacht.
-\endverse
 
 \beginchorus\memorize[teufelsweib_chorus]
 \[Am]Ohh--ohh \[Em]Ohh--ohh, sie \[Am]ist des Teufels \[Em]Weib!
@@ -141,7 +142,9 @@ Denn es \[Cm]hatte keinen \[Fm]Sinn, sie hätte es \[G]nur für Geld \[Cm]gemach
 \[Am]Ohh--ohh \[Em]Ohh, ich breche \[F]für sie jeden \[C]Eid!
 \endchorus
 
-\textnote{Erst nach Wiederholung des Intros blättern}
+\textnote{Intro (without repeat) -- Wait with page turn!}
+
+\pagebreak
 
 \beginverse\replay[teufelsweib_verse]
 Aber ^ich gab doch noch ^lang nicht ^auf, hab ihr ^nachgestellt, den ^Hof ge^macht.
@@ -150,7 +153,8 @@ Ich ^stieg die höchsten ^Berge ^rauf, hab ^ihr das Edel^weiß ^ge^bracht. ^ ^
 Ich ^kaufte ihr die ^halbe ^Welt, doch ^war's die Hälfte, ^die ihr ^nicht ge^fällt. ^ ^
 \endverse
 
-\textnote{Melodie Bridge}
+\vspace{1em}
+
 \begin{lilypond}
     \score {
         <<
@@ -162,6 +166,7 @@ Ich ^kaufte ihr die ^halbe ^Welt, doch ^war's die Hälfte, ^die ihr ^nicht ge^f�
           
             \new Staff \relative{
               \time 4/4
+              \sectionLabel \markup { \box { "Bridge" } }
               g'2 a8 g f e d4 g8 f e d c4 g'4 c8 b a g f e d4 g e2
              c16 g' es' g, c, g' es' g, 
              e16 c' as' c,    e, c' as' c,
@@ -177,7 +182,16 @@ Ich ^kaufte ihr die ^halbe ^Welt, doch ^war's die Hälfte, ^die ihr ^nicht ge^f�
     }
 \end{lilypond}
 
-\textnote{Melodie Chorus}
+\beginverse*
+\fbox{\normalsize{\textbf{Bridge}}}
+Mit \[C]Pergament und \[F]Federkiel schrieb \[G]ich ihr \[C]Liebesbriefe.
+Schlich bei \[C]Dunkelheit hi\[F]naus und hab sie \[G]ihr ge\[C]bracht.
+Seit\[Cm]dem sitz' ich am \[Fm]Fenster will mich \[G]stürzen in die \[Cm]Tiefe.
+Denn es \[Cm]hatte keinen \[Fm]Sinn, sie hätte es \[G]nur für Geld \[Cm]gemacht.
+\endverse
+
+\pagebreak
+
 \begin{lilypond}
     \score {
         <<
@@ -191,6 +205,7 @@ Ich ^kaufte ihr die ^halbe ^Welt, doch ^war's die Hälfte, ^die ihr ^nicht ge^f�
           <<
             \new Staff \relative{
               \time 4/4
+              \sectionLabel \markup { \box { "Chorus" } }
               \repeat volta 2{
                 a'4 c b g a8 16 16 ~ 8 g g2
                 a4 <c e> <b d> <g d'> <a e'>8 <g d'> <f c'> <e b'> <e c'>2
@@ -207,19 +222,11 @@ Ich ^kaufte ihr die ^halbe ^Welt, doch ^war's die Hälfte, ^die ihr ^nicht ge^f�
     }
 \end{lilypond}
 
-\beginverse*\memorize[teufelsweib_bridge]
-Mit \[C]Pergament und \[F]Federkiel schrieb \[G]ich ihr \[C]Liebesbriefe.
-Schlich bei \[C]Dunkelheit hi\[F]naus und hab sie \[G]ihr ge\[C]bracht.
-Seit\[Cm]dem sitz' ich am \[Fm]Fenster will mich \[G]stürzen in die \[Cm]Tiefe.
-Denn es \[Cm]hatte keinen \[Fm]Sinn, sie hätte es \[G]nur für Geld \[Cm]gemacht.
-\endverse
-
-\textnote{Chorus $2\times$ spielen}
-\beginchorus\memorize[teufelsweib_chorus]
-\[Am]Ohh--ohh \[Em]Ohh--ohh, sie \[Am]ist des Teufels \[Em]Weib!
+\beginchorus
+\lrep\[Am]Ohh--ohh \[Em]Ohh--ohh, sie \[Am]ist des Teufels \[Em]Weib!
 \[Am]Ohh--ohh \[Em]Ohh, verzehre \[F]mich nach ihrem \[C]Leib!
 \[Am]Ohh--ohh \[Em]Ohh--ohh, sie \[Am]ist des Teufels \[Em]Weib!
-\[Am]Ohh--ohh \[Em]Ohh, ich breche \[F]für sie jeden \[C]Eid!
+\[Am]Ohh--ohh \[Em]Ohh, ich breche \[F]für sie jeden \[C]Eid! \rrep
 \endchorus
 
 \endsong

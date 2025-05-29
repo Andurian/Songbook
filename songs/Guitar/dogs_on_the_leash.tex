@@ -2,6 +2,9 @@
     by={The O'Reillys and the Paddyhats},
     sr={\url{https://www.youtube.com/watch?v=yqMRAHs0oyQ}}
 ]
+\begin{infotext}
+\textbf{Capo: 3}
+\end{infotext}
 \vspace{-2em}
 \begin{lilypond}
     \score {
@@ -16,6 +19,7 @@
             \new Staff \relative {
               \key g \minor
               \time 4/4
+              \sectionLabel \markup { \box { Intro } }
               \partial 8 g'16 bes
               \repeat volta 2 { 
                 d8 d4 g,16 bes es8 es4 d16 es 
@@ -28,7 +32,7 @@
                 }
                 {
                   c8. c d8 c8 bes a f
-                  g8. g f8 g4
+                  g8. g f8 g2
                 }
               } 
             }
@@ -40,7 +44,7 @@
               8. 8. 8 8. 8. 8
               8 8 8 8 8 8 16 16 16 16
               8. 8. 8 8 8. 16 16 16
-              16 16 16 8. 8 4
+              16 16 16 8. 8 4 8 8
             }
           >>  
         >>
@@ -63,7 +67,6 @@ Shut their \[G]eyes and \[C]ears, give them \[Em]drugs and \[D]beers
 Keep the \[Em]bastards \[C]silent, don't \[D]trigger their a\[G]larm
 \endchorus
 
-\textnote{Begleitung Chorus}
 \begin{lilypond}
 
     \score {
@@ -79,6 +82,7 @@ Keep the \[Em]bastards \[C]silent, don't \[D]trigger their a\[G]larm
               \key g \minor
               \time 4/4
               f'4 g8. g f4.
+              \sectionLabel \markup { \box { Chorus } }
               \repeat volta 2 { 
                 d'4 d8 c bes4 bes8 g f4. g8 f4 bes8 c d4 d8 f d c bes c ~ 
               }
@@ -105,7 +109,7 @@ Keep the \[Em]bastards \[C]silent, don't \[D]trigger their a\[G]larm
       }
 \end{lilypond}
 \vspace{-1em}
-\textnote{Repeat Intro}
+\textnote{Intro}
 \vspace{-1em}
 \beginverse\replay
 I've ^got the ^task to ^keep them ^cryin'
@@ -123,7 +127,7 @@ I ^keep on ^waving my ^fake flag of ^truth
         <<
           \chords {
             \override ChordName.font-shape = #'italic
-            e1:m e2.:m c4 e1:m c2 d e1:m
+            e1:m e2.:m c4 e1:m c2 d
           }
             
           \new StaffGroup
@@ -131,12 +135,11 @@ I ^keep on ^waving my ^fake flag of ^truth
             \new Staff \relative {
               \key g \minor
               \time 4/4
+              \sectionLabel \markup { \box { B } }
                 g'8. bes16 c8. d16 c8. bes16 g8. f16 
                 g8. bes16 c8. d16 c4 bes
                 g8. bes16 c8. d16 c8. bes16 g8. f16 
                 bes8. a16 g8. f16 a4 d,
-                g1
-      
             }
             
             \new RhythmicStaff {
@@ -145,7 +148,6 @@ I ^keep on ^waving my ^fake flag of ^truth
               a8. 16 \xNotesOn a8. 16 a8. 16 \xNotesOff a4
               a8. 16 \xNotesOn a8. 16 a8. 16 a8. 16 \xNotesOff
               a8. 16 4 8. 16 4 
-              1
             }
           >>  
         >>
@@ -153,16 +155,20 @@ I ^keep on ^waving my ^fake flag of ^truth
 \end{lilypond}
 %
 \beginverse*
+\fbox{\normalsize{\textbf{B}}}
 \[Em] We won't, \[Em] we won't \[Em] We won't, we \[C]won't \[Dadd9add11]back \[Em]off
 We will, \[Em] we will \[Em] We will \[C]free ourselves \[Dadd9add11]from the \[Em]leash
 \endverse
-\textnote{Softly, only strum each chord once}
+%
 \beginchorus
+\begin{performanceinstruction}
+Softly, only strum each chord once
+\end{performanceinstruction}
 Keep the \[G]dogs on the leash, keep them calm
 A \[Em]dog on a leash means no harm
 Shut their \[G]eyes and ears, give them \[Em]drugs and \[D]beers
 Keep the \[Em]bastards \[C]silent, don't \[D]trigger their \[Em]alarm
 \endchorus
-\textnote{Repeat regular chorus}
+\textnote{Chorus}
 
 \endsong

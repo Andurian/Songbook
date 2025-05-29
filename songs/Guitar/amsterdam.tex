@@ -7,26 +7,24 @@
 
 \begin{lilypond}
 
-    \score {
-        <<
-          \chords {
-            \override ChordName.font-shape = #'italic
-            f1 a:m e:m a:m
-          }
+  \score {
+    <<
+      \chords {
+        \override ChordName.font-shape = #'italic
+        f1 a:m e:m a:m
+      }
          
            
-                  \new RhythmicStaff \relative {
-                    \time 4/4
-                    \tempo 4 = 80
-                    \improvisationOn
-                    \repeat volta 2 {
-                    a4 8. 16 4 8. 16  a4 8. 16 4 8. 16  a4 8. 16 4 8. 16  a4 8. 16 4 8. 16  } 
-                    
-                   
-                  }
-                  
-        >>
-      }
+      \new RhythmicStaff \relative {
+        \time 4/4
+        \tempo 4 = 80
+        \improvisationOn
+        \repeat volta 2 {
+          a4 8. 16 4 8. 16  a4 8. 16 4 8. 16  a4 8. 16 4 8. 16  a4 8. 16 4 8. 16  
+        } 
+      }          
+    >>
+  }
 \end{lilypond}
 
 \beginverse\memorize
