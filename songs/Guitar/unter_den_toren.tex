@@ -16,7 +16,7 @@ Song starts with Chorus played without accompaniment.
 
 \vspace{0.5em}
 
-\begin{lilypond}
+\begin{lilypondf}
   \score {
     <<
       \chords {
@@ -29,7 +29,7 @@ Song starts with Chorus played without accompaniment.
         \new Staff \relative {
           \time 6/8 
           \key d \minor
-          \sectionLabel \markup { \box { "Post Chorus" } (Original) }
+          \boxedSectionLabelWithComment "Post Chorus" "Original"
           \repeat volta 2 { a''2 g8 e a2 g8 a bes2 c8 bes a2. }
         }
         
@@ -40,11 +40,11 @@ Song starts with Chorus played without accompaniment.
     >>
   >>
 }
-\end{lilypond}
+\end{lilypondf}
 
 \vspace{0.5em}
 
-\begin{lilypond}
+\begin{lilypondf}
   \score {
     <<
       \chords {
@@ -56,7 +56,7 @@ Song starts with Chorus played without accompaniment.
       <<
         \new Staff \relative {
           \time 6/8
-          \sectionLabel \markup { \box { "Post Chorus" } (For Capo -2) }
+          \boxedSectionLabelWithComment "Post Chorus" "For Capo -2"
           \transpose a g {
             \key d \minor \relative{
               \repeat volta 2 { a''2 g8 e a2 g8 a bes2 c8 bes a2. }
@@ -71,7 +71,7 @@ Song starts with Chorus played without accompaniment.
     >>
   >>
 }
-\end{lilypond}
+\end{lilypondf}
 
 \beginverse\memorize
 \[Dm]Unter den Toren, im \[C]Schatten der Stadt, 

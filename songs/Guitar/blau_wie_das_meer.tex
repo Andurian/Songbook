@@ -8,7 +8,7 @@ Nach jedem regulären gesungenen Chrous wird der instrumentale Chorus gespielt.
 Der abgewandelte Chorus (\enquote{Sie war\dots}) geht ohne instrumentalen Chrous in das Interlude über.
 \end{infotext}
 
-\begin{lilypond}
+\begin{lilypondf}
 \score {
   <<
     \chords {
@@ -17,7 +17,7 @@ Der abgewandelte Chorus (\enquote{Sie war\dots}) geht ohne instrumentalen Chrous
     }
    
       \new Staff \relative {
-        \sectionLabel \markup { \box "Intro / Chorus" }
+        \boxedSectionLabel "Intro / Chorus"
         \partial 4 e''8 d | 
         c4. d8 e g4. a8. g16 a8 g e c4. a'8. g16 a8 g e c4 g'8 f e d e d4 e8 d 
         c4. d8 e g4. a8. g16 a8 g e c4. a'8. g16 a8 g e d e d c4 ~ 4 r2
@@ -25,7 +25,7 @@ Der abgewandelte Chorus (\enquote{Sie war\dots}) geht ohne instrumentalen Chrous
     
   >>
 }
-\end{lilypond}
+\end{lilypondf}
 
 \beginverse\memorize
 Schon als \[Am]Schiffsjunge hab ich meine \[F]Seele ver\[G]kauft
@@ -66,7 +66,7 @@ und \[Am]dichter als der \[G]Nebel vor Kap \[C]Ho-\[G]o-\[C]orn
 \endchorus
 
 \vspace*{1em}
-\begin{lilypond}
+\begin{lilypondf}
 \score {
   <<
     \chords {
@@ -77,14 +77,14 @@ und \[Am]dichter als der \[G]Nebel vor Kap \[C]Ho-\[G]o-\[C]orn
    
       \new Staff \relative {
         \time 6/8
-        \sectionLabel \markup { \box { Interlude } }
+        \boxedSectionLabel "Interlude"
         f'2 g8 a g2 e8 c d2 c8 d e4 f8 g4. f2 g8 a g2 e8 c d2 b'8 c b d c b a g \break
         f2  g8 a g2 e8 c d2 c8 d e4 f8 g4. f2 g8 a g2 b8 c b d c b4.
       }
     
   >>
 }
-\end{lilypond}
+\end{lilypondf}
 \vspace*{-1em}
 
 \beginverse*

@@ -3,7 +3,7 @@
     sr={\url{https://www.youtube.com/watch?v=IfuQX-CaQg8}}
 ]
 
-\begin{lilypond}
+\begin{lilypondf}
 \score {
   <<
     \chords {
@@ -13,7 +13,7 @@
     \relative c' {
       \key g \major
       \time 4/4
-      \sectionLabel \markup { \box { "Intro" } }
+      \boxedSectionLabel "Intro"
       \partial 4 d4 | 
       g4. g,8 8 8 b g | c2 ~ 8 e fis g | a4. g8 fis e d c | b2 ~ 8 d e fis |
       \repeat volta 2 {
@@ -26,7 +26,7 @@
    }
   >>
 }
-\end{lilypond}
+\end{lilypondf}
 
 \beginverse\memorize
 Der \[G]Papst lebt herrlich in der \[C]Welt, 
@@ -58,7 +58,7 @@ drum möcht auch ^ich nicht ^Sultan ^sein. \rrep
 
 \vspace{1em}
 
-\begin{lilypond}
+\begin{lilypondf}
 \score {
   <<
     \chords {
@@ -68,7 +68,7 @@ drum möcht auch ^ich nicht ^Sultan ^sein. \rrep
     \relative c' {
       \key g \major
       \time 4/4
-      \sectionLabel \markup { \box { "Interlude" } }
+      \boxedSectionLabel "Interlude"
       \partial 4 d4 | 
       g4. g,8 8 8 b g | c2 ~ 8 e fis g | a4. g8 fis e d c | b2 ~ 8 d e fis |
       \repeat volta 2 {
@@ -81,7 +81,7 @@ drum möcht auch ^ich nicht ^Sultan ^sein. \rrep
    }
   >>
 }
-\end{lilypond}
+\end{lilypondf}
 
 \beginverse\replay
 Ge^teilt veracht' ich beider ^Glück

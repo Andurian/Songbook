@@ -7,7 +7,7 @@
 \textbf{Capo: -1}
 \end{infotext}
 
-\begin{lilypond}
+\begin{lilypondf}
 \score {
   <<
     \new StaffGroup
@@ -16,7 +16,7 @@
         \set minimumFret = #10
         \tabFullNotation
         \time 3/4
-        \sectionLabel \markup { \box { "Intro" } }
+        \boxedSectionLabel "Intro"
         e''4 d8 c b4 | b c8 b g4 | b a g | c d8\2 c b c | e4 d8 c b4 | b c8 b g4 | b a g 
       }
 
@@ -30,7 +30,7 @@
    >>
   >>
 }
-\end{lilypond}
+\end{lilypondf}
 
 \beginverse*
 \begin{performanceinstruction}
@@ -43,22 +43,31 @@ Fingerpicked chords or single strums
 When \[Am]hours have gone \[G]by, \[Esus4]I'll close my \[Am]eyes.
 In a \[Am]world far a\[G]way, we \[Esus4]may meet a\[Am]gain.
 But \[Am]now hear my \[G]song, about the \[Esus4]dawn of the \[Dm]night.
-Let's \[C]sing \[G]the \[Am]bards' \[G]song.
 \endverse
 
-\begin{lilypond}
+\begin{lilypondf}
 \score {
   <<
+    \chords {
+      s4 c2 g a:m g
+    }
     \new TabStaff \relative {
       \tabFullNotation    
       \time 4/4
+      \partial 4
+      s4
       <c c' e>4 g' <b, b'> g' | <a, c'> g' <g, b'> g' | 
-      \sectionLabel \markup { \box { "Bridge" } }
+      \boxedSectionLabel "Bridge" 
       <c, c'>8 g' e4 <b b'>8 g' d4 | <a a'> e' <g, b'> g' 
+    }
+    \new Lyrics {
+      \lyricmode {
+        Let's4 sing2 the bards' song.
+      }
     }
   >>
 }
-\end{lilypond}
+\end{lilypondf}
 
 \beginchorus
 To\mbar{3}{4}\[Dm]mor\[Am]row will \[Dm]take us \[Am]away, \[Dm]far from \[Am]home,
@@ -70,7 +79,7 @@ To\[Dm]mor\[Am]row will \[Dm]take it \[Am]away, the \[Dm]fear of \[Am]today,
 
 \pagebreak 
 
-\begin{lilypond}
+\begin{lilypondf}
 \score {
   <<
     \new StaffGroup
@@ -79,7 +88,7 @@ To\[Dm]mor\[Am]row will \[Dm]take it \[Am]away, the \[Dm]fear of \[Am]today,
         \set minimumFret = #9
         \tabFullNotation
         \time 4/4
-        \sectionLabel \markup { \box { "Interlude" } }
+        \boxedSectionLabel "Interlude"
         \repeat volta 2 {
           c''16( b a4) g8 a4 e\3 | f4. d8 e2\3 | a8 b c d e2 
         }
@@ -99,7 +108,7 @@ To\[Dm]mor\[Am]row will \[Dm]take it \[Am]away, the \[Dm]fear of \[Am]today,
    >>
   >>
 }
-\end{lilypond}
+\end{lilypondf}
 
 \vspace{-2em}
 

@@ -14,9 +14,19 @@
 \usepackage{xfrac}
 \usepackage[autostyle]{csquotes}
 \usepackage[chorded]{songs}
-\usepackage[staffsize=20,fragment=false]{lyluatex}
+\usepackage[staffsize=20,fragment=false,pass-fonts=true]{lyluatex}
 
 \input{extra/extra_\instrument}
+
+\begin{lysavefrag}{head}
+\include "definitions.ily"
+\end{lysavefrag}
+
+\lynewenvironment{lilypondf}[1][]{%
+\begin{ly}[include_before_body=head]
+}{
+\end{ly}
+}
 
 \pretitle{
 	\begin{center}

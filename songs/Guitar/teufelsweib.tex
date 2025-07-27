@@ -6,7 +6,7 @@
 \newchords{teufelsweib_verse}
 \newchords{teufelsweib_bridge}
 \newchords{teufelsweib_chorus}
-\begin{lilypond}
+\begin{lilypondf}
     \score {
         <<
           \chords {
@@ -18,7 +18,7 @@
           <<
             \new Staff \relative{
               \time 4/4
-              \sectionLabel \markup { \box { "Intro" } }
+              \boxedSectionLabel "Intro"
               \repeat volta 2{
               a'8 a16 a16 ~ a8 b c b a g 
               a8 a16 a16 ~ a8 g a g e4
@@ -50,7 +50,7 @@
         >>
       >>
     }
-\end{lilypond}
+\end{lilypondf}
 
 \beginverse\memorize[teufelsweib_verse]
 \[Am]Schwarze Augen, \[C]schwarzes \[G]Haar, sie \[Am]lebte ganz am \[C]Rand der \[G]Stadt.
@@ -70,7 +70,7 @@ Mein ^Vater sagte: ^Lass das ^sein! Das ^Weib ist keine ^Frau für ^dich.
 
 \pagebreak
 
-\begin{lilypond}
+\begin{lilypondf}
     \score {
         <<
           \chords {
@@ -81,7 +81,7 @@ Mein ^Vater sagte: ^Lass das ^sein! Das ^Weib ist keine ^Frau für ^dich.
           
             \new Staff \relative{
               \time 4/4
-              \sectionLabel \markup { \box { "Bridge" } }
+              \boxedSectionLabel "Bridge"
               g'2 a8 g f e d4 g8 f e d c4 g'4 c8 b a g f e d4 g e2
              c16 g' es' g, c, g' es' g, 
              e16 c' as' c,    e, c' as' c,
@@ -95,7 +95,7 @@ Mein ^Vater sagte: ^Lass das ^sein! Das ^Weib ist keine ^Frau für ^dich.
 
       >>
     }
-\end{lilypond}
+\end{lilypondf}
 \vspace*{-1em}
 \beginverse*\memorize[teufelsweib_bridge]
 \fbox{\normalsize{\textbf{Bridge}}}
@@ -105,7 +105,7 @@ Seit\[Cm]dem sitz' ich am \[Fm]Fenster will mich \[G]stürzen in die \[Cm]Tiefe.
 Denn es \[Cm]hatte keinen \[Fm]Sinn, sie hätte es \[G]nur für Geld \[Cm]gemacht.
 \endverse
 
-\begin{lilypond}
+\begin{lilypondf}
     \score {
         <<
           \chords {
@@ -118,7 +118,7 @@ Denn es \[Cm]hatte keinen \[Fm]Sinn, sie hätte es \[G]nur für Geld \[Cm]gemach
           <<
             \new Staff \relative{
               \time 4/4
-              \sectionLabel \markup { \box { "Chorus" } }
+              \boxedSectionLabel "Chorus"
               \repeat volta 2{
                 a'4 c b g a8 16 16 ~ 8 g g2
                 a4 <c e> <b d> <g d'> <a e'>8 <g d'> <f c'> <e b'> <e c'>2
@@ -133,7 +133,7 @@ Denn es \[Cm]hatte keinen \[Fm]Sinn, sie hätte es \[G]nur für Geld \[Cm]gemach
     >>
       >>
     }
-\end{lilypond}
+\end{lilypondf}
 
 \beginchorus\memorize[teufelsweib_chorus]
 \[Am]Ohh--ohh \[Em]Ohh--ohh, sie \[Am]ist des Teufels \[Em]Weib!
@@ -155,7 +155,7 @@ Ich ^kaufte ihr die ^halbe ^Welt, doch ^war's die Hälfte, ^die ihr ^nicht ge^f�
 
 \vspace{1em}
 
-\begin{lilypond}
+\begin{lilypondf}
     \score {
         <<
           \chords {
@@ -166,7 +166,7 @@ Ich ^kaufte ihr die ^halbe ^Welt, doch ^war's die Hälfte, ^die ihr ^nicht ge^f�
           
             \new Staff \relative{
               \time 4/4
-              \sectionLabel \markup { \box { "Bridge" } }
+              \boxedSectionLabel "Bridge"
               g'2 a8 g f e d4 g8 f e d c4 g'4 c8 b a g f e d4 g e2
              c16 g' es' g, c, g' es' g, 
              e16 c' as' c,    e, c' as' c,
@@ -180,7 +180,7 @@ Ich ^kaufte ihr die ^halbe ^Welt, doch ^war's die Hälfte, ^die ihr ^nicht ge^f�
 
       >>
     }
-\end{lilypond}
+\end{lilypondf}
 
 \beginverse*
 \fbox{\normalsize{\textbf{Bridge}}}
@@ -192,7 +192,7 @@ Denn es \[Cm]hatte keinen \[Fm]Sinn, sie hätte es \[G]nur für Geld \[Cm]gemach
 
 \pagebreak
 
-\begin{lilypond}
+\begin{lilypondf}
     \score {
         <<
           \chords {
@@ -205,7 +205,7 @@ Denn es \[Cm]hatte keinen \[Fm]Sinn, sie hätte es \[G]nur für Geld \[Cm]gemach
           <<
             \new Staff \relative{
               \time 4/4
-              \sectionLabel \markup { \box { "Chorus" } }
+              \boxedSectionLabel "Chorus"
               \repeat volta 2{
                 a'4 c b g a8 16 16 ~ 8 g g2
                 a4 <c e> <b d> <g d'> <a e'>8 <g d'> <f c'> <e b'> <e c'>2
@@ -220,7 +220,7 @@ Denn es \[Cm]hatte keinen \[Fm]Sinn, sie hätte es \[G]nur für Geld \[Cm]gemach
     >>
       >>
     }
-\end{lilypond}
+\end{lilypondf}
 
 \beginchorus
 \lrep\[Am]Ohh--ohh \[Em]Ohh--ohh, sie \[Am]ist des Teufels \[Em]Weib!

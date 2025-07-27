@@ -3,7 +3,7 @@
     sr={\url{https://www.youtube.com/watch?v=qGyPuey-1Jw}}
 ]
 
-\begin{lilypond}
+\begin{lilypondf}
     \score {
         <<
           \chords {
@@ -25,7 +25,7 @@
           >>  
         >>
       }
-\end{lilypond}
+\end{lilypondf}
 
 \beginverse\memorize
 \[Dm]What shall we do with the drunken sailor?
@@ -76,7 +76,7 @@
 
 \textnote{Chorus 2$\times$ (insted of once)}
 
-\begin{lilypond}
+\begin{lilypondf}
     \score {
         <<
           \chords {
@@ -86,7 +86,7 @@
       
             \new Staff \relative {
               \time 4/4
-              \sectionLabel \markup { \box { "Optional Solo" } }
+              \boxedSectionLabel "Optional Solo"
                 d'16 f a f d f a f d f a f d f a f 
                 c    e g e c e g e c e g e c e g e
                 d    f a f d f a f d f a f d f a f
@@ -96,6 +96,6 @@
       
         >>
       }
-\end{lilypond}
+\end{lilypondf}
 
 \endsong

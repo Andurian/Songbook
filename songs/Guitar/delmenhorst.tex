@@ -6,7 +6,7 @@
 \newchords{delmenhorst_verse}
 \newchords{delmenhorst_chorus}
 
-\begin{lilypond}
+\begin{lilypondf}
 melody = \relative {
     \repeat volta 2 {
         b'8 d g8. fis d b 
@@ -39,7 +39,7 @@ melody = \relative {
             \key g \major
             \set TabStaff.minimumFret = #7
             \set TabStaff.restrainOpenStrings = ##t
-            \sectionLabel \markup { \box { Intro } }
+            \boxedSectionLabel "Intro"
             \transpose a a, \melody
         }
         \new RhythmicStaff \relative {
@@ -50,7 +50,7 @@ melody = \relative {
         >>              
     >>
     }
-\end{lilypond}
+\end{lilypondf}
 
 \beginverse\memorize[delmenhorst_verse]
 \[G] Ich bin jetzt immer da, wo \[Cmaj7]du nicht bist

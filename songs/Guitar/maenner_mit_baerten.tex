@@ -11,7 +11,7 @@ Play instrumental post chous after regular chorus every other time (marked place
 \newchords{maenner_mit_baerten_verse}
 \newchords{maenner_mit_baerten_chorus}
 
-\begin{lilypond}
+\begin{lilypondf}
 \score {
   <<
     \chords {
@@ -26,7 +26,7 @@ Play instrumental post chous after regular chorus every other time (marked place
     \relative c' {
       \key g \major
       \time 6/8
-      \sectionLabel \markup { \box { "Intro / Post Chorus" } }
+      \boxedSectionLabel "Intro / Post Chorus"
       \partial 8 b8 |
       e4 fis8 g4 a8 g4 fis8 e4 b8 e4 fis8 g4 a8 g4 fis8 e4. |
       e'4 fis8 g4 a8 g4 fis8 e4 b8 e4 fis8 g4 a8 g4 fis8 e4. |
@@ -38,7 +38,7 @@ Play instrumental post chous after regular chorus every other time (marked place
     }
   >>
 }
-\end{lilypond}
+\end{lilypondf}
 
 \vspace{1em}
 

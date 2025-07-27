@@ -6,7 +6,7 @@
 \newchords{eweroun_a}
 \newchords{eweroun_b}
 
-\begin{lilypond}
+\begin{lilypondf}
     \score {
         <<
             \chords {
@@ -17,12 +17,12 @@
             \new RhythmicStaff \relative {
                 \time 4/4
                 \improvisationOn
-                \sectionLabel \markup { \box { Intro } }
+                \boxedSectionLabel "Intro"
                 b'4 4 4 8 8 4 4 4 8 8 4 4 4 8 8 4 4 4 8 8
             }
         >>
     }
-\end{lilypond}
+\end{lilypondf}
 
 \beginverse\memorize[eweroun_a]
 \begin{performanceinstruction}
@@ -33,7 +33,7 @@ First verse after intro with reduced instrumentation and one octave deeper
 
 \endverse
 
-\begin{lilypond}
+\begin{lilypondf}
     \score {
         <<
             \chords {
@@ -44,22 +44,22 @@ First verse after intro with reduced instrumentation and one octave deeper
             \new RhythmicStaff \relative {
                 \time 4/4
                 \improvisationOn
-                \sectionLabel \markup { \box { Bridge } }
+                \boxedSectionLabel "Bridge"
                 b'4 4 4 8 8 4 4 4 8 8 4 4 4 8 8 4 4 4 8 8 4 4 4 8 8 4 4 4 8 8
             }
         >>
     }
-\end{lilypond}
+\end{lilypondf}
 
 \vspace{1em}
 
-\begin{lilypond}
+\begin{lilypondf}
 mynotesa =  \relative {
     r2 a4^"pizz." b c2 f4 a gis2 e b gis r2 a4 b c2 f4 a gis2 e c b8 c b4 \break 
 }
       
 mynotesb =  \relative {
-    a'2-"arco" g8 a g4 e a, a2 a' g8 a g4 c2 \grace{ b16 c } b2 a g8 a g4 e a, a2 \break a' g8 a g4 a2 g a1 r4 e c' \grace{ b16 c } b4 \sectionLabel \markup { \box { Verse } } a1
+    a'2-"arco" g8 a g4 e a, a2 a' g8 a g4 c2 \grace{ b16 c } b2 a g8 a g4 e a, a2 \break a' g8 a g4 a2 g a1 r4 e c' \grace{ b16 c } b4 \boxedSectionLabel "Verse" a1
 }
 
 \score {
@@ -76,14 +76,14 @@ mynotesb =  \relative {
         >>
     >>
 }
-\end{lilypond}
+\end{lilypondf}
 
 \beginverse\memorize[eweroun_b]
 \[Am]Wijl wintars \[C]stilta hvis \[Am]en wijl \[C]vorjaarns \[G]guldyn sunna\[Am]luiht.
 Den \[Am]oude \[C]vandrar waagt fuër \[G]ewer oun en \[Dm]eweroun.
 \[Am]Den oude \[C]vandrar waagt, wijl \[G]naarjaars roud, fuër \[Dm]ewer oun... \[F]ew\[E]er\[Am]oun
 \endverse
-\begin{lilypond}
+\begin{lilypondf}
          
     mynotesb =  \relative {
         a'2-"arco" g8 a g4 e a, a2 a' g8 a g4 c2 \grace{ b16 c } b2 a g8 a g4 e a, a2 a' g8 a g4 a2 g a1 r4 e c' \grace{ b16 c } b4 a1
@@ -93,7 +93,7 @@ Den \[Am]oude \[C]vandrar waagt fuër \[G]ewer oun en \[Dm]eweroun.
         <<
             \chords {
                 \override ChordName.font-shape = #'italic
-                a1:m s s f2 g a1:m s s f2 g d1:m s2 e a:m \sectionLabel \markup { \box { Verse } }
+                a1:m s s f2 g a1:m s s f2 g d1:m s2 e a:m \boxedSectionLabel "Verse"
             }
             
             \new StaffGroup
@@ -103,10 +103,10 @@ Den \[Am]oude \[C]vandrar waagt fuër \[G]ewer oun en \[Dm]eweroun.
             >>
         >>
     }
-    \end{lilypond}
-\vspace{-1em}
+    \end{lilypondf}
+\vspace{-1.5em}
 \textnote{Restart from Verse 1 without repeat.}
-\begin{lilypond}
+\begin{lilypondf}
     \score {
         <<
           \chords {
@@ -169,6 +169,6 @@ Den \[Am]oude \[C]vandrar waagt fuër \[G]ewer oun en \[Dm]eweroun.
         >>
       >>
     }
-\end{lilypond}
+\end{lilypondf}
 
 \endsong

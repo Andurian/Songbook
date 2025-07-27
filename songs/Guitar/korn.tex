@@ -8,7 +8,7 @@
 Second guitar starts at repeat
 \end{performanceinstruction}
 \vspace{-1em}
-\begin{lilypond}
+\begin{lilypondf}
     \score {
         <<
           \chords {
@@ -25,7 +25,7 @@ Second guitar starts at repeat
           <<
             \new TabStaff \relative {
               \time 4/4
-              \sectionLabel \markup { \box { Intro } }
+              \boxedSectionLabel "Intro"
               \repeat volta 2 {
                 e,4 g' e' b <a, c'> a' e' c <c, c'> g' e' b <g, b'> g' g' b, 
                 <e,, b''> g' e' b <a, c'> a' e' c <c, c'> g' e' b  <g, b'> g' g' b, 
@@ -44,9 +44,9 @@ Second guitar starts at repeat
           >>
         >>
       }
-\end{lilypond}
+\end{lilypondf}
 %
-\begin{lilypond}
+\begin{lilypondf}
   \score {
     <<
       \chords {
@@ -59,7 +59,7 @@ Second guitar starts at repeat
         \new Staff \relative {
           \time 4/4
             \key g \major
-            \sectionLabel \markup { \box { "Viola Solo" } }
+            \boxedSectionLabel "Viola Solo"
             g'2 a b1 e, c'2. d4 b2 g4 a b1 e, a4 b c2 b1 c2 d4 c b1 a2 b4 g e1 r
                   
           }
@@ -70,9 +70,9 @@ Second guitar starts at repeat
       >>  
     >>
   }
-\end{lilypond}
+\end{lilypondf}
 \pagebreak
-\begin{lilypond}
+\begin{lilypondf}
     \score {
         <<
           \chords {
@@ -83,14 +83,14 @@ Second guitar starts at repeat
           \new Staff \relative {
             \time 4/4
             \key g \major
-            \sectionLabel \markup { \box { "Verse" } (accompaniment) }
+            \boxedSectionLabelWithComment "Verse" "accompaniment"
             e'1 c' c b e, c' c b c2 c b1 a2 b b1 r
               
           }
         >>
        
     }
-\end{lilypond}
+\end{lilypondf}
 
 \beginverse\memorize
 Glut um \[Em]Glut drängt sich von \[Am]innen einen \[C]Weg durch festen \[G]Stein.
@@ -114,7 +114,7 @@ Zeigt uns ^einen ^stillen ^Weg, zeigt uns ^einen ^stillen ^Weg.
 \textnote{Viola Solo}
 \vspace{0.5em}
 %
-\begin{lilypond}
+\begin{lilypondf}
     \score {
         <<
           \chords {
@@ -126,9 +126,9 @@ Zeigt uns ^einen ^stillen ^Weg, zeigt uns ^einen ^stillen ^Weg.
             \new Staff \relative {
               \time 4/4
               \key g \major
-              \sectionLabel \markup { \box { "Melody A" } (Viola & Violin) }
+              \boxedSectionLabelWithComment "Melody A" "Viola & Violin"
               r2 e''4 fis g1 fis2 g g4 fis e2 e e4 fis g2 g4 a a2 a4 b b1 a2 b4 a g1 fis2 e4 d e1~e
-              }
+             }
             \new Staff \relative {
                \key g \major
                 b'1 e, a4 b c2 b1 b c c2 d4 c b1e2 fis4 g e1 fis2 g e1 ~ e
@@ -136,11 +136,11 @@ Zeigt uns ^einen ^stillen ^Weg, zeigt uns ^einen ^stillen ^Weg.
           >>
         >>
       }
-\end{lilypond}
+\end{lilypondf}
 
 \pagebreak
 
-\begin{lilypond}
+\begin{lilypondf}
     \score {
         <<
           \chords {
@@ -152,7 +152,7 @@ Zeigt uns ^einen ^stillen ^Weg, zeigt uns ^einen ^stillen ^Weg.
             \new Staff \relative {
               \time 4/4
               \key g \major
-              \sectionLabel \markup { \box { "Melody B" } (2nd voice is Verse accompaniment) }
+              \boxedSectionLabelWithComment "Melody B" "2nd voice is Verse accompaniment"
                 r2 e'4 fis g a b a d2 c b4 a g2 g g4 a b2 d c b4 a b1 a2 b4 a g1 fis2 e4 d e1 ~ e
               }
           
@@ -165,7 +165,7 @@ Zeigt uns ^einen ^stillen ^Weg, zeigt uns ^einen ^stillen ^Weg.
           >>
         >>
       }
-\end{lilypond}
+\end{lilypondf}
 
 \vspace{-2em}
 
@@ -187,7 +187,7 @@ Erst im ^Traum streift man die ^Schwingen, die dem ^Wachen unbe^kannt.
 Und dem ^Korn sein ^Sehnen ^bringen, und dem ^Korn sein ^Sehnen ^bringen. |^
 \endverse
 
-\begin{lilypond}
+\begin{lilypondf}
     \score {
         <<
           \chords {
@@ -198,7 +198,7 @@ Und dem ^Korn sein ^Sehnen ^bringen, und dem ^Korn sein ^Sehnen ^bringen. |^
             \new Staff \relative {
               \time 4/4
               \key g \major
-              \sectionLabel \markup { \box { "Melody C" } (Flute 2x) }
+              \boxedSectionLabelWithComment "Melody C" "Flute 2x"
                 \repeat volta 2 {
                 b''4 b b a8 g ~ g4 g g fis e e e g8 b ~ b1 b4 b b a8 g ~ g4 g g fis e e e g8 b ~ b1 c4 c d c8 b ~ b4 b a g a a g fis8 e ~ e1 ~ e
                 }
@@ -206,9 +206,9 @@ Und dem ^Korn sein ^Sehnen ^bringen, und dem ^Korn sein ^Sehnen ^bringen. |^
       
         >>
       }
-\end{lilypond}
+\end{lilypondf}
 \pagebreak
-\begin{lilypond}
+\begin{lilypondf}
     \score {
         <<
           \chords {
@@ -231,8 +231,8 @@ Und dem ^Korn sein ^Sehnen ^bringen, und dem ^Korn sein ^Sehnen ^bringen. |^
           }
         >>
       }
-\end{lilypond}
-\begin{lilypond}
+\end{lilypondf}
+\begin{lilypondf}
     \score {
         <<
           \chords {
@@ -254,6 +254,6 @@ Und dem ^Korn sein ^Sehnen ^bringen, und dem ^Korn sein ^Sehnen ^bringen. |^
           >>
         >>
       }
-\end{lilypond}
+\end{lilypondf}
 
 \endsong

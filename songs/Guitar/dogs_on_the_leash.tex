@@ -6,7 +6,7 @@
 \textbf{Capo: 3}
 \end{infotext}
 \vspace{-2em}
-\begin{lilypond}
+\begin{lilypondf}
     \score {
         <<
           \chords {
@@ -19,7 +19,7 @@
             \new Staff \relative {
               \key g \minor
               \time 4/4
-              \sectionLabel \markup { \box { Intro } }
+              \boxedSectionLabel "Intro"
               \partial 8 g'16 bes
               \repeat volta 2 { 
                 d8 d4 g,16 bes es8 es4 d16 es 
@@ -49,7 +49,7 @@
           >>  
         >>
       }
-\end{lilypond}
+\end{lilypondf}
 
 \beginverse\memorize
 I \[Em]heard them \[C]say they \[D]wanted \[Em]change
@@ -67,7 +67,7 @@ Shut their \[G]eyes and \[C]ears, give them \[Em]drugs and \[D]beers
 Keep the \[Em]bastards \[C]silent, don't \[D]trigger their a\[G]larm
 \endchorus
 
-\begin{lilypond}
+\begin{lilypondf}
 
     \score {
         <<
@@ -82,7 +82,7 @@ Keep the \[Em]bastards \[C]silent, don't \[D]trigger their a\[G]larm
               \key g \minor
               \time 4/4
               f'4 g8. g f4.
-              \sectionLabel \markup { \box { Chorus } }
+              \boxedSectionLabel "Chorus"
               \repeat volta 2 { 
                 d'4 d8 c bes4 bes8 g f4. g8 f4 bes8 c d4 d8 f d c bes c ~ 
               }
@@ -107,7 +107,7 @@ Keep the \[Em]bastards \[C]silent, don't \[D]trigger their a\[G]larm
           >>  
         >>
       }
-\end{lilypond}
+\end{lilypondf}
 \vspace{-1em}
 \textnote{Intro}
 \vspace{-1em}
@@ -121,7 +121,7 @@ I ^keep on ^waving my ^fake flag of ^truth
 \textnote{Chours $\rightarrow$ Chorus Halftime}
 \vspace{-1em}
 \textnote{Melody $\rightarrow$ Bridge $\rightarrow$ Melody $\rightarrow$ (Bridge + Melody)}
-\begin{lilypond}
+\begin{lilypondf}
 
     \score {
         <<
@@ -135,7 +135,7 @@ I ^keep on ^waving my ^fake flag of ^truth
             \new Staff \relative {
               \key g \minor
               \time 4/4
-              \sectionLabel \markup { \box { B } }
+              \boxedSectionLabel "B"
                 g'8. bes16 c8. d16 c8. bes16 g8. f16 
                 g8. bes16 c8. d16 c4 bes
                 g8. bes16 c8. d16 c8. bes16 g8. f16 
@@ -152,7 +152,7 @@ I ^keep on ^waving my ^fake flag of ^truth
           >>  
         >>
       }
-\end{lilypond}
+\end{lilypondf}
 %
 \beginverse*
 \fbox{\normalsize{\textbf{B}}}
