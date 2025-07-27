@@ -19,84 +19,81 @@
 \input{extra/extra_\instrument}
 
 \begin{lysavefrag}{head}
-\include "definitions.ily"
+  \include "definitions.ily"
 \end{lysavefrag}
 
 \lynewenvironment{lilypondf}[1][]{%
-\begin{ly}[include_before_body=head]
-}{
-\end{ly}
+  \begin{ly}[include_before_body=head]
+  }{
+  \end{ly}
 }
 
 \pretitle{
-	\begin{center}
-}
+  \begin{center}
+  }
 
-\posttitle{
-	~\\
-	\vspace*{1cm}
-	\includegraphics[width=6cm]{img.png}
+  \posttitle{
+    ~\\
+    \vspace*{1cm}
+    \includegraphics[width=6cm]{img.png}
 \end{center}}
 
 \makeatletter
 \xpatchcmd{\SB@@@beginsong}
-	{\SB@addtoindexes\songtitle}
-	{\SB@addtoindexes{\songtitle\ifx\songauthors\empty\else\ \textcolor{gray}{(\songauthors)}\fi}}
-	{}{}
+{\SB@addtoindexes\songtitle}
+{\SB@addtoindexes{\songtitle\ifx\songauthors\empty\else\ \textcolor{gray}{(\songauthors)}\fi}}
+{}{}
 \makeatother
 
 \newcommand{\scaletab}[1]{
-	\let\gtabBAK\gtab
-	\newcommand{\sgtab}[3]{\scalebox{##1}{\gtabBAK{##2}{##3}}}
-	\renewcommand*\gtab{\sgtab{#1}}
+  \let\gtabBAK\gtab
+  \newcommand{\sgtab}[3]{\scalebox{##1}{\gtabBAK{##2}{##3}}}
+  \renewcommand*\gtab{\sgtab{#1}}
 }
 
 \newcommand*\skiptoleftpage{%
-	\leavevmode
-	\checkoddpage
-	\ifoddpage
-		\null
-	\else
-		\null
-		\newpage
-	 \fi
+  \leavevmode
+  \checkoddpage
+  \ifoddpage
+  \null
+  \else
+  \null
+  \newpage
+  \fi
 }
 
 \newcommand*\cleartoleftpage{%
-	\clearpage
-	\skiptoleftpage
+  \clearpage
+  \skiptoleftpage
 }
 
 \newcommand{\inputafterskip}[1]{
-	\begin{intersong*}
-	\newpage
-	\end{intersong*}
-	\begin{intersong*}
-	\skiptoleftpage
-	\end{intersong*}
-	\input{#1}
+  \begin{intersong*}
+    \newpage
+  \end{intersong*}
+  \begin{intersong*}
+    \skiptoleftpage
+  \end{intersong*}
+  \input{#1}
 }
 
 \newenvironment{infotext}{
-	\begin{minipage}{\linewidth}
-	\color{darkgray}
-	\itshape
-	\normalsize
-}{
-	\end{minipage}
-%	*\vspace*{1em}
+  \begin{minipage}{\linewidth}
+    \color{darkgray}
+    \itshape
+    \normalsize
+  }{
+  \end{minipage}
 }
 
 \newenvironment{performanceinstruction}{
-	\begin{minipage}{\linewidth}
-	\color{darkgray}
-	\slshape
-	\normalsize
-}{
-	\end{minipage}
+  \begin{minipage}{\linewidth}
+    \color{darkgray}
+    \slshape
+    \normalsize
+  }{
+  \end{minipage}
 }
-
-%\MakeOuterQuote{"}
 
 \setlength{\parindent}{0cm}
 \setlength{\oddsidemargin}{0in}
@@ -119,7 +116,7 @@
 
 \title{{\bfseries \Huge Songbook}}
 \author{{\bfseries \Large Andurian}}
-\date{}     
+\date{}
 
 \begin{document}
 
@@ -138,9 +135,9 @@
 \newpage
 
 \begin{songs}{titleidx}
-\pagestyle{plain}
-\setcounter{page}{1}
-\input{\builddir/songs_\instrument}
+  \pagestyle{plain}
+  \setcounter{page}{1}
+  \input{\builddir/songs_\instrument}
 \end{songs}
 
 %\printextra

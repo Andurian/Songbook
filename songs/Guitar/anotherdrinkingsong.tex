@@ -1,5 +1,5 @@
 \beginsong{Anotherdrinkingsong}[
-	by={Skyclad},
+  by={Skyclad},
   sr={\url{https://www.youtube.com/watch?v=g6wCH-VFh68}}
 ]
 
@@ -10,27 +10,27 @@
 \vspace{-0.5em}
 
 \begin{lilypondf}
-\score {
-  <<
+  \score {
+    <<
     \chords {
       \override ChordName.font-shape = #'italic
-        a2:m a:m a:m a:m
-    } 
-      
+      a2:m a:m a:m a:m
+    }
+
     \new RhythmicStaff \relative {
       \time 4/4
       \tempo 4 = 130
       \improvisationOn
-        a8 16 8 16 8 8 16 8 16 8
-        a8 16 8 16 8 8 16 8 16 8
-    }          
-  >>
-}
+      a8 16 8 16 8 8 16 8 16 8
+      a8 16 8 16 8 8 16 8 16 8
+    }
+    >>
+  }
 \end{lilypondf}
 
 \newchords{anotherdrinkingsong_verse}
 
-\meter{2}{4} % Mesaure bars note half notes since that is the 
+\meter{2}{4} % Mesaure bars note half notes since that is the
 \beginverse\memorize[anotherdrinkingsong_verse]
 |\[Am]Where they sit a|round and get a |\[Dm]round in while the |\[G]getting's good,
 They'll |\[Am]make the most un|til the money's |\[G]gone. |
@@ -38,11 +38,11 @@ They're |\[Am]coming out to |celebrate, to |\[Dm]sing and dance and |\[G]to esca
 A |\[Am]crazy world where |\[G]everything seems |\[Am]wrong. |
 
 \begin{lilypondf}
-\score {
-  <<
+  \score {
+    <<
     \chords {
       \override ChordName.font-shape = #'italic
-        f1 c2 g f1 g
+      f1 c2 g f1 g
     }
 
     \new Staff \relative c' {
@@ -51,14 +51,14 @@ A |\[Am]crazy world where |\[G]everything seems |\[Am]wrong. |
       es'1 d2 c2 es2.f4 c1
     }
 
-    \new Lyrics { 
+    \new Lyrics {
       \lyricmode {
-        Drinking4 to8 forget4 and8 to re8 -- member4 all8 the glory4 days.8 
+        Drinking4 to8 forget4 and8 to re8 -- member4 all8 the glory4 days.8
         The days we stood apart4 and8 we stood strong.1
       }
     }
-  >>
-}
+    >>
+  }
 \end{lilypondf}
 
 |\[Am]Though the beer be|fuddles sense it |\[Dm]can't provide them |\[G]recompense,
@@ -66,69 +66,68 @@ They |\[Am]settle for a|\[G]notherdrinking|\[Am]song. |
 \endverse
 
 \begin{lilypondf}
-\score {
-<<
-  \chords {
+  \score {
+    <<
+    \chords {
       a4:m c2 g4 a:m c g2
-      a4:m c2 g4 a:m c a2:m 
-  }
+      a4:m c2 g4 a:m c a2:m
+    }
 
-  \new StaffGroup <<
+    \new StaffGroup <<
     \new Staff \relative c' {
       \time 4/4
       \key g \minor
       \boxedSectionLabel "Bridge"
-        g'8 g16 a bes4 bes16 a g8 f4 
-        g8 g16 a bes a g8 f f4.
-        g8 g16 a bes8 a16 bes d c bes8 c8 bes16 c 
-        d8 c16 bes c bes a8 g8 4.
+      g'8 g16 a bes4 bes16 a g8 f4
+      g8 g16 a bes a g8 f f4.
+      g8 g16 a bes8 a16 bes d c bes8 c8 bes16 c
+      d8 c16 bes c bes a8 g8 4.
     }
     \new RhythmicStaff \relative {
       \improvisationOn
-      g8 16 16 8 16 16 8 16 16 8 16 16 
+      g8 16 16 8 16 16 8 16 16 8 16 16
       8 16 16 8 16 16 8 4.
-      g8 16 16 8 16 16 8 16 16 8 16 16 
+      g8 16 16 8 16 16 8 16 16 8 16 16
       8 16 16 8 16 16 8 4.
     }
-  >>
->>
-}
+    >>
+    >>
+  }
 \end{lilypondf}
 
 \pagebreak
 
 \begin{lilypondf}
-\score {
-  <<
+  \score {
+    <<
     \chords {
       \override ChordName.font-shape = #'italic
-        a2:m a:m a:m a:m
-    } 
-      
+      a2:m a:m a:m a:m
+    }
+
     \new RhythmicStaff \relative {
       \time 4/4
       \improvisationOn
-        a8 16 8 16 8 8 16 8 16 8
-        a8 16 8 16 8 8 16 8 16 8
-    }          
-  >>
-}
+      a8 16 8 16 8 8 16 8 16 8
+      a8 16 8 16 8 8 16 8 16 8
+    }
+    >>
+  }
 \end{lilypondf}
 
-\meter{2}{4} % Mesaure bars note half notes since that is the 
+\meter{2}{4} % Mesaure bars note half notes since that is the
 \beginverse\replay[anotherdrinkingsong_verse]
 Where the |^busy man finds |recreation the |^idle man finds |^business,
 The |^melancholy |man finds sanctua|^ry; |
 The |^stranger may have |welcome and |^still within these |^selfsame walls,
 The |^citizen may |^find some courte|^sy. |
 
-
 \begin{lilypondf}
-\score {
-  <<
+  \score {
+    <<
     \chords {
       \override ChordName.font-shape = #'italic
-        s8 f1 c2 g f1 g
+      s8 f1 c2 g f1 g
     }
 
     \new Staff \relative c' {
@@ -138,14 +137,14 @@ The |^citizen may |^find some courte|^sy. |
       es'1 d2 c2 es2.f4 c1
     }
 
-    \new Lyrics { 
+    \new Lyrics {
       \lyricmode {
         From8 'Rose and Crown' to 'cock and bull' all history4. is8 written4 there,8
         To8 folklore,4 myth,8 and legend4 we8 be8 -- long;4
       }
     }
-  >>
-}
+    >>
+  }
 \end{lilypondf}
 
 Come |^masons, plumbers, |carpenters, come |^cricketers and |^huntsmen,
@@ -155,98 +154,97 @@ All |^join in with a|^notherdrinking|^song. |
 \vspace{2em}
 
 \begin{lilypondf}
-\score {
-<<
-  \chords {
-    \override ChordName.font-shape = #'italic
+  \score {
+    <<
+    \chords {
+      \override ChordName.font-shape = #'italic
       a4:m c2 g4 a:m c g2
-      a4:m c2 g4 a:m c a2:m 
-  }
+      a4:m c2 g4 a:m c a2:m
+    }
 
-  \new StaffGroup <<
+    \new StaffGroup <<
     \new Staff \relative c' {
       \time 4/4
       \key g \minor
       \boxedSectionLabel "Bridge"
-        g'8 g16 a bes4 bes16 a g8 f4 
-        g8 g16 a bes a g8 f f4.
-        g8 g16 a bes8 a16 bes d c bes8 c8 bes16 c 
-        d8 c16 bes c bes a8 g8 4.
+      g'8 g16 a bes4 bes16 a g8 f4
+      g8 g16 a bes a g8 f f4.
+      g8 g16 a bes8 a16 bes d c bes8 c8 bes16 c
+      d8 c16 bes c bes a8 g8 4.
     }
     \new RhythmicStaff \relative {
       \improvisationOn
-      g8 16 16 8 16 16 8 16 16 8 16 16 
+      g8 16 16 8 16 16 8 16 16 8 16 16
       8 16 16 8 16 16 8 4.
-      g8 16 16 8 16 16 8 16 16 8 16 16 
+      g8 16 16 8 16 16 8 16 16 8 16 16
       8 16 16 8 16 16 8 4.
     }
-  >>
->>
-}
+    >>
+    >>
+  }
 \end{lilypondf}
 
 \pagebreak
 
 \begin{lilypondf}
-\score {
-  <<
+  \score {
+    <<
     \chords {
       \override ChordName.font-shape = #'italic
-        a2:m a:m a:m a:m
-    } 
-      
+      a2:m a:m a:m a:m
+    }
+
     \new RhythmicStaff \relative {
       \time 4/4
       \improvisationOn
-        a8 16 8 16 8 8 16 8 16 8
-        a8 16 8 16 8 8 16 8 16 8
-    }          
-  >>
-}
+      a8 16 8 16 8 8 16 8 16 8
+      a8 16 8 16 8 8 16 8 16 8
+    }
+    >>
+  }
 \end{lilypondf}
 
 \vspace{0.5em}
 
 \begin{lilypondf}
-\score {
-  <<
+  \score {
+    <<
     \chords {
       \override ChordName.font-shape = #'italic
-        a1:m d2:m g a1:m g 
-        a1:m d2:m g a2:m a4:m g a1:m 
+      a1:m d2:m g a1:m g
+      a1:m d2:m g a2:m a4:m g a1:m
     }
 
+    \new Staff \relative c' {
+      \time 4/4
+      \key g \minor
+      \boxedSectionLabel "Solo A"
+      g''2 d
+      es8. d c8 bes8. a f8
+      g4. bes16 c d8 c bes d
+      c1
+      g'2 d
+      es8. d c8 bes8. a f8
+      g4. bes16 c d8^\markup{\italic ritardando} c bes a
+      g1
 
-      \new Staff \relative c' {
-        \time 4/4
-        \key g \minor
-        \boxedSectionLabel "Solo A"
-          g''2 d 
-          es8. d c8 bes8. a f8 
-          g4. bes16 c d8 c bes d 
-          c1
-          g'2 d
-          es8. d c8 bes8. a f8 
-          g4. bes16 c d8^\markup{\italic ritardando} c bes a
-          g1
+    }
 
-      }
-
-  >>
-}
+    >>
+  }
 \end{lilypondf}
 
 \vspace{0.5em}
 
 \begin{lilypondf}
-\score {
-  <<
+  \score {
+    <<
     \chords {
       \override ChordName.font-shape = #'italic
-        a2:m a8.:m a16:2 a8.:m a16:2 a4:m g2. 
-        d2:m g a4:m g a:m e:7
-    } 
-      
+      a2:m a8.:m a16:2 a8.:m a16:2 a4:m g2.
+      d2:m g a4:m g a:m e:7
+    }
+
     \new RhythmicStaff \relative {
       \time 4/4
       \tempo 4 = 110
@@ -256,114 +254,112 @@ All |^join in with a|^notherdrinking|^song. |
         a4 4 8. 16 8. 16 4 4 2
         a4 4 8. 16 8. 16 4 4 4 4
       }
-    }          
-  >>
-}
+    }
+    >>
+  }
 \end{lilypondf}
 
 \vspace{0.5em}
 
 \begin{lilypondf}
-\score {
-  <<
+  \score {
+    <<
     \chords {
       \override ChordName.font-shape = #'italic
-        a2:m a8.:m a16:2 a8.:m a16:2 a4:m g2. 
-        d2:m g a4:m g a:m e:7
+      a2:m a8.:m a16:2 a8.:m a16:2 a4:m g2.
+      d2:m g a4:m g a:m e:7
     }
 
-
-      \new Staff \relative c' {
-        \time 4/4
-        \key g \minor
-          \repeat volta 4 {
-          \tuplet 3/2 {f8 g a} \tuplet 3/2 {bes~bes a} g2
-          \tuplet 3/2 {g8 a bes} \tuplet 3/2 {c~c bes} a2
-          \tuplet 3/2 {a8 bes c} \tuplet 3/2 {d~d c} \tuplet 3/2 {bes~bes c} \tuplet 3/2 {bes~bes a}
-          bes4 a g d 
-        }
-        \addlyrics{
-          Fa la la la la la
-          Fa la la la la la
-          Fa la la la la la la la la
-          La la la
-        }
-        
+    \new Staff \relative c' {
+      \time 4/4
+      \key g \minor
+      \repeat volta 4 {
+        \tuplet 3/2 {f8 g a} \tuplet 3/2 {bes~bes a} g2
+        \tuplet 3/2 {g8 a bes} \tuplet 3/2 {c~c bes} a2
+        \tuplet 3/2 {a8 bes c} \tuplet 3/2 {d~d c} \tuplet 3/2 {bes~bes c} \tuplet 3/2 {bes~bes a}
+        bes4 a g d
+      }
+      \addlyrics{
+        Fa la la la la la
+        Fa la la la la la
+        Fa la la la la la la la la
+        La la la
       }
 
-  >>
-}
+    }
+
+    >>
+  }
 \end{lilypondf}
 
 \begin{performanceinstruction}
-Repeat ad lib while getting faster (at least 4 times).\\
-Playing the last 4 notes staccato signals a transition to the next part. 
+  Repeat ad lib while getting faster (at least 4 times).\\
+  Playing the last 4 notes staccato signals a transition to the next part.
 \end{performanceinstruction}
 
 \begin{lilypondf}
-\score {
-  <<
+  \score {
+    <<
     \chords {
       \override ChordName.font-shape = #'italic
-        f1 c2 g f1 g
-        a:m d2:m g a:m g a1:m
+      f1 c2 g f1 g
+      a:m d2:m g a:m g a1:m
     }
 
-
     \new StaffGroup <<
-      \new Staff \relative c' {
-        \time 4/4
-        \tempo 4 = 135
-        \key g \minor
-        \boxedSectionLabel "Solo B"
-            g''4. f8 g4 bes 
-            bes8 g f d c4 d8 bes
-            g4. a8 bes c d bes 
-            a4. bes8 a g f a  
-            g f g f g bes a f
-            g bes d g f bes a f
-            g4. es8 d c bes a
-            g1
-      }
+    \new Staff \relative c' {
+      \time 4/4
+      \tempo 4 = 135
+      \key g \minor
+      \boxedSectionLabel "Solo B"
+      g''4. f8 g4 bes
+      bes8 g f d c4 d8 bes
+      g4. a8 bes c d bes
+      a4. bes8 a g f a
+      g f g f g bes a f
+      g bes d g f bes a f
+      g4. es8 d c bes a
+      g1
+    }
 
-      \new Staff \relative {
-        \time 4/4
-        \key g \minor
-        bes'4. 8 c4 c
-        d8 d d d f,4 8 8
-        g,4. d'8 es es es es 
-        f4. f8 f d a c
-        d16 d d d d d d d d d d d d d d d 
-        es es es es g g g g c c c c d d d d
-        bes4. g8 f es es d 
-        bes1 
+    \new Staff \relative {
+      \time 4/4
+      \key g \minor
+      bes'4. 8 c4 c
+      d8 d d d f,4 8 8
+      g,4. d'8 es es es es
+      f4. f8 f d a c
+      d16 d d d d d d d d d d d d d d d
+      es es es es g g g g c c c c d d d d
+      bes4. g8 f es es d
+      bes1
 
-      }
+    }
 
     >>
 
-  >>
-}
+    >>
+  }
 \end{lilypondf}
 
 \pagebreak
 
 \begin{lilypondf}
-\score {
-  <<
+  \score {
+    <<
     \chords {
       \override ChordName.font-shape = #'italic
-        a2:m a:m a:m a:m
-    } 
-      
+      a2:m a:m a:m a:m
+    }
+
     \new RhythmicStaff \relative {
       \time 4/4
       \improvisationOn
-        a8 16 8 16 8 8 16 8 16 8
-        a8 16 8 16 8 8 16 8 16 8
-    }          
-  >>
-}
+      a8 16 8 16 8 8 16 8 16 8
+      a8 16 8 16 8 8 16 8 16 8
+    }
+    >>
+  }
 \end{lilypondf}
 
 \vspace{-1em}
@@ -371,8 +367,8 @@ Playing the last 4 notes staccato signals a transition to the next part.
 \beginverse
 ~\\
 \begin{lilypondf}
-\score {
-  <<
+  \score {
+    <<
     \chords {
       \override ChordName.font-shape = #'italic
       s2 a1:m d2:m g a1:m g1 a:m d2:m g a:m g a1:m
@@ -383,32 +379,32 @@ Playing the last 4 notes staccato signals a transition to the next part.
       \time 4/4
       \key g \minor
       \partial 2 s2
-      g'4. a8 bes8. a g8 
-      c4. d8 es8. d c8 
+      g'4. a8 bes8. a g8
+      c4. d8 es8. d c8
       bes4. c8 d c bes d
       c1
       <<
-        {
-          g'4. a8 bes8. a g8
-          f4. g8 f d c bes
-          bes4. c8 d c\trill~c a
-          bes1 
-        } \\ {
-          f'2 d 
-          es8. d c8 bes8. a f8
-          g4. a8 bes c bes a
-          g1
-        }
+      {
+        g'4. a8 bes8. a g8
+        f4. g8 f d c bes
+        bes4. c8 d c\trill~c a
+        bes1
+      } \\ {
+        f'2 d
+        es8. d c8 bes8. a f8
+        g4. a8 bes c bes a
+        g1
+      }
       >>
       es'1 d2 c2 es2.f4 c1
 
     }
 
-    \new Lyrics { 
+    \new Lyrics {
       \lyricmode {
-        Well4 you8 can8 keep your 'long-hours4 culture'4. and8 
-        lusting4 for8 ad8-venture,4. There's8 
-        life8 aplenty4. down8 'The Tap 'n' 
+        Well4 you8 can8 keep your 'long-hours4 culture'4. and8
+        lusting4 for8 ad8-venture,4. There's8
+        life8 aplenty4. down8 'The Tap 'n'
         Spile'.2. For4-get8 your occupation.2. Down8 the salu4-tation4.
         This8 tragicome2-dy8 will make you smile.2.
         From4 quaint8 barstool4 philosophy2 to8 subtle4 innu4-endo4.
@@ -416,8 +412,8 @@ Playing the last 4 notes staccato signals a transition to the next part.
       }
     }
 
-  >>
-}
+    >>
+  }
 \end{lilypondf}
 
 Curse |\[Am]abstinence and |temperance; come |\[Dm]celebrate in|\[G]souciance
@@ -425,38 +421,36 @@ And |\[Am]join us in a|\[G]notherdrinking|\[Am]song. |
 \endverse
 
 \begin{lilypondf}
-\score {
-<<
-  \chords {
-    \override ChordName.font-shape = #'italic
+  \score {
+    <<
+    \chords {
+      \override ChordName.font-shape = #'italic
       a4:m c2 g4 a:m c g2
-      a4:m c2 g4 a:m c a2:m 
-  }
+      a4:m c2 g4 a:m c a2:m
+    }
 
-  \new StaffGroup <<
+    \new StaffGroup <<
     \new Staff \relative c' {
       \time 4/4
       \key g \minor
       \repeat volta 2 {
-      \boxedSectionLabel "Outro"
-        g'8 g16 a bes4 bes16 a g8 f4 
+        \boxedSectionLabel "Outro"
+        g'8 g16 a bes4 bes16 a g8 f4
         g8 g16 a bes a g8 f f4.
-        g8 g16 a bes8 a16 bes d c bes8 c8 bes16 c 
+        g8 g16 a bes8 a16 bes d c bes8 c8 bes16 c
         d8 c16 bes c bes a8 g8 4.
       }
     }
     \new RhythmicStaff \relative {
       \improvisationOn
-      g8 16 16 8 16 16 8 16 16 8 16 16 
+      g8 16 16 8 16 16 8 16 16 8 16 16
       8 16 16 8 16 16 8 4.
-      g8 16 16 8 16 16 8 16 16 8 16 16 
+      g8 16 16 8 16 16 8 16 16 8 16 16
       8 16 16 8 16 16 8 4.
     }
-  >>
->>
-}
+    >>
+    >>
+  }
 \end{lilypondf}
-
-
 
 \endsong

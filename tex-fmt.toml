@@ -1,0 +1,13 @@
+# tex-fmt.toml
+check = false
+print = false
+
+# Do not wrap since we want full crontrol over verse layouts
+wrap = false 
+wraplen = 80
+tabsize = 2
+tabchar = "space"
+stdin = false
+verbosity = "warn"
+lists = []
+no-indent-envs = []

@@ -1,30 +1,29 @@
 \beginsong{Drunken Sailor}[
-    by={Traditional},
-    sr={\url{https://www.youtube.com/watch?v=qGyPuey-1Jw}}
+  by={Traditional},
+  sr={\url{https://www.youtube.com/watch?v=qGyPuey-1Jw}}
 ]
 
 \begin{lilypondf}
-    \score {
-        <<
-          \chords {
-            \override ChordName.font-shape = #'italic
-            d1:m c d2.:m \parenthesize bes4 a8:m \parenthesize f c4 d2:m 
-          }
-      
-          \new StaffGroup
-          <<
-            \new Staff \relative {
-              \time 4/4
-                a'4 8. 16 a8 d,8 f a g4 8. 16 g8 c,8 e g a4 8. 16 a8 b c d c a g e d4 d
-                      
-              }
-            \new RhythmicStaff {
-              \improvisationOn
-              \repeat percent 4 { a8 16 16 8 16 16 8 16 16 8 16 16 }
-            }
-          >>  
-        >>
-      }
+  \score {
+    <<
+    \chords {
+      d1:m c d2.:m \parenthesize bes4 a8:m \parenthesize f c4 d2:m
+    }
+
+    \new StaffGroup
+    <<
+    \new Staff \relative {
+      \time 4/4
+      a'4 8. 16 a8 d,8 f a g4 8. 16 g8 c,8 e g a4 8. 16 a8 b c d c a g e d4 d
+
+    }
+    \new RhythmicStaff {
+      \improvisationOn
+      \repeat percent 4 { a8 16 16 8 16 16 8 16 16 8 16 16 }
+    }
+    >>
+    >>
+  }
 \end{lilypondf}
 
 \beginverse\memorize
@@ -77,25 +76,24 @@
 \textnote{Chorus 2$\times$ (insted of once)}
 
 \begin{lilypondf}
-    \score {
-        <<
-          \chords {
-            \override ChordName.font-shape = #'italic
-            d1:m c d2.:m \parenthesize bes4 a8:m \parenthesize f c4 d2:m 
-          }
-      
-            \new Staff \relative {
-              \time 4/4
-              \boxedSectionLabel "Optional Solo"
-                d'16 f a f d f a f d f a f d f a f 
-                c    e g e c e g e c e g e c e g e
-                d    f a f d f a f d f a f d f a f
-                e' d c b a g f e d4 d   
-                      
-              }
-      
-        >>
-      }
+  \score {
+    <<
+    \chords {
+      d1:m c d2.:m \parenthesize bes4 a8:m \parenthesize f c4 d2:m
+    }
+
+    \new Staff \relative {
+      \time 4/4
+      \boxedSectionLabel "Optional Solo"
+      d'16 f a f d f a f d f a f d f a f
+      c    e g e c e g e c e g e c e g e
+      d    f a f d f a f d f a f d f a f
+      e' d c b a g f e d4 d
+
+    }
+
+    >>
+  }
 \end{lilypondf}
 
 \endsong

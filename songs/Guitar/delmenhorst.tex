@@ -1,55 +1,53 @@
 \beginsong{Delmenhorst}[
-    by={Element of Crime},
-    sr={\url{https://www.youtube.com/watch?v=ymRnuhrAp8k}}
+  by={Element of Crime},
+  sr={\url{https://www.youtube.com/watch?v=ymRnuhrAp8k}}
 ]
 
 \newchords{delmenhorst_verse}
 \newchords{delmenhorst_chorus}
 
 \begin{lilypondf}
-melody = \relative {
+  melody = \relative {
     \repeat volta 2 {
-        b'8 d g8. fis d b 
+      b'8 d g8. fis d b
     }
     \alternative{
-        { c8 e g8. fis ~ fis4 c8 }
-        { c8 e g8. fis ~ fis4.}
+      { c8 e g8. fis ~ fis4 c8 }
+      { c8 e g8. fis ~ fis4.}
     }
     g1
-    }
-    
-    \score {
+  }
+
+  \score {
     <<
-        \chords {
-        \override ChordName.font-shape = #'italic
-        \set majorSevenSymbol = \markup { maj7 }
-        g1 c:maj7 c:maj7 g
-        }
-            
-    
-        \new StaffGroup 
-        <<   
-        \new Staff {
-            \time 4/4
-            \tempo 4 = 100
-            \key g \major
-            \melody
-        }    
-        \new TabStaff{
-            \key g \major
-            \set TabStaff.minimumFret = #7
-            \set TabStaff.restrainOpenStrings = ##t
-            \boxedSectionLabel "Intro"
-            \transpose a a, \melody
-        }
-        \new RhythmicStaff \relative {
-            \improvisationOn
-            c8 8 8 16 8 16 8 16 16 16 16
-            \repeat percent 3 {c8 8 8 16 8 16 8 16 16 16 16}  
-        }
-        >>              
-    >>
+    \chords {
+      \set majorSevenSymbol = \markup { maj7 }
+      g1 c:maj7 c:maj7 g
     }
+
+    \new StaffGroup
+    <<
+    \new Staff {
+      \time 4/4
+      \tempo 4 = 100
+      \key g \major
+      \melody
+    }
+    \new TabStaff{
+      \key g \major
+      \set TabStaff.minimumFret = #7
+      \set TabStaff.restrainOpenStrings = ##t
+      \boxedSectionLabel "Intro"
+      \transpose a a, \melody
+    }
+    \new RhythmicStaff \relative {
+      \improvisationOn
+      c8 8 8 16 8 16 8 16 16 16 16
+      \repeat percent 3 {c8 8 8 16 8 16 8 16 16 16 16}
+    }
+    >>
+    >>
+  }
 \end{lilypondf}
 
 \beginverse\memorize[delmenhorst_verse]
@@ -58,7 +56,7 @@ melody = \relative {
 \[Am] Es ist schön, wenn's nicht mehr \[G]weh tut
 \[Am] Und wo zu sein, wo du nie \[D7]warst
 \endverse
- 
+
 \beginchorus\memorize[delmenhorst_chorus]
 \[Bm] Hinter Huchting ist ein \[Am]Graben
 \[D7] Der ist weder breit noch \[Cmaj7]tief
@@ -101,7 +99,7 @@ melody = \relative {
 ^ Und das ist immer Delmen^horst
 ^ Erst wenn alles scheiße^gal ist ^ Macht das Leben wieder ^Spaß
 \endverse
- 
+
 \textnote{First Chorus}
 
 \beginchorus\replay[delmenhorst_chorus]

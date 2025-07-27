@@ -1,9 +1,9 @@
 \beginsong{Havamal}[
-    by={Falkenbach},
-    sr={\url{https://www.youtube.com/watch?v=-jdAxXU46\_4}}
+  by={Falkenbach},
+  sr={\url{https://www.youtube.com/watch?v=-jdAxXU46\_4}}
 ]
 
-\beginverse\memorize                
+\beginverse\memorize
 \[Am]First I know, un\[F]known to rulers, \[G]or any human \[E]mind;
 \[Am]Help it is named, for \[F]help it can give in \[Dm]hours of \[E]despair.
 \endverse
@@ -30,15 +30,15 @@ The ^wind it calms, the ^waves it smoothes and ^puts the sea to ^sleep.
 The \[Am]Wise One has spoken the \[G]words in the \[F]hall,
 \[Am]Joy to him who \[F]un\[G]der\[Am]stood.
 \vspace{1em}
-\[Am]--- I grew and \[G]I throve \[F]well. 
+\[Am]--- I grew and \[G]I throve \[F]well.
 \[Am]Word from word gave \[F]words \[E]to \[Am]me.
-\[Am]--- I grew and \[G]I throve \[F]well. 
+\[Am]--- I grew and \[G]I throve \[F]well.
 \[Am]Deed from deed gave \[F]deeds \[E]to \[Am]me.
 \endchorus
 
 \beginverse
 ^When I brethern ^lead to battle I ^chant it behind my ^shield,
-Un^wounded they go, Un^wounded they return, 
+Un^wounded they go, Un^wounded they return,
 Un^scathed wherever they ^are.
 \endverse
 
@@ -59,46 +59,45 @@ A^bout the high ones, ^elves and gods, ^I can name them ^all.
 
 \begin{lilypondf}
 
-melody = { \partial 4 a'8 b
-        \repeat volta 2 {c2 b8 a e2 a8 b c2 b8 a}
-        \alternative{
-         { f2 c'8 a b2 a8 g\2 b2 a 8 b c2 b8 a b2 a8 b }
-         { f2 c'8 b a2 a8 b c2 a8 c b2 a8 c b2 a8 g }
-        }
-        a2.}
+  melody = { \partial 4 a'8 b
+    \repeat volta 2 {c2 b8 a e2 a8 b c2 b8 a}
+    \alternative{
+      { f2 c'8 a b2 a8 g\2 b2 a 8 b c2 b8 a b2 a8 b }
+      { f2 c'8 b a2 a8 b c2 a8 c b2 a8 c b2 a8 g }
+    }
+  a2.}
 
-\score {
-  <<
+  \score {
+    <<
     \chords {
-      \override ChordName.font-shape = #'italic
-       s4 a2.:m s f s g s e s s d:m s e s a:m
+      s4 a2.:m s f s g s e s s d:m s e s a:m
     }
 
     \new StaffGroup
     <<
-      \new Staff \relative {
-        \time 6/8 
-        \omit StringNumber
-        \melody
-       
-      }
-      \new TabStaff \relative {
-                  \set TabStaff.minimumFret = #3
-            \set TabStaff.restrainOpenStrings = ##t
-        \melody
-      }
-      \new RhythmicStaff {
-        \improvisationOn
-        \partial 4 s4
-        \repeat percent 3 { a8 16 16 8 8 16 16 8 } 
-      }
-    >>  
-  >>
-}
+    \new Staff \relative {
+      \time 6/8
+      \omit StringNumber
+      \melody
+
+    }
+    \new TabStaff \relative {
+      \set TabStaff.minimumFret = #3
+      \set TabStaff.restrainOpenStrings = ##t
+      \melody
+    }
+    \new RhythmicStaff {
+      \improvisationOn
+      \partial 4 s4
+      \repeat percent 3 { a8 16 16 8 8 16 16 8 }
+    }
+    >>
+    >>
+  }
 \end{lilypondf}
 
 \beginverse
-^The Wise One has spoken the ^words in the hall, ^needful for men to ^know.   
+^The Wise One has spoken the ^words in the hall, ^needful for men to ^know.
 ^Hail the speaker, ^hail to who knows, ^joy to him who under^stood.
 \endverse
 

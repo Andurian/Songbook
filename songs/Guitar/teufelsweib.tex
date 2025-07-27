@@ -1,55 +1,54 @@
 \beginsong{Teufelsweib}[
-    by={Schandmaul},
-    sr={\url{https://www.youtube.com/watch?v=X\_7pE2sPVqw}}
+  by={Schandmaul},
+  sr={\url{https://www.youtube.com/watch?v=X\_7pE2sPVqw}}
 ]
 
 \newchords{teufelsweib_verse}
 \newchords{teufelsweib_bridge}
 \newchords{teufelsweib_chorus}
 \begin{lilypondf}
-    \score {
-        <<
-          \chords {
-            \override ChordName.font-shape = #'italic
-            a2:m c4 g4 a2:m c4 g4 a2:m c4 g4 a2:m f4 e4 a2:m f4 e4 a2:m e4:m g
-          }
-          
-          \new StaffGroup
-          <<
-            \new Staff \relative{
-              \time 4/4
-              \boxedSectionLabel "Intro"
-              \repeat volta 2{
-              a'8 a16 a16 ~ a8 b c b a g 
-              a8 a16 a16 ~ a8 g a g e4
-              a8 a16 a16 ~ a8 b c d c b
-              }
-              \alternative{
-                { a a16 a16 ~ a8 g a4 a}
-                {a16 g a b a g a b a g a b a g a b}
-              }
-              a2 e4 g
-            }
-            \new TabStaff \relative {
-              \repeat percent 3 {<a, e''>8 e'16 a a, c' a e <c g' c>8 e <g, g' b> c}
-              <a e''>8 e'16 a a, c' a e <c c' f>4 <b b' e>
-              <a e''>8 e'16 a a, c' a e <c c' f>4 <b b' e>
-              \improvisationOn
-              g'4. 16 16 4 4
-              
-            }
-
-            \new RhythmicStaff \relative{
-              \improvisationOn
-              \repeat percent 3 { a8 16 8 16 16 16 8 16 16 8 16 16 }
-              8 16 8 16 16 16 4 4 
-              8 16 8 16 16 16 4 4 
-              4. 16 16 4 4
-            }
-    
-        >>
-      >>
+  \score {
+    <<
+    \chords {
+      a2:m c4 g4 a2:m c4 g4 a2:m c4 g4 a2:m f4 e4 a2:m f4 e4 a2:m e4:m g
     }
+
+    \new StaffGroup
+    <<
+    \new Staff \relative{
+      \time 4/4
+      \boxedSectionLabel "Intro"
+      \repeat volta 2{
+        a'8 a16 a16 ~ a8 b c b a g
+        a8 a16 a16 ~ a8 g a g e4
+        a8 a16 a16 ~ a8 b c d c b
+      }
+      \alternative{
+        { a a16 a16 ~ a8 g a4 a}
+        {a16 g a b a g a b a g a b a g a b}
+      }
+      a2 e4 g
+    }
+    \new TabStaff \relative {
+      \repeat percent 3 {<a, e''>8 e'16 a a, c' a e <c g' c>8 e <g, g' b> c}
+      <a e''>8 e'16 a a, c' a e <c c' f>4 <b b' e>
+      <a e''>8 e'16 a a, c' a e <c c' f>4 <b b' e>
+      \improvisationOn
+      g'4. 16 16 4 4
+
+    }
+
+    \new RhythmicStaff \relative{
+      \improvisationOn
+      \repeat percent 3 { a8 16 8 16 16 16 8 16 16 8 16 16 }
+      8 16 8 16 16 16 4 4
+      8 16 8 16 16 16 4 4
+      4. 16 16 4 4
+    }
+
+    >>
+    >>
+  }
 \end{lilypondf}
 
 \beginverse\memorize[teufelsweib_verse]
@@ -71,30 +70,29 @@ Mein ^Vater sagte: ^Lass das ^sein! Das ^Weib ist keine ^Frau f체r ^dich.
 \pagebreak
 
 \begin{lilypondf}
-    \score {
-        <<
-          \chords {
-            \override ChordName.font-shape = #'italic
-            c2 f g c c f g c
-            c:m f:m g c:m c:m f:m g c:m
-          }
-          
-            \new Staff \relative{
-              \time 4/4
-              \boxedSectionLabel "Bridge"
-              g'2 a8 g f e d4 g8 f e d c4 g'4 c8 b a g f e d4 g e2
-             c16 g' es' g, c, g' es' g, 
-             e16 c' as' c,    e, c' as' c,
-             g16 d' b' d,     g, d' b' d, 
-             c,16 g' es' g,   c, g' es' g,
-             c,16 g' es'  g,   c, g' es' g,   
-             e16 c' as'  c,   e, c' as' c, 
-             g16 d' b' d,     g, d' b' d
-              c,2
-            } 
-
-      >>
+  \score {
+    <<
+    \chords {
+      c2 f g c c f g c
+      c:m f:m g c:m c:m f:m g c:m
     }
+
+    \new Staff \relative{
+      \time 4/4
+      \boxedSectionLabel "Bridge"
+      g'2 a8 g f e d4 g8 f e d c4 g'4 c8 b a g f e d4 g e2
+      c16 g' es' g, c, g' es' g,
+      e16 c' as' c,    e, c' as' c,
+      g16 d' b' d,     g, d' b' d,
+      c,16 g' es' g,   c, g' es' g,
+      c,16 g' es'  g,   c, g' es' g,
+      e16 c' as'  c,   e, c' as' c,
+      g16 d' b' d,     g, d' b' d
+      c,2
+    }
+
+    >>
+  }
 \end{lilypondf}
 \vspace*{-1em}
 \beginverse*\memorize[teufelsweib_bridge]
@@ -106,33 +104,32 @@ Denn es \[Cm]hatte keinen \[Fm]Sinn, sie h채tte es \[G]nur f체r Geld \[Cm]gemach
 \endverse
 
 \begin{lilypondf}
-    \score {
-        <<
-          \chords {
-            \override ChordName.font-shape = #'italic
-            a2:m e:m a:m e:m 
-            a:m e:m f c
-          }
-          
-          \new StaffGroup
-          <<
-            \new Staff \relative{
-              \time 4/4
-              \boxedSectionLabel "Chorus"
-              \repeat volta 2{
-                a'4 c b g a8 16 16 ~ 8 g g2
-                a4 <c e> <b d> <g d'> <a e'>8 <g d'> <f c'> <e b'> <e c'>2
-              }
-             
-            }
-          \new RhythmicStaff \relative{
-            \improvisationOn
-            \repeat percent 4 {a4 8 16 16 8 8 8 16 16}
-            
-          } 
-    >>
-      >>
+  \score {
+    <<
+    \chords {
+      a2:m e:m a:m e:m
+      a:m e:m f c
     }
+
+    \new StaffGroup
+    <<
+    \new Staff \relative{
+      \time 4/4
+      \boxedSectionLabel "Chorus"
+      \repeat volta 2{
+        a'4 c b g a8 16 16 ~ 8 g g2
+        a4 <c e> <b d> <g d'> <a e'>8 <g d'> <f c'> <e b'> <e c'>2
+      }
+
+    }
+    \new RhythmicStaff \relative{
+      \improvisationOn
+      \repeat percent 4 {a4 8 16 16 8 8 8 16 16}
+
+    }
+    >>
+    >>
+  }
 \end{lilypondf}
 
 \beginchorus\memorize[teufelsweib_chorus]
@@ -156,30 +153,29 @@ Ich ^kaufte ihr die ^halbe ^Welt, doch ^war's die H채lfte, ^die ihr ^nicht ge^f�
 \vspace{1em}
 
 \begin{lilypondf}
-    \score {
-        <<
-          \chords {
-            \override ChordName.font-shape = #'italic
-            c2 f g c c f g c
-            c:m f:m g c:m c:m f:m g c:m
-          }
-          
-            \new Staff \relative{
-              \time 4/4
-              \boxedSectionLabel "Bridge"
-              g'2 a8 g f e d4 g8 f e d c4 g'4 c8 b a g f e d4 g e2
-             c16 g' es' g, c, g' es' g, 
-             e16 c' as' c,    e, c' as' c,
-             g16 d' b' d,     g, d' b' d, 
-             c,16 g' es' g,   c, g' es' g,
-             c,16 g' es'  g,   c, g' es' g,   
-             e16 c' as'  c,   e, c' as' c, 
-             g16 d' b' d,     g, d' b' d
-              c,2
-            } 
-
-      >>
+  \score {
+    <<
+    \chords {
+      c2 f g c c f g c
+      c:m f:m g c:m c:m f:m g c:m
     }
+
+    \new Staff \relative{
+      \time 4/4
+      \boxedSectionLabel "Bridge"
+      g'2 a8 g f e d4 g8 f e d c4 g'4 c8 b a g f e d4 g e2
+      c16 g' es' g, c, g' es' g,
+      e16 c' as' c,    e, c' as' c,
+      g16 d' b' d,     g, d' b' d,
+      c,16 g' es' g,   c, g' es' g,
+      c,16 g' es'  g,   c, g' es' g,
+      e16 c' as'  c,   e, c' as' c,
+      g16 d' b' d,     g, d' b' d
+      c,2
+    }
+
+    >>
+  }
 \end{lilypondf}
 
 \beginverse*
@@ -193,33 +189,32 @@ Denn es \[Cm]hatte keinen \[Fm]Sinn, sie h채tte es \[G]nur f체r Geld \[Cm]gemach
 \pagebreak
 
 \begin{lilypondf}
-    \score {
-        <<
-          \chords {
-            \override ChordName.font-shape = #'italic
-            a2:m e:m a:m e:m 
-            a:m e:m f c
-          }
-          
-          \new StaffGroup
-          <<
-            \new Staff \relative{
-              \time 4/4
-              \boxedSectionLabel "Chorus"
-              \repeat volta 2{
-                a'4 c b g a8 16 16 ~ 8 g g2
-                a4 <c e> <b d> <g d'> <a e'>8 <g d'> <f c'> <e b'> <e c'>2
-              }
-             
-            }
-          \new RhythmicStaff \relative{
-            \improvisationOn
-            \repeat percent 4 {a4 8 16 16 8 8 8 16 16}
-            
-          } 
-    >>
-      >>
+  \score {
+    <<
+    \chords {
+      a2:m e:m a:m e:m
+      a:m e:m f c
     }
+
+    \new StaffGroup
+    <<
+    \new Staff \relative{
+      \time 4/4
+      \boxedSectionLabel "Chorus"
+      \repeat volta 2{
+        a'4 c b g a8 16 16 ~ 8 g g2
+        a4 <c e> <b d> <g d'> <a e'>8 <g d'> <f c'> <e b'> <e c'>2
+      }
+
+    }
+    \new RhythmicStaff \relative{
+      \improvisationOn
+      \repeat percent 4 {a4 8 16 16 8 8 8 16 16}
+
+    }
+    >>
+    >>
+  }
 \end{lilypondf}
 
 \beginchorus

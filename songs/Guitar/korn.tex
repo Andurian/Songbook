@@ -1,95 +1,92 @@
 \beginsong{Korn}[
-    by={Forseti},
-    sr={\url{https://www.youtube.com/watch?v=zRRIkpnrO30}}
+  by={Forseti},
+  sr={\url{https://www.youtube.com/watch?v=zRRIkpnrO30}}
 ]
 \vspace{-1em}
 \meter{}{}
 \begin{performanceinstruction}
-Second guitar starts at repeat
+  Second guitar starts at repeat
 \end{performanceinstruction}
 \vspace{-1em}
 \begin{lilypondf}
-    \score {
-        <<
-          \chords {
-          \override ChordName.font-shape = #'italic
-            \repeat volta 2 {
-              s2 e:m a1:m c g e:m a:m c g a2:m c e1:m a2:m b:m
-            }
-            \alternative {
-              { e1:m s }
-              { e1:m }
-            }
-          }
-          \new StaffGroup
-          <<
-            \new TabStaff \relative {
-              \time 4/4
-              \boxedSectionLabel "Intro"
-              \repeat volta 2 {
-                e,4 g' e' b <a, c'> a' e' c <c, c'> g' e' b <g, b'> g' g' b, 
-                <e,, b''> g' e' b <a, c'> a' e' c <c, c'> g' e' b  <g, b'> g' g' b, 
-                <a, c'> a'  <c, c'> g' <e, b''> g' e' b <a, c'> a' <fis d'> b\3
-              }
-              \alternative {
-                { <e,, b''> g' e' b g e' b g }
-                { <e, b' e g b e>1 }
-              }
-            }
-            \new TabStaff \relative {
-                b4 g e b' c a e c' c g e c' b g d b'
-                b g e b' c a e c' c g e c' b g d b'
-                c a c g b g e b' c a d g, s1 s <e, b' e g b e>1
-            }
-          >>
-        >>
+  \score {
+    <<
+    \chords {
+      \repeat volta 2 {
+        s2 e:m a1:m c g e:m a:m c g a2:m c e1:m a2:m b:m
       }
+      \alternative {
+        { e1:m s }
+        { e1:m }
+      }
+    }
+    \new StaffGroup
+    <<
+    \new TabStaff \relative {
+      \time 4/4
+      \boxedSectionLabel "Intro"
+      \repeat volta 2 {
+        e,4 g' e' b <a, c'> a' e' c <c, c'> g' e' b <g, b'> g' g' b,
+        <e,, b''> g' e' b <a, c'> a' e' c <c, c'> g' e' b  <g, b'> g' g' b,
+        <a, c'> a'  <c, c'> g' <e, b''> g' e' b <a, c'> a' <fis d'> b\3
+      }
+      \alternative {
+        { <e,, b''> g' e' b g e' b g }
+        { <e, b' e g b e>1 }
+      }
+    }
+    \new TabStaff \relative {
+      b4 g e b' c a e c' c g e c' b g d b'
+      b g e b' c a e c' c g e c' b g d b'
+      c a c g b g e b' c a d g, s1 s <e, b' e g b e>1
+    }
+    >>
+    >>
+  }
 \end{lilypondf}
 %
 \begin{lilypondf}
   \score {
     <<
-      \chords {
-        \override ChordName.font-shape = #'italic
-        s1 e1:m a:m c g e:m a:m c g a2:m c e1:m a2:m b:m e1:m s
-      }
-  
-      \new StaffGroup
-      <<
-        \new Staff \relative {
-          \time 4/4
-            \key g \major
-            \boxedSectionLabel "Viola Solo"
-            g'2 a b1 e, c'2. d4 b2 g4 a b1 e, a4 b c2 b1 c2 d4 c b1 a2 b4 g e1 r
-                  
-          }
-        \new RhythmicStaff {
-          \improvisationOn
-          s1 \repeat percent 3 { a4 4 4 8 8 } 4 8 8 4 8 8 \repeat percent 3 { a4 4 4 8 8 } 4 8 8 4 8 8 4 8 8 4 8 8 4 4 4 8 8 4 8 8 4 8 8 4 4 4 8 8 4 8 8 4 4 
-        }
-      >>  
+    \chords {
+      s1 e1:m a:m c g e:m a:m c g a2:m c e1:m a2:m b:m e1:m s
+    }
+
+    \new StaffGroup
+    <<
+    \new Staff \relative {
+      \time 4/4
+      \key g \major
+      \boxedSectionLabel "Viola Solo"
+      g'2 a b1 e, c'2. d4 b2 g4 a b1 e, a4 b c2 b1 c2 d4 c b1 a2 b4 g e1 r
+
+    }
+    \new RhythmicStaff {
+      \improvisationOn
+      s1 \repeat percent 3 { a4 4 4 8 8 } 4 8 8 4 8 8 \repeat percent 3 { a4 4 4 8 8 } 4 8 8 4 8 8 4 8 8 4 8 8 4 4 4 8 8 4 8 8 4 8 8 4 4 4 8 8 4 8 8 4 4
+    }
+    >>
     >>
   }
 \end{lilypondf}
 \pagebreak
 \begin{lilypondf}
-    \score {
-        <<
-          \chords {
-          \override ChordName.font-shape = #'italic
-              e1:m a:m c g e:m a:m c g a2:m c e1:m a2:m b:m e1:m s
-          }
-         
-          \new Staff \relative {
-            \time 4/4
-            \key g \major
-            \boxedSectionLabelWithComment "Verse" "accompaniment"
-            e'1 c' c b e, c' c b c2 c b1 a2 b b1 r
-              
-          }
-        >>
-       
+  \score {
+    <<
+    \chords {
+      e1:m a:m c g e:m a:m c g a2:m c e1:m a2:m b:m e1:m s
     }
+
+    \new Staff \relative {
+      \time 4/4
+      \key g \major
+      \boxedSectionLabelWithComment "Verse" "accompaniment"
+      e'1 c' c b e, c' c b c2 c b1 a2 b b1 r
+
+    }
+    >>
+
+  }
 \end{lilypondf}
 
 \beginverse\memorize
@@ -115,56 +112,54 @@ Zeigt uns ^einen ^stillen ^Weg, zeigt uns ^einen ^stillen ^Weg.
 \vspace{0.5em}
 %
 \begin{lilypondf}
-    \score {
-        <<
-          \chords {
-            \override ChordName.font-shape = #'italic
-            e1:m a:m c g e:m a:m c g a2:m c e1:m a2:m b:m e1:m s
-          }
-          \new StaffGroup
-          <<
-            \new Staff \relative {
-              \time 4/4
-              \key g \major
-              \boxedSectionLabelWithComment "Melody A" "Viola & Violin"
-              r2 e''4 fis g1 fis2 g g4 fis e2 e e4 fis g2 g4 a a2 a4 b b1 a2 b4 a g1 fis2 e4 d e1~e
-             }
-            \new Staff \relative {
-               \key g \major
-                b'1 e, a4 b c2 b1 b c c2 d4 c b1e2 fis4 g e1 fis2 g e1 ~ e
-            }
-          >>
-        >>
-      }
+  \score {
+    <<
+    \chords {
+      e1:m a:m c g e:m a:m c g a2:m c e1:m a2:m b:m e1:m s
+    }
+    \new StaffGroup
+    <<
+    \new Staff \relative {
+      \time 4/4
+      \key g \major
+      \boxedSectionLabelWithComment "Melody A" "Viola & Violin"
+      r2 e''4 fis g1 fis2 g g4 fis e2 e e4 fis g2 g4 a a2 a4 b b1 a2 b4 a g1 fis2 e4 d e1~e
+    }
+    \new Staff \relative {
+      \key g \major
+      b'1 e, a4 b c2 b1 b c c2 d4 c b1e2 fis4 g e1 fis2 g e1 ~ e
+    }
+    >>
+    >>
+  }
 \end{lilypondf}
 
 \pagebreak
 
 \begin{lilypondf}
-    \score {
-        <<
-          \chords {
-            \override ChordName.font-shape = #'italic
-            e1:m a:m c g e:m a:m c g a2:m c e1:m a2:m b:m e1:m s
-          }
-          \new StaffGroup
-          <<
-            \new Staff \relative {
-              \time 4/4
-              \key g \major
-              \boxedSectionLabelWithComment "Melody B" "2nd voice is Verse accompaniment"
-                r2 e'4 fis g a b a d2 c b4 a g2 g g4 a b2 d c b4 a b1 a2 b4 a g1 fis2 e4 d e1 ~ e
-              }
-          
-                  \new Staff \relative {
-                    \time 4/4
-                    \key g \major
-                    e'1 c' c b e, c' c b c b a2 b b1 ~ b
-                    
-                  }
-          >>
-        >>
-      }
+  \score {
+    <<
+    \chords {
+      e1:m a:m c g e:m a:m c g a2:m c e1:m a2:m b:m e1:m s
+    }
+    \new StaffGroup
+    <<
+    \new Staff \relative {
+      \time 4/4
+      \key g \major
+      \boxedSectionLabelWithComment "Melody B" "2nd voice is Verse accompaniment"
+      r2 e'4 fis g a b a d2 c b4 a g2 g g4 a b2 d c b4 a b1 a2 b4 a g1 fis2 e4 d e1 ~ e
+    }
+
+    \new Staff \relative {
+      \time 4/4
+      \key g \major
+      e'1 c' c b e, c' c b c b a2 b b1 ~ b
+
+    }
+    >>
+    >>
+  }
 \end{lilypondf}
 
 \vspace{-2em}
@@ -188,72 +183,69 @@ Und dem ^Korn sein ^Sehnen ^bringen, und dem ^Korn sein ^Sehnen ^bringen. |^
 \endverse
 
 \begin{lilypondf}
-    \score {
-        <<
-          \chords {
-            \override ChordName.font-shape = #'italic
-            e1:m a:m c g e:m a:m c g a2:m c e1:m a2:m b:m e1:m s
-          }
-      
-            \new Staff \relative {
-              \time 4/4
-              \key g \major
-              \boxedSectionLabelWithComment "Melody C" "Flute 2x"
-                \repeat volta 2 {
-                b''4 b b a8 g ~ g4 g g fis e e e g8 b ~ b1 b4 b b a8 g ~ g4 g g fis e e e g8 b ~ b1 c4 c d c8 b ~ b4 b a g a a g fis8 e ~ e1 ~ e
-                }
-              }
-      
-        >>
+  \score {
+    <<
+    \chords {
+      e1:m a:m c g e:m a:m c g a2:m c e1:m a2:m b:m e1:m s
+    }
+
+    \new Staff \relative {
+      \time 4/4
+      \key g \major
+      \boxedSectionLabelWithComment "Melody C" "Flute 2x"
+      \repeat volta 2 {
+        b''4 b b a8 g ~ g4 g g fis e e e g8 b ~ b1 b4 b b a8 g ~ g4 g g fis e e e g8 b ~ b1 c4 c d c8 b ~ b4 b a g a a g fis8 e ~ e1 ~ e
       }
+    }
+
+    >>
+  }
 \end{lilypondf}
 \pagebreak
 \begin{lilypondf}
-    \score {
-        <<
-          \chords {
-            \override ChordName.font-shape = #'italic
-            s1 
-            e1:m a:m c g e:m a:m c g a2:m c e1:m a2:m b:m e1:m s
-            e1:m a:m c g e:m a:m c g a2:m c e1:m a2:m b:m e1:m s
-            e1:m a:m c g e:m a:m c g a2:m c e1:m a2:m b:m e1:m s
-            e1:m a:m c g e:m a:m c g a2:m c e1:m a2:m b:m e1:m s
-          }
-      
-          \new Staff \relative {
-            \time 4/4
-            \key g \major 
-            r4 b4 c b e2 e4 fis g b, e2 g4 fis e fis g d d c b2 a4 g a2 d2 d4 e g a b2. a8 b c2 d4 c b1 a2 g4 fis e1 r \break
-            g1 a4 b a c ~ c2 b4 a b2 d4 e8 fis g2 g4 a b a2. e4 g2 fis4 d1 c2 d4 c b1 a2 g4 fis e1 r \break
-            r2 e'4 fis g1 fis2 e4 d \grace{d8} c2 b b b4 c d2 c c4 a d a b1 c2 d4 c b a g2 fis g4 fis e1 r \break
-            g'8 fis g a b a g4 g8 fis g a b a g fis g a g fis g fis e d e fis g fis g d g d e d c d c b c a b g a g fis g fis e e fis e fis g fis e d e4 e8 fis g2 g8 a b a g fis e d e2 e e8 b e fis g fis e d e2 e 
-              
-          }
-        >>
-      }
+  \score {
+    <<
+    \chords {
+      s1
+      e1:m a:m c g e:m a:m c g a2:m c e1:m a2:m b:m e1:m s
+      e1:m a:m c g e:m a:m c g a2:m c e1:m a2:m b:m e1:m s
+      e1:m a:m c g e:m a:m c g a2:m c e1:m a2:m b:m e1:m s
+      e1:m a:m c g e:m a:m c g a2:m c e1:m a2:m b:m e1:m s
+    }
+
+    \new Staff \relative {
+      \time 4/4
+      \key g \major
+      r4 b4 c b e2 e4 fis g b, e2 g4 fis e fis g d d c b2 a4 g a2 d2 d4 e g a b2. a8 b c2 d4 c b1 a2 g4 fis e1 r \break
+      g1 a4 b a c ~ c2 b4 a b2 d4 e8 fis g2 g4 a b a2. e4 g2 fis4 d1 c2 d4 c b1 a2 g4 fis e1 r \break
+      r2 e'4 fis g1 fis2 e4 d \grace{d8} c2 b b b4 c d2 c c4 a d a b1 c2 d4 c b a g2 fis g4 fis e1 r \break
+      g'8 fis g a b a g4 g8 fis g a b a g fis g a g fis g fis e d e fis g fis g d g d e d c d c b c a b g a g fis g fis e e fis e fis g fis e d e4 e8 fis g2 g8 a b a g fis e d e2 e e8 b e fis g fis e d e2 e
+
+    }
+    >>
+  }
 \end{lilypondf}
 \begin{lilypondf}
-    \score {
-        <<
-          \chords {
-            \override ChordName.font-shape = #'italic
-            s1 e1:m a:m c g e:m a:m c g a2:m c e1:m a2:m b:m e1:m
-          }
-          \new StaffGroup
-          <<
-            \new Staff \relative {
-              \time 4/4
-              \key g \major
-                r1 b''4 b b a8 g ~ g4 g g fis e e e g8 b ~ b1 b4 b b a8 g ~ g4 g g fis e e e g8 b ~ b1 c4 c d c8 b ~ b4 b a g a a g fis8 e ~ e1 ~ e
-              }
-            \new Staff \relative {
-               \key g \major
-                g'2 a b1 e, c'2. d4 b2 g4 a b1 e, a4 b c2 b1 c2 d4 c b1 a2 b4 g e1 ~ e
-              
-            }
-          >>
-        >>
-      }
+  \score {
+    <<
+    \chords {
+      s1 e1:m a:m c g e:m a:m c g a2:m c e1:m a2:m b:m e1:m
+    }
+    \new StaffGroup
+    <<
+    \new Staff \relative {
+      \time 4/4
+      \key g \major
+      r1 b''4 b b a8 g ~ g4 g g fis e e e g8 b ~ b1 b4 b b a8 g ~ g4 g g fis e e e g8 b ~ b1 c4 c d c8 b ~ b4 b a g a a g fis8 e ~ e1 ~ e
+    }
+    \new Staff \relative {
+      \key g \major
+      g'2 a b1 e, c'2. d4 b2 g4 a b1 e, a4 b c2 b1 c2 d4 c b1 a2 b4 g e1 ~ e
+
+    }
+    >>
+    >>
+  }
 \end{lilypondf}
 
 \endsong
