@@ -3,9 +3,7 @@
   sr={\url{https://www.youtube.com/watch?v=n63UbX5kzAc}}
 ]
 
-\begin{infotext}
-  \textbf{Capo: -1}
-\end{infotext}
+\transposeChords{-1}
 
 \begin{lilypondf}
   \score {
@@ -49,7 +47,9 @@ But \[Am]now hear my \[G]song, about the \[Esus4]dawn of the \[Dm]night.
   \score {
     <<
     \chords {
+      \transpose c \transposeTarget {
       s4 c2 g a:m g
+      }
     }
     \new TabStaff \relative {
       \tabFullNotation

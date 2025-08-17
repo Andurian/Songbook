@@ -72,18 +72,20 @@ class SongbookBuilder():
         if self.tempdir is not None:
             self.tempdir.cleanup()
 
-    def build_instrument(self, instrument, force_fullbuild):
+    def build_instrument(self, instrument, force_fullbuild, soundingchords):
         auxdir = self.auxdir
 
         filename = join(auxdir, '{}.tex'.format(instrument))
         outname = 'Songbook_{}'.format(instrument)
+        if soundingchords:
+            outname += "_NoCapo"
         outname_pdf = outname + ".pdf"
         outname_full = join(auxdir, outname_pdf)
         
         fullbuild = not os.path.exists(outname_full) or force_fullbuild
 
         with open(filename, 'w+') as outfile:
-            document = self.filecontents[instrument] + '\n\n\\newcommand{{\\instrument}}{{{}}}\n\\newcommand{{\\builddir}}{{{}}}\n\\input{{Songbook}}'.format(instrument, auxdir)
+            document = self.filecontents[instrument] + '\n\n\\newcommand{{\\instrument}}{{{}}}\n\\newcommand{{\\builddir}}{{{}}}\n\\newif\\ifSoundingChords\\SoundingChords{}\\input{{Songbook}}'.format(instrument, auxdir, "true" if soundingchords else "false")
             outfile.write(document)
             print(document)
         
@@ -107,12 +109,13 @@ parser = argparse.ArgumentParser()
 parser.add_argument("-d", "--dir", help="Use an existing build directory")
 parser.add_argument("-i", "--instrument", help="Build Songbook only for a specific instrument")
 parser.add_argument("-f", "--fullbuild", help="Force a full build", action="store_true", default=False)
+parser.add_argument("-s", "--soundingchords", help="Show the actually sounding chords instead of capo", action="store_true", default=False)
 
 args = parser.parse_args()
 
 builder = SongbookBuilder(args.dir)
 if(args.instrument):
-    builder.build_instrument(args.instrument, args.fullbuild)
+    builder.build_instrument(args.instrument, args.fullbuild, args.soundingchords)
 else:
     builder.build_all(args.fullbuild)
     

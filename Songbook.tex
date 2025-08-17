@@ -22,11 +22,94 @@
   \include "definitions.ily"
 \end{lysavefrag}
 
+\begin{lysavefrag}{targetA}
+  transposeTarget = a
+\end{lysavefrag}
+
+\begin{lysavefrag}{targetAis}
+  transposeTarget = bes
+\end{lysavefrag}
+
+\begin{lysavefrag}{targetB}
+  transposeTarget = b
+\end{lysavefrag}
+
+\begin{lysavefrag}{targetC}
+  transposeTarget = c
+\end{lysavefrag}
+
+\begin{lysavefrag}{targetCis}
+  transposeTarget = cis
+\end{lysavefrag}
+
+\begin{lysavefrag}{targetD}
+  transposeTarget = d
+\end{lysavefrag}
+
+\begin{lysavefrag}{targetDis}
+  transposeTarget = es
+\end{lysavefrag}
+
+\begin{lysavefrag}{targetE}
+  transposeTarget = e
+\end{lysavefrag}
+
+\begin{lysavefrag}{targetF}
+  transposeTarget = f
+\end{lysavefrag}
+
+\begin{lysavefrag}{targetFis}
+  transposeTarget = fis
+\end{lysavefrag}
+
+\expandafter\def\csname fetchTransposeOffset@-4\endcsname{targetGis}
+\expandafter\def\csname fetchTransposeOffset@-3\endcsname{targetA}
+\expandafter\def\csname fetchTransposeOffset@-2\endcsname{targetAis}
+\expandafter\def\csname fetchTransposeOffset@-1\endcsname{targetB}
+\expandafter\def\csname fetchTransposeOffset@0\endcsname{targetC}
+\expandafter\def\csname fetchTransposeOffset@1\endcsname{targetCis}
+\expandafter\def\csname fetchTransposeOffset@2\endcsname{targetD}
+\expandafter\def\csname fetchTransposeOffset@3\endcsname{targetDis}
+\expandafter\def\csname fetchTransposeOffset@4\endcsname{targetE}
+\expandafter\def\csname fetchTransposeOffset@5\endcsname{targetF}
+\expandafter\def\csname fetchTransposeOffset@6\endcsname{targetFis}
+
+\newcommand{\fetchTransposeHeader}[1]{%
+\csname fetchTransposeOffset@#1\endcsname
+}
+
+\newcommand{\lilypondTranspose}{0}
+
 \lynewenvironment{lilypondf}[1][]{%
-  \begin{ly}[include_before_body=head]
+  \begin{ly}[include_before_body={head,\fetchTransposeHeader{\lilypondTranspose}}]
   }{
   \end{ly}
 }
+
+\ifSoundingChords
+
+\newenvironment{infotextAfterTranspose}[1]{
+  \transpose{#1}
+  \renewcommand{\lilypondTranspose}{#1}
+  \begin{infotext}
+}{
+  \end{infotext}
+}
+
+\newcommand{\transposeChords}[1]{\transpose{#1}\renewcommand{\lilypondTranspose}{#1}}}
+
+\else
+
+\newenvironment{infotextAfterTranspose}[1]{
+  \begin{infotext}
+    \textbf{Capo: #1}\\
+}{
+  \end{infotext}
+}
+
+\newcommand{\transposeChords}[1]{\begin{infotext}\textbf{Capo: #1}\end{infotext}}
+
+\fi
 
 \pretitle{
   \begin{center}
@@ -44,6 +127,8 @@
 {\SB@addtoindexes{\songtitle\ifx\songauthors\empty\else\ \textcolor{gray}{(\songauthors)}\fi}}
 {}{}
 \makeatother
+
+
 
 \newcommand{\scaletab}[1]{
   \let\gtabBAK\gtab
@@ -114,7 +199,8 @@
 \newindex{titleidx}{cbtitle}
 \indexsongsas{titleidx}{\thepage}
 
-\title{{\bfseries \Huge Songbook}}
+\title{{\bfseries \Huge Songbook}\ifSoundingChords\\{\Large Sounding Chords -- No Capo}\fi}
+
 \author{{\bfseries \Large Andurian}}
 \date{}
 
