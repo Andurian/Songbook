@@ -1,21 +1,41 @@
 \beginsong{Drunken Sailor}[
-    by={Traditional}
+  by={Traditional},
+  sr={\url{https://www.youtube.com/watch?v=qGyPuey-1Jw}}
 ]
 
-\transpose{5}
+\begin{lilypondf}
+  \score {
+    <<
+    \chords {
+      d1:m c d2.:m \parenthesize bes4 a8:m \parenthesize f c4 d2:m
+    }
+
+    \new StaffGroup
+    <<
+    \new Staff \relative {
+      \time 4/4
+      a'4 8. 16 a8 d,8 f a g4 8. 16 g8 c,8 e g a4 8. 16 a8 b c d c a g e d4 d
+
+    }
+    \new RhythmicStaff {
+      \improvisationOn
+      \repeat percent 4 { a8 16 16 8 16 16 8 16 16 8 16 16 }
+    }
+    >>
+    >>
+  }
+\end{lilypondf}
 
 \beginverse\memorize
-\[Em]What shall we do with the drunken sailor?
-\[D]What shall we do with the drunken sailor?
-\[Em]What shall we do with the drunken \[(C)]sailor?
-\[G]Early \[D]in the \[Em]morning!
+\[Dm]What shall we do with the drunken sailor?
+\[C]What shall we do with the drunken sailor?
+\[Dm]What shall we do with the drunken \[(B&)]sailor?
+\[F (Am)]Early \[C]in the \[Dm]morning!
 \endverse
 
 \beginchorus
-^Ho---ray and up she rises
-^Ho---ray and up she rises
-^Ho---ray and up she ^rises
-^Early ^in the ^morning!
+^Ho---ray and up she rises, ^Ho---ray and up she rises
+^Ho---ray and up she ^rises ^early ^in the ^morning!
 \endchorus
 
 \beginverse
@@ -53,6 +73,27 @@
 ^Early ^in the ^morning!
 \endverse
 
-\textnote{Chorus 2$\times$ singen.}
+\textnote{Chorus 2$\times$ (insted of once)}
+
+\begin{lilypondf}
+  \score {
+    <<
+    \chords {
+      d1:m c d2.:m \parenthesize bes4 a8:m \parenthesize f c4 d2:m
+    }
+
+    \new Staff \relative {
+      \time 4/4
+      \boxedSectionLabel "Optional Solo"
+      d'16 f a f d f a f d f a f d f a f
+      c    e g e c e g e c e g e c e g e
+      d    f a f d f a f d f a f d f a f
+      e' d c b a g f e d4 d
+
+    }
+
+    >>
+  }
+\end{lilypondf}
 
 \endsong

@@ -1,49 +1,60 @@
 \beginsong{Männer mit Bärten}[
-    by={Die Streuner}
+  by={Die Streuner},
+  sr={\url{https://www.youtube.com/watch?v=q3khFyxt3Uk}}
 ]
 
 \begin{infotext}
-Wenn eine Melodiebegleitung existiert, kann das Intro mit gespielt werden.\\
-Angenehmer zu singen, wenn einen Ganzton tiefer gestimmt.
+  \textbf{Capo: -2} (Personal comfort if no additional instrument is present)\\
+  Play instrumental post chous after regular chorus every other time (marked places).
 \end{infotext}
 
 \newchords{maenner_mit_baerten_verse}
 \newchords{maenner_mit_baerten_chorus}
 
-\beginverse*\memorize[maenner_mit_baerten_verse]
-\[Em] \[C] \[D] \[Em] ~~~  \[Em] \[C] \[D] \[Em]
-\[Em] \[C] \[D] \[Em] ~~~  \[Em] \[C] \[D] \[Em]
+\begin{lilypondf}
+  \score {
+    <<
+    \chords {
+      s8
+      e4.:m c4. d4. e4.:m e4.:m c4. d4. e4.:m
+      e4.:m c4. d4. e4.:m e4.:m c4. d4. e4.:m
+      g2. s2. e4.:m d4. b4.:m e4.:m
+      g2. s2. e4.:m d4. b4.:m e4.:m
+      e2.:m d4. e2.:m s4. d4.
+    }
+    \relative c' {
+      \key g \major
+      \time 6/8
+      \boxedSectionLabel "Intro / Post Chorus"
+      \partial 8 b8 |
+      e4 fis8 g4 a8 g4 fis8 e4 b8 e4 fis8 g4 a8 g4 fis8 e4. |
+      e'4 fis8 g4 a8 g4 fis8 e4 b8 e4 fis8 g4 a8 g4 fis8 e4. |
+      g4 a8 b4 a8 g4 a8 b4. e,8 fis8 g8 fis4. fis8 g8 a8 g4 e8 |
+      g4 a8 b4 a8 g4 a8 b4. e,4 fis8 g4 a8 g4 fis8 e4. | \break
+      \improvisationOn
+      b8 16 16 8 8 16 16 8 \time 3/8 8 8 8
+      \time 6/8 8 16 16 8 8 16 16 8 8 16 16 8 8 8 8
+    }
+    >>
+  }
+\end{lilypondf}
+
+\vspace{1em}
+
+\beginverse\memorize[maenner_mit_baerten_verse]
+\[Em]Alle die \[C]mit uns auf \[D]Kaperfahrt \[Em]fahren
+\[Em]Müssen \[C]Männer mit \[D]Bärten \[Em]sein
+\[Em]Alle die \[C]mit uns auf \[D]Kaperfahrt \[Em]fahren
+\[Em]Müssen \[C]Männer mit \[D]Bärten \[Em]sein
 \endverse
 
-\beginverse*\memorize[maenner_mit_baerten_chorus]
-\[G] \[G] \[G] \[G] ~~~ \[Em] \[D] \[Bm] \[Em]
-\[G] \[G] \[G] \[G] ~~~ \[Em] \[D] \[Bm] \[Em]
-\endverse
-
-\textnote{Auftakt}
-
-\beginverse*
-\[Em] \[Em] \[D] ~~~ \[Em] \[Em] \[Em] \[D]
-\endverse
-
-\beginverse\replay[maenner_mit_baerten_verse]
-^Alle die ^mit uns auf ^Kaperfahrt ^fahren
-^Müssen ^Männer mit ^Bärten ^sein
-^Alle die ^mit uns auf ^Kaperfahrt ^fahren
-^Müssen ^Männer mit ^Bärten ^sein
-\endverse
-
-\beginchorus\replay[maenner_mit_baerten_chorus]
-^Jan und ^Hein und ^Claas und ^Pit
-^Die haben ^Bärte, ^die haben ^Bärte
-^Jan und ^Hein und ^Claas und ^Pit
-^Die haben ^Bärte, die ^fahren ^mit
+\beginchorus\memorize[maenner_mit_baerten_chorus]
+\[G]Jan und \[G]Hein und \[G]Klaas und \[G]Pit
+\[Em]Die haben \[D]Bärte, \[Bm]die haben \[Em]Bärte
+\[G]Jan und \[G]Hein und \[G]Klaas und \[G]Pit
+\[Em]Die haben \[D]Bärte, die \[Bm]fahren \[Em]mit
 \endchorus
 
-\beginverse*
-\[Em] \[Em] \[D] ~~~ \[Em] \[Em] \[Em] \[D]
-\endverse
-
 \beginverse\replay[maenner_mit_baerten_verse]
 ^Alle die ^Weiber und ^Branntwein ^lieben
 ^Müssen ^Männer mit ^Bärten ^sein
@@ -51,7 +62,7 @@ Angenehmer zu singen, wenn einen Ganzton tiefer gestimmt.
 ^Müssen ^Männer mit ^Bärten ^sein
 \endverse
 
-\textnote{Nach chorus intro mit Melodie wiederholen}
+\textnote{Post Chorus}
 
 \beginverse\replay[maenner_mit_baerten_verse]
 ^Alle die ^mit uns das ^Walross ^töten
@@ -59,7 +70,7 @@ Angenehmer zu singen, wenn einen Ganzton tiefer gestimmt.
 ^Alle die ^mit uns das ^Walross ^töten
 ^Müssen ^Männer mit ^Bärten ^sein
 \endverse
- 
+
 \beginverse\replay[maenner_mit_baerten_verse]
 ^Alle die ^Tod und ^Teufel nicht ^fürchten
 ^Müssen ^Männer mit ^Bärten ^sein
@@ -67,7 +78,7 @@ Angenehmer zu singen, wenn einen Ganzton tiefer gestimmt.
 ^Müssen ^Männer mit ^Bärten ^sein
 \endverse
 
-\textnote{Nach chorus intro mit Melodie wiederholen}
+\textnote{Post Chorus}
 
 \beginverse\replay[maenner_mit_baerten_verse]
 ^Alle die ^endlich zur ^Hölle mit ^fahren

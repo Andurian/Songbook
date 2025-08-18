@@ -1,19 +1,25 @@
 \beginsong{Blau wie das Meer}[
-	by={Mr.~Hurley \& die Pulveraffen}
+  by={Mr.~Hurley \& die Pulveraffen},
+  sr={\url{https://www.youtube.com/watch?v=TgDXGQYib8k}}
 ]
 
-\begin{infotext}
-Mit Instrumentalbegleitung:
-	\begin{itemize}
-		\item Intro zweimal spielen
-		\item Refrain ohne Gesang wiederholen
-	\end{itemize}
-\end{infotext}
+\begin{lilypondf}
+  \score {
+    <<
+    \chords {
+      s4 c1 f a:m g c f a2:m g c4 g c2
+    }
 
-\beginverse*
-\[C] \[F] \[Am] \[G]
-\[C] \[F] \[Am] \[G] \[C] \[G] \[C]
-\endverse
+    \new Staff \relative {
+      \boxedSectionLabel "Intro / Instrumental Chorus"
+      \partial 4 e''8 d |
+      c4. d8 e g4. a8. g16 a8 g e c4. a'8. g16 a8 g e c4 g'8 f e d e d4 e8 d
+      c4. d8 e g4. a8. g16 a8 g e c4. a'8. g16 a8 g e d e d c4 ~ 4 r2
+    }
+
+    >>
+  }
+\end{lilypondf}
 
 \beginverse\memorize
 Schon als \[Am]Schiffsjunge hab ich meine \[F]Seele ver\[G]kauft
@@ -29,6 +35,8 @@ Ich bin \[C]blau wie das Meer ge\[F]laden wie ein Bordgeschütz
 und \[Am]dichter als der \[G]Nebel vor Kap \[C]Ho-\[G]o-\[C]orn
 \endchorus
 
+\textnote{Instrumental Chorus}
+
 \beginverse
 Der ^Schiffsarzt sagt mir jeden Tag ich ^tränke zu viel ^Rum
 er ^bangt um meine Leber, appel^liert an die Vernunft
@@ -36,18 +44,17 @@ Doch ^wär für uns das Wasser zum ^trinken ge^dacht
 ^hätte Gott den Ozean nicht ^salzig gemacht!
 \endverse
 
-\newpage
-
-\textnote{Gesprochen und verkatert}
+\textnote{Chorus $\rightarrow$ Instrumental Chorus}
 
 \beginverse
+\begin{performanceinstruction}
+Gesprochen und verkatert}
+\end{performanceinstruction}
 ^Gestern Abend habe ich wohl ^ein' zu viel ge^habt
 ich ^wache auf und hab in meiner ^Koje wenig Platz
 ich ^drehe mich nach Steuerbord und ^was muss ich da ^seh'n?
 In ^meinem Bett liegt nackt die Frau ^vom \[G]Ka\[G]pi\[G]tän
 \endverse
-
-\textnote{Refrain normal ohne Wiederholung}
 
 \beginchorus
 Sie war \[C]blau wie das Meer \[F]voll wie unser Laderaum
@@ -56,20 +63,40 @@ Sie war \[C]blau wie das Meer ge\[F]laden wie ein Bordgeschütz
 und \[Am]dichter als der \[G]Nebel vor Kap \[C]Ho-\[G]o-\[C]orn
 \endchorus
 
-\textnote{Halftime}
-\beginverse
-Und \[F]kann ich mich morgens noch \[C]daran erinnern \[G]wo ich einge\[C]schlafen bin
-\[F]muss das Gelage wohl \[C]trostlos gewesen \[G]sein 
-Wir \[F]liegen viel länger im \[C]Seemannsgrab als \[G]dass wir lebendig \[C]sind
-also \[F]gießt den drei Ma\[C]trosen noch einen \[G]ein
-\endverse
+\vspace*{1em}
+\begin{lilypondf}
+\score {
+  <<
+  \chords {
+    s8
+    f2. c g c f c g s
+    f   c g c f c g
+  }
 
-\textnote{Refrain ohne Begleitung}
-\textnote{Refrain}
+  \new Staff \relative {
+    \time 6/8
+    \partial 8
+    s8
+    \boxedSectionLabel "Interlude"
+    f'2 g8 a g2 e8 c d2 c8 d e4 f8 g4. f2 g8 a g2 e8 c d2 b'8 c b d c b a g \break
+    f2  g8 a g2 e8 c d2 c8 d e4 f8 g4. f2 g8 a g2 b8 c b d c b4.
+  }
 
-\beginverse*
-\[C] \[F] \[Am] \[G]
-\[C] \[F] \[Am] \[G] \[C] \[G] \[C]
-\endverse
+  \new Lyrics {
+    \lyricmode {
+      Und8 kann ich mich morgens4 noch8 daran4 erinnern2 wo4 ich8
+      einge4.-schlafen bin
+      muss8 das Gelage4. wohl8 trostlos4 gewe4-sen4 sein.2. 2 8
+      Wir liegen4 viel8 länger4 im8 Seemannsgrab2 8 als8 dass wir
+      lebendig2 sind.8 2
+      Also8 gießt4 den8 drei4 Ma8-trosen4 noch8 einen4. ein.8
+    }
+  }
+  >>
+}
+\end{lilypondf}
+\vspace*{-1em}
+
+\textnote{Chorus ohne Gitarre $\rightarrow$ Chorus $\rightarrow$ Instrumental Chorus}
 
 \endsong

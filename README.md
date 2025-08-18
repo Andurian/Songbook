@@ -19,12 +19,12 @@ You can build it (more or less) manually or you can use the automated build.
 
 You need:
   
-  - PDFLaTeX
   - LuaLaTeX
   - Python 3
-  
-LuaLaTeX is more or less optional and only necessary if you want to build the index of the book.
-All code is probably platform independent but has only been tested on Windows so far.
+  - Lilypond
+
+It might be necessary to apply the patch associated with this error to the luaoptions package: https://github.com/lualatex-tools/luaoptions/issues/6  
+
 
 ### Automated build
 

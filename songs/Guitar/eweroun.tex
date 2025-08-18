@@ -1,0 +1,169 @@
+\beginsong{Eweroun}[
+  by={Falkenbach},
+  sr={\url{https://www.youtube.com/watch?v=mA5nN65B\_eg}}
+]
+\meter{}{} % We do not want the small meter marks
+\newchords{eweroun_a}
+\newchords{eweroun_b}
+
+\begin{lilypondf}
+  \score {
+    <<
+    \chords {
+      a1:m a:m a:m a:m
+    }
+
+    \new RhythmicStaff \relative {
+      \time 4/4
+      \improvisationOn
+      \boxedSectionLabel "Intro"
+      b'4 4 4 8 8 4 4 4 8 8 4 4 4 8 8 4 4 4 8 8
+    }
+    >>
+  }
+\end{lilypondf}
+
+\beginverse\memorize[eweroun_a]
+\begin{performanceinstruction}
+  First verse after intro with reduced instrumentation and one octave deeper
+\end{performanceinstruction}
+\lrep \[Am]I wintars stilta hvis. \[F]I vor\[Am]jaarns \[E]guldyn \[Am]luiht.
+\[Am]I \[C]naarjaars bluodin \[G]roud, \[F]naarjaars \[E]bluodin \[Am]roud |\[Am] |\[Am] \rrep
+
+\endverse
+
+\begin{lilypondf}
+  \score {
+    <<
+    \chords {
+      a1:m a:m f f a:m e
+    }
+
+    \new RhythmicStaff \relative {
+      \time 4/4
+      \improvisationOn
+      \boxedSectionLabel "Bridge"
+      b'4 4 4 8 8 4 4 4 8 8 4 4 4 8 8 4 4 4 8 8 4 4 4 8 8 4 4 4 8 8
+    }
+    >>
+  }
+\end{lilypondf}
+
+\vspace{1em}
+
+\begin{lilypondf}
+  mynotesa =  \relative {
+    r2 a4^"pizz." b c2 f4 a gis2 e b gis r2 a4 b c2 f4 a gis2 e c b8 c b4 \break
+  }
+
+  mynotesb =  \relative {
+    a'2-"arco" g8 a g4 e a, a2 a' g8 a g4 c2 \grace{ b16 c } b2 a g8 a g4 e a, a2 \break a' g8 a g4 a2 g a1 r4 e c' \grace{ b16 c } b4 \boxedSectionLabel "Verse" a1
+  }
+
+  \score {
+    <<
+    \chords {
+      f1 s e s f s e f2 g a1:m s s f2 g a1:m s s f2 g d1:m s2 e a:m
+    }
+
+    \new StaffGroup
+    <<
+    \new Staff  \transpose a a'  { \mynotesa \transpose a a, \mynotesb }
+    \new TabStaff  { \mynotesa \transpose a a \mynotesb }
+    >>
+    >>
+  }
+\end{lilypondf}
+
+\beginverse\memorize[eweroun_b]
+\[Am]Wijl wintars \[C]stilta hvis \[Am]en wijl \[C]vorjaarns \[G]guldyn sunna\[Am]luiht.
+Den \[Am]oude \[C]vandrar waagt fuër \[G]ewer oun en \[Dm]eweroun.
+\[Am]Den oude \[C]vandrar waagt, wijl \[G]naarjaars roud, fuër \[Dm]ewer oun... \[F]ew\[E]er\[Am]oun
+\endverse
+\begin{lilypondf}
+
+  mynotesb =  \relative {
+    a'2-"arco" g8 a g4 e a, a2 a' g8 a g4 c2 \grace{ b16 c } b2 a g8 a g4 e a, a2 a' g8 a g4 a2 g a1 r4 e c' \grace{ b16 c } b4 a1
+  }
+
+  \score {
+    <<
+    \chords {
+      a1:m s s f2 g a1:m s s f2 g d1:m s2 e a:m \boxedSectionLabel "Verse"
+    }
+
+    \new StaffGroup
+    <<
+    \new Staff \mynotesb
+    \new TabStaff \mynotesb
+    >>
+    >>
+  }
+\end{lilypondf}
+\vspace{-1.5em}
+\textnote{Restart from Verse 1 without repeat.}
+\begin{lilypondf}
+  \score {
+    <<
+    \chords {
+      a1:m a:m a:m a:m f f a:m e a:m a:m c c g g f e a:m a:m a:m a:m f f a:m e a:m
+    }
+
+    \new StaffGroup
+    <<
+    \new TabStaff \relative {
+      \time 4/4
+      a,8\6 e'\5 a4\4  <a,\6 e'\5 a\4>2 <a\6 e'\5 a\4>1 <a\6 e'\5 a\4>1 <a\6 e'\5 a\4>1
+      <a\6 f'\5 a\4>1 <a\6 f'\5 a\4>1
+      <a\6 e'\5 a\4>1
+      <gis\6 e'\5 gis\4>1
+      <a\6 e'\5 a\4>1  <a\6 e'\5 a\4>1
+      <c e g> <c e g>
+      <g d'\5 g\4> <g d'\5 g\4>
+      <f c' f>
+      <e b' e>
+      <a\6 e'\5 a\4>1 <a\6 e'\5 a\4>1 <a\6 e'\5 a\4>1 <a\6 e'\5 a\4>1
+      <a\6 f'\5 a\4>1 <a\6 f'\5 a\4>1
+      <a\6 e'\5 a\4>1
+      <gis\6 e'\5 gis\4>1
+      <a\6 e'\5 a\4>1
+    }
+
+    \new TabStaff \relative{
+      e8 c'8 e4 c8 e4 c8 <e, c' e>1 <e c' e>  <e c' e>
+      <a c e> <a c e>
+      <e c' e>
+      <gis b e>
+      <e c' e>1 <e c' e>  <e c' e>  <e c' e>
+      <d g d'> <d g d'>
+      <a' c e>
+      <gis b e>
+      <e c' e>1 <e c' e> <e c' e>1 <e c' e>
+      <a c e> <a c e>
+      <e c' e>1
+      <gis b e>
+      <a c e>
+    }
+
+    \new TabStaff \relative{
+      c'8\3 e\2 a4\1 e8\2 a4\1 e8\2 <c e a>1 <c e a> <c e a>
+      <c f a> <c f a>
+      <c e a>
+      <b e gis>
+      <c e a> <c e a>
+      <c e g> <c e g>
+      <b d g> <b d g>
+      <c f a>
+      <b e gis>
+      <c e a> <c e a> <c e a> <c e a>
+      <c f a> <c f a>
+      <c e a>
+      <b e gis>
+      <c e a>
+    }
+    >>
+    >>
+  }
+\end{lilypondf}
+
+\endsong

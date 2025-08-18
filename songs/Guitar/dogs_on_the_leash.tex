@@ -1,0 +1,353 @@
+\beginsong{Dogs on the Leash}[
+  by={The O'Reillys and the Paddyhats},
+  sr={\url{https://www.youtube.com/watch?v=yqMRAHs0oyQ}}
+]
+
+\transposeChords{3}
+
+\begin{lilypondf}
+  \score {
+    <<
+    \chords {
+      \transpose c \transposeTarget {
+      s8 e2:m c g e:m a:m g d1 a2:m g e2.:m
+      }
+    }
+
+    \new StaffGroup
+    <<
+    \new Staff \relative {
+      \key g \minor
+      \time 4/4
+      \boxedSectionLabel "Intro"
+      \partial 8 g'16 bes
+      \repeat volta 2 {
+        d8 d4 g,16 bes es8 es4 d16 es
+        f8. f es8 d2
+      }
+      \alternative{
+        {
+          c8. c d8 c8. bes bes8
+          c8 bes a bes a g f g16 bes
+        }
+        {
+          c8. c d8 c8 bes a f
+          g8. g f8 g2
+        }
+      }
+    }
+
+    \new RhythmicStaff {
+      \improvisationOn
+      s8 a8 8. 16 16 16 8 8. 16 16 16
+      16 16 16 8. 8 8 8. 16 16 16
+      8. 8. 8 8. 8. 8
+      8 8 8 8 8 8 16 16 16 16
+      8. 8. 8 8 8. 16 16 16
+      16 16 16 8. 8 4 8 8
+    }
+    >>
+    >>
+  }
+\end{lilypondf}
+
+\beginverse\memorize
+I \[Em]heard them \[C]say they \[D]wanted \[Em]change
+\[C]Think they're not the \[G]only ones \[D]bein' \[Em]strange
+But I \[Em]know a \[C]way, oh \[D]I can make them \[Em]stop
+A \[C]trunk full of \[G]drugs and a \mbar{2}{4}\[D]box of beer on
+\endverse
+
+\begin{lilypondf}
+
+  \score {
+    <<
+    \chords {
+      \transpose c \transposeTarget {
+      e1:m
+      g2 c g1 e2:m g d1
+      g2 c g1 e2:m g d1
+      g2 c e:m d e:m c d g
+      }
+    }
+
+    \new StaffGroup
+    <<
+    \new Staff \relative {
+      \key g \minor
+      \time 4/4
+      f'4 g8. g16 f4 bes8 c
+      \boxedSectionLabel "Chorus"
+      d4 d8 c bes4 bes8 g f4. g8 f4 bes8 c d4 d8 f d c bes c ~ c c ~ c2 bes8 c
+      d4 d8 c bes4 bes8 g f4. g8 f4 bes8 c d4 d8 f d c bes c ~ c c ~ c2 bes4
+      f'4. f8 f4 es8 d
+      es4 d c bes8 c
+      d4 d c8 bes4 bes8
+      c16 bes8 bes8. a8 bes2
+    }
+
+    \new Lyrics {
+      \lyricmode {
+        top.2.
+        Keep8 the dogs4 on8 the leash4 keep8 them calm.4. 4.
+        A4 dog4 on8 a leash4 means8 no8 8 harm.2 8
+        Keep8 the dogs4 on8 the leash4 hold8 them tight.4. 4.
+        A4 dog4 on8 a leash4 he8 won't8 8 bite.2 8
+        Shut8 their eyes4. and8 ears,4 give8 them drugs4 and beers.
+        Keep8 the bastards2 silent4. don't8 trigger8. their a8-larm.2
+      }
+    }
+
+    \new RhythmicStaff {
+      \improvisationOn
+      a4 8. 8. 4. \repeat percent 2 { 8 8. 16 16 16 8 8. 16 16 16}
+    }
+    >>
+    >>
+  }
+\end{lilypondf}
+\vspace{-1em}
+\textnote{Intro}
+\vspace{-1em}
+\beginverse\replay
+I've ^got the ^task to ^keep them ^cryin'
+So ^I devised a ^plan to ^avoid their ^riot
+Most ^people ^are so ^easy to se^duce
+I ^keep on ^waving my \mbar{2}{4}^fake flag of \mbar{4}{4}\[Em]truth
+\endverse
+\vspace{-1em}
+\textnote{Chours}
+\vspace{0.5em}
+\begin{lilypondf}
+  \score {
+    <<
+    \chords {
+      \transpose c \transposeTarget {
+      g1 g g g
+      g2 c g1
+      }
+    }
+
+    \new RhythmicStaff {
+      \improvisationOn
+      \boxedSectionLabel "Chorus Halftime"
+      a2.~8. 32 32
+      a2.~8. 32 32
+      a2.~8. 32 32
+      8. 16 8. 16 8. 16 8. 32 32
+      8. 16 8. 32 32 8. 16 8. 32 32 8. 16 8. 16 8. 16 8. 32 32
+    }
+
+
+    \new Lyrics {
+      \lyricmode{
+        larm4 2. 1 1 2. Keep8 the dogs4 on8 the leash4 keep8 them calm.4. 4.
+        A4
+      }
+    }
+
+    >>
+  }
+\end{lilypondf}
+\vspace{-1em}
+\beginverse*
+\[Em]dog on a \[G]leash means \[D]no harm
+Keep the \[G]dogs on the \[C]leash, hold them \[G]tight
+A \[Em]dog on a \[G]leash he \[D]won't bite
+Shut their \[G]eyes and \[C]ears, give them \[Em]drugs and \[D]beers
+Keep the \[Em]bastards \[C]silent, don't \mbar{2}{4}\[D]trigger their a-
+\endverse
+\begin{lilypondf}
+
+  \score {
+    <<
+    \chords {
+      \transpose c \transposeTarget {
+      \set majorSevenSymbol = \markup {↑} % Abuse the symbol to remind me to play D as C shape moved up
+      e1:m e:m e:m c2 d:7+
+      e1:m e2.:m c4 e1:m c2 d:
+      }
+    }
+
+    \new StaffGroup
+    <<
+    \new Staff \relative {
+      \key g \minor
+      \time 4/4
+      \boxedSectionLabelWithComment "B" "Emulate Siren"
+      a'1\glissando es'\glissando a,\glissando es'\glissando \break
+      g,8. bes16 c8. d16 c8. bes16 g8. f16
+      g8. bes16 c8. d16 c4 bes
+      g8. bes16 c8. d16 c8. bes16 g8. f16
+      bes8. a16 g8. f16 a4 d,
+
+    }\addlyrics{larm.}
+
+    \new RhythmicStaff {
+      \improvisationOn
+      a8. 16 \xNotesOn a8. 16 a8. 16 a8. 16 \xNotesOff
+      a8. 16 \xNotesOn a8. 16 a4 a4 \xNotesOff
+      a8. 16 \xNotesOn a8. 16 a8. 16 a8. 16 \xNotesOff
+      a8. 16 4 8. 16 4
+      a8. 16 \xNotesOn a8. 16 a8. 16 a8. 16 \xNotesOff
+      a8. 16 \xNotesOn a8. 16 a8. 16 \xNotesOff a4
+      a8. 16 \xNotesOn a8. 16 a8. 16 a8. 16 \xNotesOff
+      a8. 16 4 8. 16 4
+    }
+    >>
+
+    >>
+  }
+\end{lilypondf}
+
+\begin{lilypondf}
+  \score {
+    <<
+    \chords {
+      \transpose c \transposeTarget {
+      \set majorSevenSymbol = \markup {↑} % Abuse the symbol to remind me to play D as C shape moved up
+      e1:m e:m e:m c2 d:7+
+      e1:m e:m e1:m c2 d:7+
+      }
+    }
+
+    \new RhythmicStaff {
+      \improvisationOn
+      a8. 16 \xNotesOn a8. 16 a8. 16 a8. 16 \xNotesOff
+      a8. 16 \xNotesOn a8. 16 a8. 16 a8. 16 \xNotesOff
+      a8. 16 \xNotesOn a8. 16 a8. 16 a8. 16 \xNotesOff
+      a8. 16 4 8. 16 4
+      a8. 16 \xNotesOn a8. 16 a8. 16 a8. 16 \xNotesOff
+      a8. 16 \xNotesOn a8. 16 a8. 16 a8. 16 \xNotesOff
+      a8. 16 \xNotesOn a8. 16 a8. 16 a8. 16 \xNotesOff
+      a8. 16 4 8. 16 4
+    }
+
+    \new Lyrics {
+      \lyricmode{
+        4 We4 won't,2 4 we won't,2 4 we won't,4. we8 won't2 back2 off.4
+        We will,2 4 we will,2 4 we will2 free8 ourselves4. from4 the
+      }
+    }
+
+    >>
+  }
+\end{lilypondf}
+
+\begin{lilypondf}
+  \score {
+    <<
+    \chords {
+      \transpose c \transposeTarget {
+      \set majorSevenSymbol = \markup {↑} % Abuse the symbol to remind me to play D as C shape moved up
+      e1:m e2.:m c4 e1:m c2 d:7+
+      e1:m e:m e1:m c2 d:7+
+      e1:m e:m e1:m c2 d:7+
+      }
+      e1:m
+    }
+
+    \new StaffGroup
+    <<
+    \new Staff \relative {
+      \key g \minor
+      \time 4/4
+      g'8. bes16 c8. d16 c8. bes16 g8. f16
+      g8. bes16 c8. d16 c4 bes
+      g8. bes16 c8. d16 c8. bes16 g8. f16
+      bes8. a16 g8. f16 a4 d,
+      g8. bes16 c8. d16 c8. bes16 g8. f16
+      g8. bes16 c8. d16 c4 bes
+      g8. bes16 c8. d16 c8. bes16 g8. f16
+      bes8. a16 g8. f16 a4 d,
+      g8. bes16 c8. d16 c8. bes16 g8. f16
+      g8. bes16 c8. d16 c4 bes
+      g8. bes16 c8. d16 c8. bes16 g8. f16
+      bes8. a16 g8. f16 a4 d,
+      g2\> ~ g\!
+    }
+
+    \new RhythmicStaff {
+      \improvisationOn
+      a8. 16 a8. 16 a8. 16 a8. 32 32
+      a8. 16 a8. 16 a8. 32 32 a8. 16
+      a8. 16 a8. 16 a8. 16 a8. 32 32
+      \repeat percent 8 {
+        a8. 16 8. 32 32 8. 16 8. 32 32
+      }
+      a8. 16 4 4 4 1
+    }
+    >>
+
+    \new Lyrics {
+      \lyricmode{
+        leash4 2. 1 1 1
+        4 We4 won't,2 4 we won't,2 4 we won't,4. we8 won't2 back2 off.4
+        We will,2 4 we will,2 4 we will2 free8 ourselves4. from4 the leash
+      }
+    }
+
+    >>
+  }
+\end{lilypondf}
+%
+\beginverse*
+\begin{performanceinstruction}
+  Softly, only strum each chord once
+\end{performanceinstruction}
+Keep the \[Em]dogs on the leash, keep them calm
+A \[Em]dog on a leash means no harm
+Shut their \[G]eyes and ears, give them \[Em]drugs and \[D]beers
+Keep the \[Em]bastards \[C]silent, don't \mbar{2}{4}\[D]trigger their a-
+\endverse
+
+\begin{lilypondf}
+
+  \score {
+    <<
+    \chords {
+      \transpose c \transposeTarget {
+      e1:m
+      g2 c g1 e2:m g d1
+      g2 c g1 e2:m g d1
+      g2 c e:m d e:m c d g
+      }
+    }
+
+    \new StaffGroup
+    <<
+    \new Staff \relative {
+      \key g \minor
+      \time 4/4
+      f'4 g8. g16 f4 bes8 c
+      \boxedSectionLabel "Chorus"
+      d4 d8 c bes4 bes8 g f4. g8 f4 bes8 c d4 d8 f d c bes c ~ c c ~ c2 bes8 c
+      d4 d8 c bes4 bes8 g f4. g8 f4 bes8 c d4 d8 f d c bes c ~ c c ~ c2 bes4
+      f'4. f8 f4 es8 d
+      es4 d c bes8 c
+      d4 d c8 bes4 bes8
+      c16 bes8 bes8. a8 bes2
+    }
+
+    \new Lyrics {
+      \lyricmode {
+        larm.2.
+        Keep8 the dogs4 on8 the leash4 keep8 them calm.4. 4.
+        A4 dog4 on8 a leash4 means8 no8 8 harm.2 8
+        Keep8 the dogs4 on8 the leash4 hold8 them tight.4. 4.
+        A4 dog4 on8 a leash4 he8 won't8 8 bite.2 8
+        Shut8 their eyes4. and8 ears,4 give8 them drugs4 and beers.
+        Keep8 the bastards2 silent4. don't8 trigger8. their a8-larm.2
+      }
+    }
+
+    \new RhythmicStaff {
+      \improvisationOn
+      a4 8. 8. 4. \repeat percent 2 { 8 8. 16 16 16 8 8. 16 16 16}
+    }
+    >>
+    >>
+  }
+\end{lilypondf}
+
+\endsong

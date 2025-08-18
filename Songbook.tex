@@ -1,9 +1,8 @@
 \documentclass[12pt,oneside]{book}
 
 \providecommand{\instrument}{Guitar}
-\providecommand{\builddir}{.}
+\providecommand{\builddir}{build}
 
-\usepackage[utf8]{inputenc}
 \usepackage[main=english,ngerman]{babel}
 \usepackage[bookmarks]{hyperref}
 \usepackage{graphicx}
@@ -12,87 +11,174 @@
 \usepackage{xpatch}
 \usepackage{ifoddpage}
 \usepackage{units}
-\usepackage{listings}
+\usepackage{xfrac}
 \usepackage[autostyle]{csquotes}
 \usepackage[chorded]{songs}
+\usepackage[staffsize=20,fragment=false,pass-fonts=true]{lyluatex}
 
 \input{extra/extra_\instrument}
 
-\pretitle{
-	\begin{center}
+\begin{lysavefrag}{head}
+  \include "definitions.ily"
+\end{lysavefrag}
+
+\begin{lysavefrag}{targetA}
+  transposeTarget = a
+\end{lysavefrag}
+
+\begin{lysavefrag}{targetAis}
+  transposeTarget = bes
+\end{lysavefrag}
+
+\begin{lysavefrag}{targetB}
+  transposeTarget = b
+\end{lysavefrag}
+
+\begin{lysavefrag}{targetC}
+  transposeTarget = c
+\end{lysavefrag}
+
+\begin{lysavefrag}{targetCis}
+  transposeTarget = cis
+\end{lysavefrag}
+
+\begin{lysavefrag}{targetD}
+  transposeTarget = d
+\end{lysavefrag}
+
+\begin{lysavefrag}{targetDis}
+  transposeTarget = es
+\end{lysavefrag}
+
+\begin{lysavefrag}{targetE}
+  transposeTarget = e
+\end{lysavefrag}
+
+\begin{lysavefrag}{targetF}
+  transposeTarget = f
+\end{lysavefrag}
+
+\begin{lysavefrag}{targetFis}
+  transposeTarget = fis
+\end{lysavefrag}
+
+\expandafter\def\csname fetchTransposeOffset@-4\endcsname{targetGis}
+\expandafter\def\csname fetchTransposeOffset@-3\endcsname{targetA}
+\expandafter\def\csname fetchTransposeOffset@-2\endcsname{targetAis}
+\expandafter\def\csname fetchTransposeOffset@-1\endcsname{targetB}
+\expandafter\def\csname fetchTransposeOffset@0\endcsname{targetC}
+\expandafter\def\csname fetchTransposeOffset@1\endcsname{targetCis}
+\expandafter\def\csname fetchTransposeOffset@2\endcsname{targetD}
+\expandafter\def\csname fetchTransposeOffset@3\endcsname{targetDis}
+\expandafter\def\csname fetchTransposeOffset@4\endcsname{targetE}
+\expandafter\def\csname fetchTransposeOffset@5\endcsname{targetF}
+\expandafter\def\csname fetchTransposeOffset@6\endcsname{targetFis}
+
+\newcommand{\fetchTransposeHeader}[1]{%
+\csname fetchTransposeOffset@#1\endcsname
 }
 
-\posttitle{
-	~\\
-	\vspace*{1cm}
-	\includegraphics[width=6cm]{img.png}
+\newcommand{\lilypondTranspose}{0}
+
+\lynewenvironment{lilypondf}[1][]{%
+  \begin{ly}[include_before_body={head,\fetchTransposeHeader{\lilypondTranspose}}]
+  }{
+  \end{ly}
+}
+
+\ifSoundingChords
+
+\newenvironment{infotextAfterTranspose}[1]{
+  \transpose{#1}
+  \renewcommand{\lilypondTranspose}{#1}
+  \begin{infotext}
+}{
+  \end{infotext}
+}
+
+\newcommand{\transposeChords}[1]{\transpose{#1}\renewcommand{\lilypondTranspose}{#1}}}
+
+\else
+
+\newenvironment{infotextAfterTranspose}[1]{
+  \begin{infotext}
+    \textbf{Capo: #1}\\
+}{
+  \end{infotext}
+}
+
+\newcommand{\transposeChords}[1]{\begin{infotext}\textbf{Capo: #1}\end{infotext}}
+
+\fi
+
+\pretitle{
+  \begin{center}
+  }
+
+  \posttitle{
+    ~\\
+    \vspace*{1cm}
+    \includegraphics[width=6cm]{img.png}
 \end{center}}
 
 \makeatletter
 \xpatchcmd{\SB@@@beginsong}
-	{\SB@addtoindexes\songtitle}
-	{\SB@addtoindexes{\songtitle\ifx\songauthors\empty\else\ \textcolor{gray}{(\songauthors)}\fi}}
-	{}{}
+{\SB@addtoindexes\songtitle}
+{\SB@addtoindexes{\songtitle\ifx\songauthors\empty\else\ \textcolor{gray}{(\songauthors)}\fi}}
+{}{}
 \makeatother
 
+
+
 \newcommand{\scaletab}[1]{
-	\let\gtabBAK\gtab
-	\newcommand{\sgtab}[3]{\scalebox{##1}{\gtabBAK{##2}{##3}}}
-	\renewcommand*\gtab{\sgtab{#1}}
+  \let\gtabBAK\gtab
+  \newcommand{\sgtab}[3]{\scalebox{##1}{\gtabBAK{##2}{##3}}}
+  \renewcommand*\gtab{\sgtab{#1}}
 }
 
 \newcommand*\skiptoleftpage{%
-	\leavevmode
-	\checkoddpage
-	\ifoddpage
-		\null
-	\else
-		\null
-		\newpage
-	 \fi
+  \leavevmode
+  \checkoddpage
+  \ifoddpage
+  \null
+  \else
+  \null
+  \newpage
+  \fi
 }
 
 \newcommand*\cleartoleftpage{%
-	\clearpage
-	\skiptoleftpage
+  \clearpage
+  \skiptoleftpage
 }
 
 \newcommand{\inputafterskip}[1]{
-	\begin{intersong*}
-	\newpage
-	\end{intersong*}
-	\begin{intersong*}
-	\skiptoleftpage
-	\end{intersong*}
-	\input{#1}
+  \begin{intersong*}
+    \newpage
+  \end{intersong*}
+  \begin{intersong*}
+    \skiptoleftpage
+  \end{intersong*}
+  \input{#1}
 }
 
 \newenvironment{infotext}{
-	\begin{minipage}{\linewidth}
-	\color{darkgray}
-	\itshape
-	\normalsize
-}{
-	\end{minipage}
-	\vspace*{1em}
+  \begin{minipage}{\linewidth}
+    \color{darkgray}
+    \itshape
+    \normalsize
+  }{
+  \end{minipage}
 }
 
-%\MakeOuterQuote{"}
-
-\lstdefinestyle{tabs}{
-	basicstyle=\ttfamily\footnotesize,
-	breakatwhitespace=false,         
-	breaklines=true,                 
-	captionpos=b,                    
-	keepspaces=true,                 
-	numbers=none,                                 
-	showspaces=false,                
-	showstringspaces=false,
-	showtabs=false,                  
-	tabsize=2
+\newenvironment{performanceinstruction}{
+  \begin{minipage}{\linewidth}
+    \color{darkgray}
+    \slshape
+    \normalsize
+  }{
+  \end{minipage}
 }
-
-\lstset{style=tabs}
 
 \setlength{\parindent}{0cm}
 \setlength{\oddsidemargin}{0in}
@@ -113,9 +199,10 @@
 \newindex{titleidx}{cbtitle}
 \indexsongsas{titleidx}{\thepage}
 
-\title{{\bfseries \Huge Songbook \\[0.5cm] \Large \instrument}}
+\title{{\bfseries \Huge Songbook}\ifSoundingChords\\{\Large Sounding Chords -- No Capo}\fi}
+
 \author{{\bfseries \Large Andurian}}
-\date{}     
+\date{}
 
 \begin{document}
 
@@ -134,11 +221,11 @@
 \newpage
 
 \begin{songs}{titleidx}
-\pagestyle{plain}
-\setcounter{page}{1}
-\input{\builddir/songs_\instrument}
+  \pagestyle{plain}
+  \setcounter{page}{1}
+  \input{\builddir/songs_\instrument}
 \end{songs}
 
-\printextra
+%\printextra
 
 \end{document}

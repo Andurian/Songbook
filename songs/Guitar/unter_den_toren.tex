@@ -1,40 +1,95 @@
 \beginsong{Unter den Toren}[
-	by={Traditional}
+  by={Die Streuner},
+  sr={\url{https://www.youtube.com/watch?v=nD3Iy-47nDU}}
 ]
 
 \begin{infotext}
-Angenehmer zu singen, wenn die Gitarre einen Ganzton tiefer gestimmt ist.
+  \textbf{Capo: 0} (Original)\\
+  \textbf{Capo: -2} (Personal Comfort)\\
+  Song starts with Chorus played without accompaniment.
 \end{infotext}
 
-\beginverse*
-\[Dm] \[C] \[F] \[A]
-\endverse
-
-\beginverse\memorize
-\[Dm]Unter den Toren, im \[C]Schatten der Stadt, 
-schläft man \[B]gut, wenn man sonst keine \[A]Schlafstelle hat. 
-\[Dm]Keiner, der \[C]fragt nach Wo\[F]her und Wo\[G]hin, 
-und zu \[Dm]kalt ist die \[Am]Nacht für Gen\[Dm]darmen. 
-\endverse
-
 \beginchorus
-\lrep \[Dm]He \[C]ho ein \[F]Feuerlein \[C]brennt, 
-\[Dm]kalt ist die \[Am]Nacht für Gen\[Dm]darmen. \rrep \rep{2}
-\[Dm] \[C] \[F] \[A]
+\lrep \[F]He \[C]ho ein \[F]Feuerlein \[C]brennt,
+\[Dm]kalt ist die \[A7]Nacht für Gen\[Dm]darmen. \rrep \rep{2}
 \endchorus
 
-\beginverse
-^Silberne Löffel und ^Ketten im Sack, 
-legst du ^besser beim Schlafen dir ^unters Genack. 
-^Zeig nichts und ^sag nichts, die ^Messer sind ^stumm, 
-und zu ^kalt ist die ^Nacht für Gen^darmen.
-\endverse 
+\vspace{0.5em}
+
+\begin{lilypondf}
+  \score {
+    <<
+    \chords {
+      d2.:m f g:m a:7
+    }
+
+    \new StaffGroup
+    <<
+    \new Staff \relative {
+      \time 6/8
+      \key d \minor
+      \boxedSectionLabelWithComment "Post Chorus" "Original"
+      \repeat volta 2 { a''2 g8 e a2 g8 a bes2 c8 bes a2. }
+    }
+
+    \new RhythmicStaff {
+      \improvisationOn
+      \repeat percent 4 {a8. 16 8 8 16 16 16 16}
+    }
+    >>
+    >>
+  }
+\end{lilypondf}
+
+\vspace{0.5em}
+
+\begin{lilypondf}
+  \score {
+    <<
+    \chords {
+      d2.:m f g:m a:7
+    }
+
+    \new StaffGroup
+    <<
+    \new Staff \relative {
+      \time 6/8
+      \boxedSectionLabelWithComment "Post Chorus" "For Capo -2"
+      \transpose a g {
+        \key d \minor \relative{
+          \repeat volta 2 { a''2 g8 e a2 g8 a bes2 c8 bes a2. }
+        }
+      }
+    }
+
+    \new RhythmicStaff {
+      \improvisationOn
+      \repeat percent 4 {a8. 16 8 8 16 16 16 16}
+    }
+    >>
+    >>
+  }
+\end{lilypondf}
+
+\beginverse\memorize
+\[Dm]Unter den Toren, im \[C]Schatten der Stadt,
+schläft man \[B&]gut, wenn man sonst keine \[A7]Schlafstelle hat.
+\[Dm]Keiner, der \[C]fragt nach Wo\[F]her und Wo\[Gm]hin,
+und zu \[Dm]kalt ist die \[A7]Nacht für Gen\[Dm]darmen.
+\endverse
 
 \beginverse
-^Greif nach der Flasche, doch ^trink nicht zuviel, 
+^Silberne Löffel und ^Ketten im Sack,
+legst du ^besser beim Schlafen dir ^unters Genack.
+^Zeig nichts und ^sag nichts, die ^Messer sind ^stumm,
+und zu ^kalt ist die ^Nacht für Gen^darmen.
+\endverse
+
+\beginverse
+^Greif nach der Flasche, doch ^trink nicht zuviel,
 deine ^Würfel sind gut, aber ^falsch ist das Spiel.
-^Guck in die ^Asche und ^schau lieber ^zu, 
-denn zu ^kalt ist die ^Nacht für ^Gendarmen. 
+^Guck in die ^Asche und ^schau lieber ^zu,
+denn zu ^kalt ist die ^Nacht für ^Gendarmen.
 \endverse
 
 \beginverse
@@ -45,14 +100,14 @@ denn zu ^kalt ist die ^Nacht für Gen^darmen.
 \endverse
 
 \beginverse
-^Geh mit der Nacht, eh der ^Frühnebel steigt, 
+^Geh mit der Nacht, eh der ^Frühnebel steigt,
 nur das ^Feuer brennt stumm und das ^Steinpflaster schweigt.
-^Laß nichts zu^rück und ver^giß, was du ^sahst, 
+^Laß nichts zu^rück und ver^giß, was du ^sahst,
 denn die ^Sonne bringt ^bald die Gen^darmen.
 \endverse
 
 \beginchorus
-\lrep \[Dm]He \[C]ho das \[F]Feuer ist \[C]aus, 
-\[Dm]bald kommen \[Am]die Gen\[Dm]darmen. \rrep \rep{2}
+\lrep \[F]He \[C]ho das \[F]Feuer ist \[C]aus,
+\[Dm]bald kommen \[A7]die Gen\[Dm]darmen. \rrep \rep{2}
 \endchorus
 \endsong

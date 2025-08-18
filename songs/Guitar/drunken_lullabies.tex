@@ -1,0 +1,236 @@
+\beginsong{Drunken Lullabies}[
+  by={Flogging Molly},
+  sr={\url{https://www.youtube.com/watch?v=89NjEeHku8o}}
+]
+
+\begin{lilypondf}
+  \score {
+    <<
+    \new RhythmicStaff \relative {
+      \time 4/4
+      \tempo 4 = 160
+      \improvisationOn
+        \boxedSectionLabel "Rhythm"
+        a8 8 16 16 8 8 8 16 16 8
+      
+    }
+    >>
+  }
+\end{lilypondf}
+
+\begin{performanceinstruction}
+Play melody once on solo banjo, then add violin and rhythm guitar.
+\end{performanceinstruction}
+
+\begin{lilypondf}
+\score {
+  <<
+  
+  \chords{
+    s4
+    g1 c2 g g1 d g2 d g1
+  }
+  
+  \new Staff \relative c' {
+    \time 4/4
+    \key g \major
+    \partial 4
+    g'8 b
+    \boxedSectionLabel "Intro"
+    \repeat volta 2 { 
+      d8 16 16 8 e d b g' fis
+      e8 16 16 d8 e d b g b
+    }
+    \alternative {
+      { 
+        d d16 16 8 e d b c b
+        a a16 16 8 b a 4 g8 b 
+      }
+      { 
+        d d16 16 c8 b a a16 16 b8 a
+        g g16 16 g8 a g2
+      }
+    }
+  }
+  
+  >>
+}
+\end{lilypondf}
+
+\beginverse\memorize
+Must it \[G]take a life for \[G]hateful eyes
+to \[Em]glisten once a\[Em]gain
+Five \[C]hundred years like \[C]Gelignite
+Have \[Em]blown us all to \[D]hell \echo{to hell!}
+What \[G]savior rests while on his \[G]cross we die
+For\[Em]gotten freedom \[Em]burns
+Has the \[C]shephard led his \[C]lambs astray
+to the \[Em]bigot and the \[D]gun
+\endverse
+
+\beginchorus
+Must it \[C]take a life for \[G]hateful eyes
+to \[C]glisten once a\[D]gain
+Cause we \[G]find our\[C]selves in the \[Em]same old mess
+singing \[G]drunken \[D]lulla\[G]bies
+\endchorus
+
+\begin{lilypondf}
+\score {
+  <<
+  
+  \chords{
+    s4
+    g1 c2 g g1 d g2 d g1
+  }
+  
+  \new Staff \relative c' {
+    \time 4/4
+    \key g \major
+    \partial 4
+    g'8 b
+    \boxedSectionLabel "Post-Chorus"
+    \repeat volta 2 { 
+      d8 16 16 8 e d b g' fis
+      e8 16 16 d8 e d b g b
+    }
+    \alternative {
+      { 
+        d d16 16 8 e d b c b
+        a a16 16 8 b a 4 g8 b 
+      }
+      { 
+        d d16 16 c8 b a a16 16 b8 a
+        g g16 16 g8 a g2
+      }
+    }
+  }
+  
+  >>
+}
+\end{lilypondf}
+
+\beginverse\replay
+I ^watch and stare as ^Rosin's eyes
+turn a ^darker shade of ^red
+And the ^bullet with this ^sniper lie
+in their ^bloody gutless ^cell
+Must we ^starve on crumbs from ^long ago
+through ^bars these men made ^steel
+Is it a ^great or little thing we ^fought
+knelt the ^conscience blessed to ^kill
+\endverse
+
+\beginchorus
+Must it \[C]take a life for \[G]hateful eyes
+to \[C]glisten once a\[D]gain
+Cause we \[G]find our\[C]selves in the \[Em]same old mess
+singing \[G]drunken \[D]lulla\[G]bies
+\endchorus
+
+\beginverse*
+Ah, but \[C]maybe it's the \[D]way we're \[G]taught
+or \[C]maybe it's the \[D]way we \[G]fought
+But a \[C]smile never \[D]grins without \[G]tears to be\[C]gin
+for each \[C]kiss is a \[D]cry we all \[G]lost
+Though \[C]nothing left to \[G]gain
+but for the \[C]banshee that stole the \[D]grave
+Cause we \[G]find our\[C]selves in the \[Em]same old mess
+singing \[G]drunken \[D]lulla\[G]bies \echo{right!}
+\endverse
+
+\begin{lilypondf}
+\score {
+  <<
+  
+  \chords{
+    s1*8 
+      g1 c2 g g1 d g2 d g1
+      c1 e:m c d g2 c e1:m g2 d g1
+  }
+  
+  \new Staff \relative c' {
+    \time 4/4
+    \key g \major
+          \boxedSectionLabel "Solo"
+      R1*3 r2.
+      g'8 b
+      d8 16 16 8 e d b g' fis
+      e8 16 16 d8 e d b g b
+      d d16 16 c8 b a a16 16 b8 a
+      g g16 16 g8 a g2
+
+
+      \repeat volta 2 {
+        d'8 16 16 8 e d b g' fis
+        e8 16 16 d8 e d b g b
+      }
+      \alternative {
+        {
+          d d16 16 8 e d b c b
+          a a16 16 8 b a 4 g8 b
+        }
+        {
+          d d16 16 c8 b a a16 16 b8 a
+          g g16 16 g8 a g2
+        }
+      }
+
+      g'4 g8 fis e4 e8 d e4 e8 d e d b d g4 g8 fis e4 g a2 \grace{b16} a4 e8 fis g4 fis e d e d b g8 a b d4. a g8 g1
+      
+  }
+  
+  >>
+}
+\end{lilypondf}
+
+\beginverse\replay
+I ^sit and dwell on ^faces past
+like ^memories seem to ^fade
+No ^color left but ^black and white
+and ^soon will all turn ^grey
+But may these ^shadows rise to ^walk again
+with ^lessons truly ^learned
+When the ^blossom flowers in ^each our hearts
+shall ^beat a new found ^flame \echo{the flame!}
+\endverse
+
+\beginchorus
+Must it \[C]take a life for \[G]hateful eyes
+to \[C]glisten once a\[D]gain
+Cause we \[G]find our\[C]selves in the \[Em]same old mess
+singing \[G]drunken \[D]lulla\[G]bies
+\endchorus
+
+\begin{lilypondf}
+\score {
+  <<
+  
+  \chords{
+     s4 g2 c  e1:m g1 d g2 c e1:m g2 d g2 s4 g
+  }
+  
+  \new Staff \relative c' {
+    \time 4/4
+    \key g \major
+      \partial 4
+      e'8 fis
+          \boxedSectionLabel "Outro"
+       g4 fis e d e d b2 b1 a2. e'8 fis  g4 fis e d e d b2 b2 a g2 r4 g
+      
+  }
+
+  \new Lyrics {
+      \lyricmode {
+        Cause8 we find4 ourselves2 in8 the same old4 mess4. singing4 drunken1 lu1 -- labies4 2. 2. singing4 drunken2 lu4. -- la8 -- bies2
+      }
+    }
+  
+  >>
+}
+\end{lilypondf}
+
+
+
+
+\endsong

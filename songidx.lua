@@ -203,8 +203,8 @@ function setstartchars(songs)
   end
 end
 
---prelist = { A=true, THE=true}
-prelist = { }
+prelist = { A=true, THE=true, DER=true, DIE=true, DAS=true}
+--prelist = { }
 wt_and = { AND=true }
 wt_by = { BY=true }
 wt_unknown = { UNKNOWN=true }
